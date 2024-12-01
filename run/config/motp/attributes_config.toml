@@ -1,0 +1,43 @@
+
+["Attribute 1"]
+	display_name = "Vitality"
+	#Make sure the command contain '(variable)' so you can update the attribute
+	cmd_to_exc = ["/attribute @p generic.max_health base set (variable)"]
+	tip_to_display = "§7Represents your overall durability. §7More health means you can survive longer in battle"
+
+["Attribute 2"]
+	display_name = "Attack Power"
+	#Make sure the command contain '(variable)' so you can update the attribute
+	cmd_to_exc = ["/attribute @p generic.attack_damage base set (variable)"]
+	tip_to_display = "§7Defines the amount of harm you can inflict with each attack. "
+
+["Attribute 3"]
+	display_name = "Attack Speed"
+	#Make sure the command contain '(variable)' so you can update the attribute
+	cmd_to_exc = ["/attribute @p generic.attack_speed base set (variable)"]
+	tip_to_display = "§7Determines how quickly you can swing your weapon. "
+
+["Attribute 4"]
+	display_name = "Protection"
+	#Make sure the command contain '(variable)' so you can update the attribute
+	cmd_to_exc = ["/attribute @p generic.armor base set (variable)"]
+	tip_to_display = "§7Reduces the amount of damage you take from enemy attacks"
+
+["Attribute 5"]
+	display_name = "Agility"
+	#Make sure the command contain '(variable)' so you can update the attribute
+	cmd_to_exc = ["/attribute @p generic.movement_speed base set (variable)"]
+	tip_to_display = "§7Influences how fast you can move"
+
+["Attribute 6"]
+	display_name = "Fortitude"
+	#Make sure the command contain '(variable)' so you can update the attribute
+	cmd_to_exc = ["/attribute @p generic.knockback_resistance base set (variable) "]
+	tip_to_display = "§7Reduces the distance you are pushed back when hit by an enemy or explosion"
+
+["Attribute 7"]
+	display_name = "Exploration"
+	#Make sure the command contain '(variable)' so you can update the attribute
+	cmd_to_exc = ["/attribute @p generic.luck base set (variable)"]
+	tip_to_display = "§7Influences the chances of receiving better loot or triggering beneficial events"
+

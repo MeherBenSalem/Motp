@@ -1,0 +1,7 @@
+{
+  "parent": "memory_of_the_past:custom/greater_memory_frag",
+  "textures": {
+    "0": "memory_of_the_past:block/greater_texture",
+    "particle": "memory_of_the_past:item/greater_texture"
+  }
+}

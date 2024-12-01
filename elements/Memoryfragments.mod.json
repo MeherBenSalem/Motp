@@ -1,0 +1,11 @@
+{
+  "_fv": 66,
+  "_type": "tab",
+  "definition": {
+    "name": "MOTP",
+    "icon": {
+      "value": "CUSTOM:OrbOfLeveling"
+    },
+    "showSearch": false
+  }
+}

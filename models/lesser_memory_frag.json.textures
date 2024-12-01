@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "better_texture"
+      },
+      "name": "default"
+    }
+  }
+}

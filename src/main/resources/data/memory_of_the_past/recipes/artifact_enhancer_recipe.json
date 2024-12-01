@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "memory_of_the_past:auto_consumer_item"
+  },
+  "base": {
+    "item": "minecraft:nether_star"
+  },
+  "addition": {
+    "item": "minecraft:diamond_block"
+  },
+  "result": {
+    "item": "memory_of_the_past:experience_enhancer_artifact"
+  }
+}

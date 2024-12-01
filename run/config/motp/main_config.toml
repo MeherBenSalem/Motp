@@ -1,0 +1,79 @@
+
+[Attribute_One]
+	max_level = 100.0
+	value_per_level = 1.0
+	lock = false
+
+[Attribute_Two]
+	max_level = 100.0
+	value_per_level = 0.5
+	lock = false
+
+[Attribute_Three]
+	max_level = 30.0
+	value_per_level = 0.3
+	lock = false
+
+[Attribute_Forth]
+	max_level = 30.0
+	value_per_level = 0.1
+	lock = false
+
+[Attribute_Fifth]
+	#The display will always show value * 100
+	max_level = 0.5
+	#The display will always show value * 100
+	value_per_level = 0.005
+	lock = false
+
+[Attribute_Sixth]
+	#The display will always show value * 10
+	max_level = 1.0
+	#The display will always show value * 10
+	value_per_level = 0.01
+	lock = false
+
+[Attribute_Seventh]
+	max_level = 10.0
+	value_per_level = 0.05
+	lock = false
+
+["HUD Overlay"]
+	display_level_overlay = true
+	display_xp_overlay = true
+	display_points_overlay = true
+
+["Leveling Config"]
+	lesser_experience_value = 20.0
+	better_experience_value = 200.0
+	greater_experience_value = 2000.0
+	level_per_orb = 1.0
+	scale_factor = 30.0
+	points_per_level = 1.0
+	enableDrops = true
+	onDeathReset = false
+	maxPlayerLevel = 500.0
+
+["Artifacts Settings"]
+	bonus_experience_factor = 1.4
+
+["Initial Starting Values"]
+	init_val_attribute_one = 20.0
+	init_val_attribute_two = 2.0
+	init_val_attribute_three = 4.0
+	init_val_attribute_forth = 0.0
+	init_val_attribute_fifth = 0.1
+	init_val_attribute_sixth = 0.0
+	init_val_attribute_seventh = 0.0
+	init_val_starting_level = 0.0
+
+["Leveling Scale"]
+	level_interval_first = 20000.0
+	level_interval_scale_first = 1.1
+	level_interval_second = 100000.0
+	level_interval_scale_second = 1.02
+	level_interval_scale_after = 1.001
+
+[Colors]
+	global_stats_ui_color = "§6"
+

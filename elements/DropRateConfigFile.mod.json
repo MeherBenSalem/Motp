@@ -1,0 +1,237 @@
+{
+  "_fv": 66,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "Overworld",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 80.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99]",
+            "vardisplay": "lesser_drop_rate",
+            "varname": "ow_lesser_rate",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 95.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99] you have to take into account the previous probabilities for exmaple (if the value = 80 which means its 90% its a better if not a lesser )",
+            "vardisplay": "better_drop_rate",
+            "varname": "ow_better_rate",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 99.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99] & 99% chance guarantees the drop if the previous two drops were unsuccessful",
+            "vardisplay": "greater_drop_rate",
+            "varname": "ow_greater_rate",
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Nether",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 50.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99]",
+            "vardisplay": "lesser_drop_rate",
+            "varname": "nether_lesser_rate",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 95.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99] you have to take into account the previous probabilities for exmaple (if the value = 80 which means its 95% its a better if not a lesser )",
+            "vardisplay": "better_drop_rate",
+            "varname": "nether_better_rate",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 99.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99] & 99% chance guarantees the drop if the previous two drops were unsuccessful",
+            "vardisplay": "greater_drop_rate",
+            "varname": "nether_greater_rate",
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "End",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 20.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99]",
+            "vardisplay": "lesser_drop_rate",
+            "varname": "end_lesser_rate",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 30.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99] you have to take into account the previous probabilities for exmaple (if the value = 80 which means its 90% its a better if not a lesser )",
+            "vardisplay": "better_drop_rate",
+            "varname": "end_better_rate",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 99.0,
+            "textDefault": "",
+            "comment": "Choose a value between [0-99] & 99% chance guarantees the drop if the previous two drops were unsuccessful",
+            "vardisplay": "greater_drop_rate",
+            "varname": "end_greater_rate",
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Bosses Drop Rates",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 3.0,
+            "textDefault": "",
+            "comment": "Max drop rate of orbs of leveling from bosses",
+            "vardisplay": "max_drop_rate",
+            "varname": "max_drop_rate",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
+            "textDefault": "",
+            "comment": "Min drop rate of orbs of leveling from bosses",
+            "vardisplay": "min_drop_rate",
+            "varname": "min_drop_rate",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "list of the mobs which will drop the leveling orbs",
+            "vardisplay": "bosses_list",
+            "varname": "bosses_list",
+            "enablecomment": true,
+            "stringlist": [
+              "minecraft:ender_dragon",
+              "minecraft:wither"
+            ]
+          }
+        ]
+      }
+    ],
+    "file": "motp/drop_rate_config",
+    "configType": 0
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "_fv": 66,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "Attribute 1",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "Vitality",
+            "comment": "",
+            "vardisplay": "display_name",
+            "varname": "display_name_att_1",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "vardisplay": "cmd_to_exc",
+            "varname": "cmd_att_1",
+            "enablecomment": true,
+            "stringlist": [
+              "/attribute @p generic.max_health base set (variable)"
+            ]
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "§7Represents your overall durability. §7More health means you can survive longer in battle",
+            "comment": "",
+            "vardisplay": "tip_to_display",
+            "varname": "display_tip_att_1",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Attribute 2",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "Attack Power",
+            "comment": "",
+            "vardisplay": "display_name",
+            "varname": "display_name_att_2",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "/attribute @p generic.attack_damage base set (variable)",
+            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "vardisplay": "cmd_to_exc",
+            "varname": "cmd_att_2",
+            "enablecomment": true,
+            "stringlist": [
+              "/attribute @p generic.attack_damage base set (variable)"
+            ]
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "§7Defines the amount of harm you can inflict with each attack. ",
+            "comment": "",
+            "vardisplay": "tip_to_display",
+            "varname": "display_tip_att_2",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Attribute 3",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "Attack Speed",
+            "comment": "",
+            "vardisplay": "display_name",
+            "varname": "display_name_att_3",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "/attribute @p generic.attack_speed base set (variable)",
+            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "vardisplay": "cmd_to_exc",
+            "varname": "cmd_att_3",
+            "enablecomment": true,
+            "stringlist": [
+              "/attribute @p generic.attack_speed base set (variable)"
+            ]
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "§7Determines how quickly you can swing your weapon. ",
+            "comment": "",
+            "vardisplay": "tip_to_display",
+            "varname": "display_tip_att_3",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Attribute 4",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "Protection",
+            "comment": "",
+            "vardisplay": "display_name",
+            "varname": "display_name_att_4",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "/attribute @p generic.armor base set (variable)",
+            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "vardisplay": "cmd_to_exc",
+            "varname": "cmd_att_4",
+            "enablecomment": true,
+            "stringlist": [
+              "/attribute @p generic.armor base set (variable)"
+            ]
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "§7Reduces the amount of damage you take from enemy attacks",
+            "comment": "",
+            "vardisplay": "tip_to_display",
+            "varname": "display_tip_att_4",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Attribute 5",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "Agility",
+            "comment": "",
+            "vardisplay": "display_name",
+            "varname": "display_name_att_5",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "/attribute @p generic.movement_speed base set (variable)",
+            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "vardisplay": "cmd_to_exc",
+            "varname": "cmd_att_5",
+            "enablecomment": true,
+            "stringlist": [
+              "/attribute @p generic.movement_speed base set (variable)"
+            ]
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "§7Influences how fast you can move",
+            "comment": "",
+            "vardisplay": "tip_to_display",
+            "varname": "display_tip_att_5",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Attribute 6",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "Fortitude",
+            "comment": "",
+            "vardisplay": "display_name",
+            "varname": "display_name_att_6",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "/attribute @p generic.knockback_resistance base set (variable) ",
+            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "vardisplay": "cmd_to_exc",
+            "varname": "cmd_att_6",
+            "enablecomment": true,
+            "stringlist": [
+              "/attribute @p generic.knockback_resistance base set (variable) "
+            ]
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "§7Reduces the distance you are pushed back when hit by an enemy or explosion",
+            "comment": "",
+            "vardisplay": "tip_to_display",
+            "varname": "display_tip_att_6",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Attribute 7",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "Exploration",
+            "comment": "",
+            "vardisplay": "display_name",
+            "varname": "display_name_att_7",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 5,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "/attribute @p generic.luck base set (variable)",
+            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "vardisplay": "cmd_to_exc",
+            "varname": "cmd_att_7",
+            "enablecomment": true,
+            "stringlist": [
+              "/attribute @p generic.luck base set (variable)"
+            ]
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "§7Influences the chances of receiving better loot or triggering beneficial events",
+            "comment": "",
+            "vardisplay": "tip_to_display",
+            "varname": "display_tip_att_7",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      }
+    ],
+    "file": "motp/attributes_config",
+    "configType": 0
+  }
+}

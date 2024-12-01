@@ -1,0 +1,854 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 234,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "player_stats_gui.png",
+          "use1Xscale": false,
+          "x": 31,
+          "y": 19
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "GetThePlayerModel"
+          },
+          "scale": 60,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 71,
+          "y": 154
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_health",
+          "text": {
+            "fixedValue": "Vitality :",
+            "name": "ReturnAttributeOneName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingHealthLogic"
+          },
+          "x": 156,
+          "y": 54
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hp",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentHealthValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingHealthLogic"
+          },
+          "x": 301,
+          "y": 54
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level",
+          "text": {
+            "fixedValue": "Level :"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 61,
+          "y": 184
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentLevel"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 101,
+          "y": 184
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_available_points",
+          "text": {
+            "fixedValue": "Available Points:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 176,
+          "y": 29
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_extra_points",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnExtraPoints"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 266,
+          "y": 29
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_resistance",
+          "text": {
+            "fixedValue": "Fortitude : ",
+            "name": "ReturnAttributeSixthName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicFortitude"
+          },
+          "x": 156,
+          "y": 154
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_resistance",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentResistance"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicFortitude"
+          },
+          "x": 301,
+          "y": 154
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_armor",
+          "text": {
+            "fixedValue": "Protection :",
+            "name": "ReturnAttributeForthName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicProtection"
+          },
+          "x": 156,
+          "y": 114
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_exploration",
+          "text": {
+            "fixedValue": "Exploration :",
+            "name": "ReturnAttributeSeventhName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicExploration"
+          },
+          "x": 156,
+          "y": 176
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_armor",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentArmor"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicProtection"
+          },
+          "x": 301,
+          "y": 114
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_attack_damage",
+          "text": {
+            "fixedValue": "Attack Power :",
+            "name": "ReturnAttributeTwoName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackPower"
+          },
+          "x": 156,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attack_damag",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttackDamage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackPower"
+          },
+          "x": 301,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_movement_speed",
+          "text": {
+            "fixedValue": "Agility :",
+            "name": "ReturnAttributeFifthName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicMS"
+          },
+          "x": 156,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_movement_spe",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentMovementSpeed"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicMS"
+          },
+          "x": 301,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_attack_speed",
+          "text": {
+            "fixedValue": "Attack Speed :",
+            "name": "ReturnAttributeThreeName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackSpeed"
+          },
+          "x": 156,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attack_speed",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttackSpeed"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackSpeed"
+          },
+          "x": 301,
+          "y": 94
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_pressed",
+          "image": "pressed.png",
+          "hoveredImage": "unpressed.png",
+          "onClick": {
+            "name": "AddPointsProcedure"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingHealthLogic"
+          },
+          "x": 331,
+          "y": 49
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_pressed3",
+          "image": "pressed.png",
+          "hoveredImage": "unpressed.png",
+          "onClick": {
+            "name": "AddAttackDamagePoints"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackPower"
+          },
+          "x": 331,
+          "y": 69
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_pressed1",
+          "image": "pressed.png",
+          "hoveredImage": "unpressed.png",
+          "onClick": {
+            "name": "AddAttackSpeedPoints"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackSpeed"
+          },
+          "x": 331,
+          "y": 89
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_pressed2",
+          "image": "pressed.png",
+          "hoveredImage": "unpressed.png",
+          "onClick": {
+            "name": "AddAromrPoints"
+          },
+          "x": 331,
+          "y": 109
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_pressed4",
+          "image": "pressed.png",
+          "hoveredImage": "unpressed.png",
+          "onClick": {
+            "name": "AddMvPoints"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicMS"
+          },
+          "x": 331,
+          "y": 129
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_pressed5",
+          "image": "pressed.png",
+          "hoveredImage": "unpressed.png",
+          "onClick": {
+            "name": "AddResistancePoints"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicFortitude"
+          },
+          "x": 331,
+          "y": 149
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_pressed6",
+          "image": "pressed.png",
+          "hoveredImage": "unpressed.png",
+          "onClick": {
+            "name": "AddExplorationPoints"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicExploration"
+          },
+          "x": 331,
+          "y": 174
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_exploration",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentExploration"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicExploration"
+          },
+          "x": 301,
+          "y": 177
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_represents_your_overall_durabili",
+          "text": {
+            "fixedValue": "§7Represents your overall durability. §7More health means you can survive longer in battle. ",
+            "name": "ReturnAttributeOneTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingHealthLogic"
+          },
+          "width": 15,
+          "height": 14,
+          "x": 136,
+          "y": 53
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_defines_the_amount_of_harm_you_c",
+          "text": {
+            "fixedValue": "§7Defines the amount of harm you can inflict with each attack. ",
+            "name": "ReturnAttributeTwoTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackPower"
+          },
+          "width": 17,
+          "height": 17,
+          "x": 135,
+          "y": 72
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_determines_how_quickly_you_can_s",
+          "text": {
+            "fixedValue": "§7Determines how quickly you can swing your weapon. ",
+            "name": "ReturnAttributeThreeTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackSpeed"
+          },
+          "width": 15,
+          "height": 17,
+          "x": 135,
+          "y": 92
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_reduces_the_amount_of_damage_you",
+          "text": {
+            "fixedValue": "§7Reduces the amount of damage you take from enemy attacks. ",
+            "name": "ReturnAttributeForthTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicProtection"
+          },
+          "width": 15,
+          "height": 16,
+          "x": 137,
+          "y": 111
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_influences_how_fast_you_can_move",
+          "text": {
+            "fixedValue": "§7Influences how fast you can move. ",
+            "name": "ReturnAttributeFifthTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicMS"
+          },
+          "width": 13,
+          "height": 16,
+          "x": 137,
+          "y": 131
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_reduces_the_distance_you_are_pus",
+          "text": {
+            "fixedValue": "§7Reduces the distance you are pushed back when hit by an enemy or explosion",
+            "name": "ReturnAttributeSixthTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicFortitude"
+          },
+          "width": 15,
+          "height": 17,
+          "x": 136,
+          "y": 151
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_influences_the_chances_of_receiv",
+          "text": {
+            "fixedValue": "§7Influences the chances of receiving better loot or triggering beneficial events",
+            "name": "ReturnAttributeSeventhTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicExploration"
+          },
+          "width": 15,
+          "height": 16,
+          "x": 135,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty7",
+          "text": {
+            "fixedValue": "?"
+          },
+          "color": {
+            "value": -13553359,
+            "falpha": 0.0
+          },
+          "x": 166,
+          "y": 29
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty8",
+          "text": {
+            "fixedValue": "?"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 184
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_represents_your_overall_progress",
+          "text": {
+            "fixedValue": "§7Represents your overall progress and power"
+          },
+          "width": 10,
+          "height": 10,
+          "x": 46,
+          "y": 184
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_indicates_the_number_of_points_y",
+          "text": {
+            "fixedValue": "§7Indicates the number of points you can allocate to improve your stats"
+          },
+          "width": 10,
+          "height": 10,
+          "x": 161,
+          "y": 29
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_health_value",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextHealthValue"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingHealthLogic"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 331,
+          "y": 49
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attack_power_va",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttackPowerValue"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackSpeed"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 331,
+          "y": 69
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attack_speed_va",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttackSpeedValue"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicAttackPower"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 331,
+          "y": 89
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_protection_valu",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextProtectionValue"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicProtection"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 331,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_movement_speed",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextMovementSpeedValue"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicMS"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 331,
+          "y": 129
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_resistance_valu",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextResistanceValue"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicFortitude"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 331,
+          "y": 149
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_exploration_val",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextExplorationValue"
+          },
+          "displayCondition": {
+            "name": "DisplayLevelingLogicExploration"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 331,
+          "y": 174
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_player_name",
+          "text": {
+            "fixedValue": "",
+            "name": "PlayerName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 57,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_1.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 52
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_7.png",
+          "use1Xscale": false,
+          "x": 135,
+          "y": 173
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_6.png",
+          "use1Xscale": false,
+          "x": 135,
+          "y": 151
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_5.png",
+          "use1Xscale": false,
+          "x": 135,
+          "y": 131
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_4.png",
+          "use1Xscale": false,
+          "x": 137,
+          "y": 111
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_3.png",
+          "use1Xscale": false,
+          "x": 135,
+          "y": 92
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_2.png",
+          "use1Xscale": false,
+          "x": 135,
+          "y": 72
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 10,
+      "sy": 10,
+      "ox": 30,
+      "oy": 6,
+      "snapOnGrid": false
+    }
+  }
+}
