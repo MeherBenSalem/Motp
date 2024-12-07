@@ -1646,7 +1646,7 @@
           "src/main/resources/data/memory_of_the_past/recipes/tome_of_rebirth_recipe.json"
         ]
       },
-      "path": "~/Recipies"
+      "path": "~/Recipes"
     },
     {
       "name": "AutoConsumerArtifactRecipe",
@@ -1659,7 +1659,7 @@
           "src/main/resources/data/memory_of_the_past/recipes/auto_consumer_artifact_recipe.json"
         ]
       },
-      "path": "~/Recipies"
+      "path": "~/Recipes"
     },
     {
       "name": "ArtifactEnhancerRecipe",
@@ -1672,7 +1672,7 @@
           "src/main/resources/data/memory_of_the_past/recipes/artifact_enhancer_recipe.json"
         ]
       },
-      "path": "~/Recipies"
+      "path": "~/Recipes"
     },
     {
       "name": "LevelUpProcedureAutoLevel",
@@ -2125,10 +2125,6 @@
         "children": []
       },
       {
-        "name": "Recipes",
-        "children": []
-      },
-      {
         "name": "Blocks",
         "children": []
       },
@@ -2149,7 +2145,7 @@
         "children": []
       },
       {
-        "name": "Recipies",
+        "name": "Recipes",
         "children": []
       }
     ]
@@ -2157,7 +2153,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.0.0hf",
+    "version": "1.0.1",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",
@@ -2168,7 +2164,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "forge-1.19.2",
     "credits": "No Credits yet",
     "modElementsPackage": "tn.mbs.memory"
   },
