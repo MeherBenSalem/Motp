@@ -12,13 +12,13 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.STONE#0"
       },
       {
         "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.STONE#0"
       },
       {
         "value": "Items.ENDER_PEARL"
@@ -30,13 +30,13 @@
         "value": "Items.ENDER_PEARL"
       },
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.STONE#0"
       },
       {
         "value": "Items.ENDER_PEARL"
       },
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.STONE#0"
       }
     ],
     "recipeReturnStack": {
