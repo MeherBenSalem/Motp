@@ -48,6 +48,13 @@ public class WhenPlayerRespawnsProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				double _setval = 0;
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SparePoints = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 		OnPlayerSpawnProcedure.execute(entity);
 	}

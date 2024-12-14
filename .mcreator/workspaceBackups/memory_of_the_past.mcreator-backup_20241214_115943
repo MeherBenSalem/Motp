@@ -1125,22 +1125,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1646,7 +1630,7 @@
           "src/main/resources/data/memory_of_the_past/recipes/tome_of_rebirth_recipe.json"
         ]
       },
-      "path": "~/Recipies"
+      "path": "~/Recipes"
     },
     {
       "name": "AutoConsumerArtifactRecipe",
@@ -1659,7 +1643,7 @@
           "src/main/resources/data/memory_of_the_past/recipes/auto_consumer_artifact_recipe.json"
         ]
       },
-      "path": "~/Recipies"
+      "path": "~/Recipes"
     },
     {
       "name": "ArtifactEnhancerRecipe",
@@ -1672,7 +1656,7 @@
           "src/main/resources/data/memory_of_the_past/recipes/artifact_enhancer_recipe.json"
         ]
       },
-      "path": "~/Recipies"
+      "path": "~/Recipes"
     },
     {
       "name": "LevelUpProcedureAutoLevel",
@@ -1747,6 +1731,97 @@
         ]
       },
       "path": "~/Procedures/Leveling Logic"
+    },
+    {
+      "name": "LevelUpProcedureECommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_up_procedure_e_command",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/LevelUpProcedureECommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ResetPlayerLevels",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_player_levels",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/command/ResetPlayerLevelsCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ResetPlayerCmd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_player_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ResetPlayerCmdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "AddPlayerPoints",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_player_points",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/command/AddPlayerPointsCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "AddPointsCmd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsCmdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -2125,10 +2200,6 @@
         "children": []
       },
       {
-        "name": "Recipes",
-        "children": []
-      },
-      {
         "name": "Blocks",
         "children": []
       },
@@ -2149,7 +2220,7 @@
         "children": []
       },
       {
-        "name": "Recipies",
+        "name": "Recipes",
         "children": []
       }
     ]
@@ -2157,7 +2228,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.0.0hf",
+    "version": "1.0.2",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",

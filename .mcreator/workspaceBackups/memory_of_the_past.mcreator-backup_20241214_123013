@@ -633,7 +633,7 @@
       "registry_name": "orb_of_reseting_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipe/orb_of_reseting_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipes/orb_of_reseting_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1016,9 +1016,9 @@
       "registry_name": "level_100_trophy_reward",
       "metadata": {
         "files": [
+          "src/main/resources/data/memory_of_the_past/loot_tables/blocks/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/item/level_100_trophy_reward.json",
           "src/main/java/tn/mbs/memory/block/Level100TrophyRewardBlock.java",
-          "src/main/resources/data/memory_of_the_past/loot_table/blocks/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/blockstates/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/block/level_100_trophy_reward.json"
         ]
@@ -1037,7 +1037,7 @@
           "src/main/java/tn/mbs/memory/block/Level200TrophyRewardBlock.java",
           "src/main/resources/assets/memory_of_the_past/blockstates/level_200_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/item/level_200_trophy_reward.json",
-          "src/main/resources/data/memory_of_the_past/loot_table/blocks/level_200_trophy_reward.json"
+          "src/main/resources/data/memory_of_the_past/loot_tables/blocks/level_200_trophy_reward.json"
         ]
       },
       "path": "~/Blocks"
@@ -1050,7 +1050,7 @@
       "registry_name": "first_level_up",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancement/first_level_up.json"
+          "src/main/resources/data/memory_of_the_past/advancements/first_level_up.json"
         ]
       },
       "path": "~/Advancements"
@@ -1063,7 +1063,7 @@
       "registry_name": "reach_level_50",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancement/reach_level_50.json"
+          "src/main/resources/data/memory_of_the_past/advancements/reach_level_50.json"
         ]
       },
       "path": "~/Advancements"
@@ -1076,7 +1076,7 @@
       "registry_name": "reach_level_100",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancement/reach_level_100.json"
+          "src/main/resources/data/memory_of_the_past/advancements/reach_level_100.json"
         ]
       },
       "path": "~/Advancements"
@@ -1089,7 +1089,7 @@
       "registry_name": "reach_level_200",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancement/reach_level_200.json"
+          "src/main/resources/data/memory_of_the_past/advancements/reach_level_200.json"
         ]
       },
       "path": "~/Advancements"
@@ -1125,22 +1125,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1643,7 +1627,7 @@
       "registry_name": "tome_of_rebirth_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipe/tome_of_rebirth_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipes/tome_of_rebirth_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1656,7 +1640,7 @@
       "registry_name": "auto_consumer_artifact_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipe/auto_consumer_artifact_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipes/auto_consumer_artifact_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1669,7 +1653,7 @@
       "registry_name": "artifact_enhancer_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipe/artifact_enhancer_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipes/artifact_enhancer_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1747,6 +1731,97 @@
         ]
       },
       "path": "~/Procedures/Leveling Logic"
+    },
+    {
+      "name": "LevelUpProcedureECommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_up_procedure_e_command",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/LevelUpProcedureECommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ResetPlayerLevels",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_player_levels",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/command/ResetPlayerLevelsCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ResetPlayerCmd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_player_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ResetPlayerCmdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "AddPlayerPoints",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_player_points",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/command/AddPlayerPointsCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "AddPointsCmd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsCmdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -2153,7 +2228,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",
@@ -2164,7 +2239,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "neoforge-1.21.1",
+    "currentGenerator": "forge-1.19.2",
     "credits": "No Credits yet",
     "modElementsPackage": "tn.mbs.memory"
   },

@@ -168,8 +168,8 @@ public class OnPlayerSpawnProcedure {
 		entity.getPersistentData().putDouble("motp_level", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level));
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_1.get()) {
 			stringCommand = stringiterator;
-			if (stringCommand.contains("param=")) {
-				commandParam = new Object() {
+			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
+				commandParam = Math.round(new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -177,9 +177,8 @@ public class OnPlayerSpawnProcedure {
 						}
 						return 0;
 					}
-				}.convert(stringCommand.substring((int) ((stringCommand).length() - 3)));
-				stringCommand = stringCommand.replace("param=", "");
-				stringCommand = stringCommand.substring(0, (int) ((stringCommand).length() - 4));
+				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
+				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_1") * commandParam);
 			} else {
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_1"));
@@ -194,8 +193,8 @@ public class OnPlayerSpawnProcedure {
 		}
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_2.get()) {
 			stringCommand = stringiterator;
-			if (stringCommand.contains("param=")) {
-				commandParam = new Object() {
+			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
+				commandParam = Math.round(new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -203,9 +202,8 @@ public class OnPlayerSpawnProcedure {
 						}
 						return 0;
 					}
-				}.convert(stringCommand.substring((int) ((stringCommand).length() - 3)));
-				stringCommand = stringCommand.replace("param=", "");
-				stringCommand = stringCommand.substring(0, (int) ((stringCommand).length() - 4));
+				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
+				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_2") * commandParam);
 			} else {
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_2"));
@@ -220,8 +218,8 @@ public class OnPlayerSpawnProcedure {
 		}
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_3.get()) {
 			stringCommand = stringiterator;
-			if (stringCommand.contains("param=")) {
-				commandParam = new Object() {
+			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
+				commandParam = Math.round(new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -229,9 +227,8 @@ public class OnPlayerSpawnProcedure {
 						}
 						return 0;
 					}
-				}.convert(stringCommand.substring((int) ((stringCommand).length() - 3)));
-				stringCommand = stringCommand.replace("param=", "");
-				stringCommand = stringCommand.substring(0, (int) ((stringCommand).length() - 4));
+				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
+				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_3") * commandParam);
 			} else {
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_3"));
@@ -246,8 +243,8 @@ public class OnPlayerSpawnProcedure {
 		}
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_4.get()) {
 			stringCommand = stringiterator;
-			if (stringCommand.contains("param=")) {
-				commandParam = new Object() {
+			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
+				commandParam = Math.round(new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -255,12 +252,11 @@ public class OnPlayerSpawnProcedure {
 						}
 						return 0;
 					}
-				}.convert(stringCommand.substring((int) ((stringCommand).length() - 3)));
-				stringCommand = stringCommand.replace("param=", "");
-				stringCommand = stringCommand.substring(0, (int) ((stringCommand).length() - 4));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_4") * commandParam);
+				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
+				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
+				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("cmd_att_4") * commandParam);
 			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_4"));
+				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("cmd_att_4"));
 			}
 			{
 				Entity _ent = entity;
@@ -272,8 +268,8 @@ public class OnPlayerSpawnProcedure {
 		}
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_5.get()) {
 			stringCommand = stringiterator;
-			if (stringCommand.contains("param=")) {
-				commandParam = new Object() {
+			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
+				commandParam = Math.round(new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -281,9 +277,8 @@ public class OnPlayerSpawnProcedure {
 						}
 						return 0;
 					}
-				}.convert(stringCommand.substring((int) ((stringCommand).length() - 3)));
-				stringCommand = stringCommand.replace("param=", "");
-				stringCommand = stringCommand.substring(0, (int) ((stringCommand).length() - 4));
+				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
+				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_5") * commandParam);
 			} else {
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_5"));
@@ -298,8 +293,8 @@ public class OnPlayerSpawnProcedure {
 		}
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_6.get()) {
 			stringCommand = stringiterator;
-			if (stringCommand.contains("param=")) {
-				commandParam = new Object() {
+			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
+				commandParam = Math.round(new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -307,9 +302,8 @@ public class OnPlayerSpawnProcedure {
 						}
 						return 0;
 					}
-				}.convert(stringCommand.substring((int) ((stringCommand).length() - 3)));
-				stringCommand = stringCommand.replace("param=", "");
-				stringCommand = stringCommand.substring(0, (int) ((stringCommand).length() - 4));
+				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
+				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_6") * commandParam);
 			} else {
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_6"));
@@ -324,8 +318,8 @@ public class OnPlayerSpawnProcedure {
 		}
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_7.get()) {
 			stringCommand = stringiterator;
-			if (stringCommand.contains("param=")) {
-				commandParam = new Object() {
+			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
+				commandParam = Math.round(new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -333,9 +327,8 @@ public class OnPlayerSpawnProcedure {
 						}
 						return 0;
 					}
-				}.convert(stringCommand.substring((int) ((stringCommand).length() - 3)));
-				stringCommand = stringCommand.replace("param=", "");
-				stringCommand = stringCommand.substring(0, (int) ((stringCommand).length() - 4));
+				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
+				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_7") * commandParam);
 			} else {
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_7"));

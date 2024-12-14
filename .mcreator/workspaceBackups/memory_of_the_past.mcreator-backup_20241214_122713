@@ -1125,22 +1125,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1747,6 +1731,97 @@
         ]
       },
       "path": "~/Procedures/Leveling Logic"
+    },
+    {
+      "name": "LevelUpProcedureECommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_up_procedure_e_command",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/LevelUpProcedureECommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ResetPlayerLevels",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_player_levels",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/command/ResetPlayerLevelsCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ResetPlayerCmd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_player_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ResetPlayerCmdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "AddPlayerPoints",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_player_points",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/command/AddPlayerPointsCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "AddPointsCmd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsCmdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -2153,7 +2228,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",
@@ -2164,7 +2239,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "forge-1.19.2",
     "credits": "No Credits yet",
     "modElementsPackage": "tn.mbs.memory"
   },
