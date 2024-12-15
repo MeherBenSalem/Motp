@@ -21,19 +21,19 @@ public class AddPointsCmdProcedure {
 		}
 		if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 1) {
 			for (int index0 = 0; index0 < (int) DoubleArgumentType.getDouble(arguments, "count"); index0++) {
-				AddPointsProcedureProcedure.execute(entity);
+				AddPointsAttributeOneProcedure.execute(entity);
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 2) {
 			for (int index1 = 0; index1 < (int) DoubleArgumentType.getDouble(arguments, "count"); index1++) {
-				AddAttackDamagePointsProcedure.execute(entity);
+				AddPointsAttributeTwoProcedure.execute(entity);
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 3) {
 			for (int index2 = 0; index2 < (int) DoubleArgumentType.getDouble(arguments, "count"); index2++) {
-				AddAttackSpeedPointsProcedure.execute(entity);
+				AddPointsAttributeThreeProcedure.execute(entity);
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 4) {
 			for (int index3 = 0; index3 < (int) DoubleArgumentType.getDouble(arguments, "count"); index3++) {
-				AddAromrPointsProcedure.execute(entity);
+				AddPointsAttributeForthProcedure.execute(entity);
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 5) {
 			for (int index4 = 0; index4 < (int) DoubleArgumentType.getDouble(arguments, "count"); index4++) {

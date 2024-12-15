@@ -3,12 +3,12 @@ package tn.mbs.memory.network;
 
 import tn.mbs.memory.world.inventory.PlayerStatsGUIMenu;
 import tn.mbs.memory.procedures.AddResistancePointsProcedure;
-import tn.mbs.memory.procedures.AddPointsProcedureProcedure;
+import tn.mbs.memory.procedures.AddPointsAttributeTwoProcedure;
+import tn.mbs.memory.procedures.AddPointsAttributeThreeProcedure;
+import tn.mbs.memory.procedures.AddPointsAttributeOneProcedure;
+import tn.mbs.memory.procedures.AddPointsAttributeForthProcedure;
 import tn.mbs.memory.procedures.AddMvPointsProcedure;
 import tn.mbs.memory.procedures.AddExplorationPointsProcedure;
-import tn.mbs.memory.procedures.AddAttackSpeedPointsProcedure;
-import tn.mbs.memory.procedures.AddAttackDamagePointsProcedure;
-import tn.mbs.memory.procedures.AddAromrPointsProcedure;
 import tn.mbs.memory.MemoryOfThePastMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -70,19 +70,19 @@ public class PlayerStatsGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			AddPointsProcedureProcedure.execute(entity);
+			AddPointsAttributeOneProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			AddAttackDamagePointsProcedure.execute(entity);
+			AddPointsAttributeTwoProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			AddAttackSpeedPointsProcedure.execute(entity);
+			AddPointsAttributeThreeProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			AddAromrPointsProcedure.execute(entity);
+			AddPointsAttributeForthProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 

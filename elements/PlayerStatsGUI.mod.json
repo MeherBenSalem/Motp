@@ -45,7 +45,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingHealthLogic"
+            "name": "DisplayLogicAttributeOne"
           },
           "x": 156,
           "y": 54
@@ -57,14 +57,14 @@
           "name": "label_hp",
           "text": {
             "fixedValue": "",
-            "name": "ReturnCurrentHealthValue"
+            "name": "ReturnCurrentAttributeOne"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingHealthLogic"
+            "name": "DisplayLogicAttributeOne"
           },
           "x": 301,
           "y": 54
@@ -183,7 +183,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicProtection"
+            "name": "DisplayLogicAttributeForth"
           },
           "x": 156,
           "y": 114
@@ -214,14 +214,14 @@
           "name": "label_proc_return_current_armor",
           "text": {
             "fixedValue": "",
-            "name": "ReturnCurrentArmor"
+            "name": "ReturnCurrentAttributeForth"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicProtection"
+            "name": "DisplayLogicAttributeForth"
           },
           "x": 301,
           "y": 114
@@ -240,7 +240,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackPower"
+            "name": "DisplayLogicAttributeTwo"
           },
           "x": 156,
           "y": 74
@@ -252,14 +252,14 @@
           "name": "label_proc_return_current_attack_damag",
           "text": {
             "fixedValue": "",
-            "name": "ReturnCurrentAttackDamage"
+            "name": "ReturnCurrentAttributeTwo"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackPower"
+            "name": "DisplayLogicAttributeTwo"
           },
           "x": 301,
           "y": 74
@@ -316,7 +316,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackSpeed"
+            "name": "DisplayLogicAttributeThree"
           },
           "x": 156,
           "y": 94
@@ -328,14 +328,14 @@
           "name": "label_proc_return_current_attack_speed",
           "text": {
             "fixedValue": "",
-            "name": "ReturnCurrentAttackSpeed"
+            "name": "ReturnCurrentAttributeThree"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackSpeed"
+            "name": "DisplayLogicAttributeThree"
           },
           "x": 301,
           "y": 94
@@ -348,10 +348,10 @@
           "image": "pressed.png",
           "hoveredImage": "unpressed.png",
           "onClick": {
-            "name": "AddPointsProcedure"
+            "name": "AddPointsAttributeOne"
           },
           "displayCondition": {
-            "name": "DisplayLevelingHealthLogic"
+            "name": "DisplayLogicAttributeOne"
           },
           "x": 331,
           "y": 49
@@ -364,10 +364,10 @@
           "image": "pressed.png",
           "hoveredImage": "unpressed.png",
           "onClick": {
-            "name": "AddAttackDamagePoints"
+            "name": "AddPointsAttributeTwo"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackPower"
+            "name": "DisplayLogicAttributeTwo"
           },
           "x": 331,
           "y": 69
@@ -380,10 +380,10 @@
           "image": "pressed.png",
           "hoveredImage": "unpressed.png",
           "onClick": {
-            "name": "AddAttackSpeedPoints"
+            "name": "AddPointsAttributeThree"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackSpeed"
+            "name": "DisplayLogicAttributeThree"
           },
           "x": 331,
           "y": 89
@@ -396,7 +396,10 @@
           "image": "pressed.png",
           "hoveredImage": "unpressed.png",
           "onClick": {
-            "name": "AddAromrPoints"
+            "name": "AddPointsAttributeForth"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
           },
           "x": 331,
           "y": 109
@@ -478,7 +481,7 @@
             "name": "ReturnAttributeOneTip"
           },
           "displayCondition": {
-            "name": "DisplayLevelingHealthLogic"
+            "name": "DisplayLogicAttributeOne"
           },
           "width": 15,
           "height": 14,
@@ -495,12 +498,12 @@
             "name": "ReturnAttributeTwoTip"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackPower"
+            "name": "DisplayLogicAttributeTwo"
           },
           "width": 17,
           "height": 17,
-          "x": 135,
-          "y": 72
+          "x": 134,
+          "y": 71
         }
       },
       {
@@ -512,7 +515,7 @@
             "name": "ReturnAttributeThreeTip"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackSpeed"
+            "name": "DisplayLogicAttributeThree"
           },
           "width": 15,
           "height": 17,
@@ -529,7 +532,7 @@
             "name": "ReturnAttributeForthTip"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicProtection"
+            "name": "DisplayLogicAttributeForth"
           },
           "width": 15,
           "height": 16,
@@ -650,10 +653,10 @@
           "name": "tooltip_proc_return_next_health_value",
           "text": {
             "fixedValue": "",
-            "name": "ReturnNextHealthValue"
+            "name": "ReturnNextAttributeOne"
           },
           "displayCondition": {
-            "name": "DisplayLevelingHealthLogic"
+            "name": "DisplayLogicAttributeOne"
           },
           "width": 20,
           "height": 20,
@@ -667,10 +670,10 @@
           "name": "tooltip_proc_return_next_attack_power_va",
           "text": {
             "fixedValue": "",
-            "name": "ReturnNextAttackPowerValue"
+            "name": "ReturnNextAttributeTwo"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackSpeed"
+            "name": "DisplayLogicAttributeTwo"
           },
           "width": 20,
           "height": 20,
@@ -684,10 +687,10 @@
           "name": "tooltip_proc_return_next_attack_speed_va",
           "text": {
             "fixedValue": "",
-            "name": "ReturnNextAttackSpeedValue"
+            "name": "ReturnNextAttributeThree"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicAttackPower"
+            "name": "DisplayLogicAttributeThree"
           },
           "width": 20,
           "height": 20,
@@ -701,10 +704,10 @@
           "name": "tooltip_proc_return_next_protection_valu",
           "text": {
             "fixedValue": "",
-            "name": "ReturnNextProtectionValue"
+            "name": "ReturnNextAttributeForth"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicProtection"
+            "name": "DisplayLogicAttributeForth"
           },
           "width": 20,
           "height": 20,
@@ -784,6 +787,9 @@
         "data": {
           "image": "att_1.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeOne"
+          },
           "x": 136,
           "y": 52
         }
@@ -820,6 +826,9 @@
         "data": {
           "image": "att_4.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
+          },
           "x": 137,
           "y": 111
         }
@@ -829,6 +838,9 @@
         "data": {
           "image": "att_3.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeThree"
+          },
           "x": 135,
           "y": 92
         }
@@ -838,6 +850,9 @@
         "data": {
           "image": "att_2.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTwo"
+          },
           "x": 135,
           "y": 72
         }

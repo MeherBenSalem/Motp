@@ -38,7 +38,28 @@ public class OnPlayerSpawnProcedure {
 			{
 				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_1.get();
 				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.max_health = _setval;
+					capability.attribute_1 = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_2.get();
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.attribute_2 = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_3.get();
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.attribute_3 = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_4.get();
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.attribute_4 = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -57,30 +78,16 @@ public class OnPlayerSpawnProcedure {
 				});
 			}
 			{
-				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_2.get();
-				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.attack_damage = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_4.get();
-				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.armor = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_3.get();
-				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.attack_speed = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
 				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_7.get();
 				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.exploration = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = (double) MainConfigFileConfiguration.STARTING_XP_LEVEL.get();
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.nextevelXp = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -94,38 +101,38 @@ public class OnPlayerSpawnProcedure {
 				}
 			}
 		} else {
-			if (entity.getPersistentData().getDouble("motp_att_1") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).max_health) {
+			if (entity.getPersistentData().getDouble("motp_att_1") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
 				{
 					double _setval = entity.getPersistentData().getDouble("motp_att_1");
 					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.max_health = _setval;
+						capability.attribute_1 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 			}
-			if (entity.getPersistentData().getDouble("motp_att_2") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attack_damage) {
+			if (entity.getPersistentData().getDouble("motp_att_2") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2) {
 				{
 					double _setval = entity.getPersistentData().getDouble("motp_att_2");
 					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attack_damage = _setval;
+						capability.attribute_2 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 			}
-			if (entity.getPersistentData().getDouble("motp_att_3") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attack_speed) {
+			if (entity.getPersistentData().getDouble("motp_att_3") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3) {
 				{
 					double _setval = entity.getPersistentData().getDouble("motp_att_3");
 					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attack_speed = _setval;
+						capability.attribute_3 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 			}
-			if (entity.getPersistentData().getDouble("motp_att_4") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).armor) {
+			if (entity.getPersistentData().getDouble("motp_att_4") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_4) {
 				{
 					double _setval = entity.getPersistentData().getDouble("motp_att_4");
 					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.armor = _setval;
+						capability.attribute_4 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -158,12 +165,12 @@ public class OnPlayerSpawnProcedure {
 				}
 			}
 		}
-		entity.getPersistentData().putDouble("motp_att_1", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).max_health));
+		entity.getPersistentData().putDouble("motp_att_1", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1));
+		entity.getPersistentData().putDouble("motp_att_2", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2));
+		entity.getPersistentData().putDouble("motp_att_3", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3));
+		entity.getPersistentData().putDouble("motp_att_4", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_4));
 		entity.getPersistentData().putDouble("motp_att_6", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).knockback_resistance));
 		entity.getPersistentData().putDouble("motp_att_5", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).movement_speed));
-		entity.getPersistentData().putDouble("motp_att_2", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attack_damage));
-		entity.getPersistentData().putDouble("motp_att_4", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).armor));
-		entity.getPersistentData().putDouble("motp_att_3", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attack_speed));
 		entity.getPersistentData().putDouble("motp_att_7", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).exploration));
 		entity.getPersistentData().putDouble("motp_level", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level));
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_1.get()) {
@@ -254,9 +261,9 @@ public class OnPlayerSpawnProcedure {
 					}
 				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
 				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("cmd_att_4") * commandParam);
+				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_4") * commandParam);
 			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("cmd_att_4"));
+				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_4"));
 			}
 			{
 				Entity _ent = entity;

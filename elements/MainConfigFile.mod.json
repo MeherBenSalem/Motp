@@ -4,230 +4,6 @@
   "definition": {
     "pools": [
       {
-        "category": "Attribute_One",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 100.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "max_level",
-            "varname": "max_health_level",
-            "enablecomment": false,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 1.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "value_per_level",
-            "varname": "health_value_per_level",
-            "enablecomment": false,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 0,
-            "block": {
-              "value": ""
-            },
-            "logicField": 1,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "lock",
-            "varname": "lock_health",
-            "enablecomment": false,
-            "stringlist": []
-          }
-        ]
-      },
-      {
-        "category": "Attribute_Two",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 100.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "max_level",
-            "varname": "max_ap_level",
-            "enablecomment": false,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.5,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "value_per_level",
-            "varname": "ap_value_per_level",
-            "enablecomment": false,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 0,
-            "block": {
-              "value": ""
-            },
-            "logicField": 1,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "lock",
-            "varname": "lock_ap",
-            "enablecomment": false,
-            "stringlist": []
-          }
-        ]
-      },
-      {
-        "category": "Attribute_Three",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 30.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "max_level",
-            "varname": "max_as_level",
-            "enablecomment": false,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.3,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "value_per_level",
-            "varname": "as_value_per_level",
-            "enablecomment": false,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 0,
-            "block": {
-              "value": ""
-            },
-            "logicField": 1,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "lock",
-            "varname": "lock_as",
-            "enablecomment": false,
-            "stringlist": []
-          }
-        ]
-      },
-      {
-        "category": "Attribute_Forth",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 30.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "max_level",
-            "varname": "max_prot_level",
-            "enablecomment": false,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.1,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "value_per_level",
-            "varname": "prot_value_per_level",
-            "enablecomment": false,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 0,
-            "block": {
-              "value": ""
-            },
-            "logicField": 1,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "lock",
-            "varname": "lock_prot",
-            "enablecomment": false,
-            "stringlist": []
-          }
-        ]
-      },
-      {
         "category": "Attribute_Fifth",
         "entries": [
           {
@@ -857,6 +633,23 @@
             "comment": "",
             "vardisplay": "level_interval_scale_after",
             "varname": "level_interval_scale_after",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 90.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "starting_xp_level",
+            "varname": "starting_xp_level",
             "enablecomment": false,
             "stringlist": []
           }
