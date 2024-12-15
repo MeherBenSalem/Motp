@@ -85,65 +85,6 @@
       "path": "~/GUI"
     },
     {
-      "name": "ReturnCurrentHealthValue",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_current_att_1_value",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentHealthValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
-      "name": "AddPointsProcedure",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "add_points_att_1_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/AddPointsProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
-    },
-    {
-      "name": "ReturnCurrentAttackSpeed",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_current_attack_speed",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttackSpeedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
       "name": "ReturnCurrentResistance",
       "type": "procedure",
       "compiles": true,
@@ -164,26 +105,6 @@
       "path": "~/Procedures/Text Logic/LevelInfo"
     },
     {
-      "name": "ReturnCurrentAttackDamage",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_current_attack_damage",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttackDamageProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
       "name": "ReturnCurrentMovementSpeed",
       "type": "procedure",
       "compiles": true,
@@ -193,26 +114,6 @@
         "return_type": "string",
         "files": [
           "src/main/java/tn/mbs/memory/procedures/ReturnCurrentMovementSpeedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
-      "name": "ReturnCurrentArmor",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_current_armor",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentArmorProcedure.java"
         ],
         "dependencies": [
           {
@@ -280,7 +181,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Leveling Logic"
+      "path": "~/Procedures/Leveling Logic/Add Points"
     },
     {
       "name": "AddMvPoints",
@@ -299,64 +200,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Leveling Logic"
-    },
-    {
-      "name": "AddAttackSpeedPoints",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "add_attack_speed_points",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/AddAttackSpeedPointsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
-    },
-    {
-      "name": "AddAttackDamagePoints",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "add_attack_damage_points",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/AddAttackDamagePointsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
-    },
-    {
-      "name": "AddAromrPoints",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "add_aromr_points",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/AddAromrPointsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
+      "path": "~/Procedures/Leveling Logic/Add Points"
     },
     {
       "name": "WhenPlayerRespawns",
@@ -703,7 +547,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Leveling Logic"
+      "path": "~/Procedures/Leveling Logic/Add Points"
     },
     {
       "name": "YouHavePoints",
@@ -737,66 +581,6 @@
         ]
       },
       "path": "~/Configurations"
-    },
-    {
-      "name": "DisplayLevelingHealthLogic",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_leveling_health_logic",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/DisplayLevelingHealthLogicProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
-    },
-    {
-      "name": "DisplayLevelingLogicAttackSpeed",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_leveling_logic_attack_speed",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/DisplayLevelingLogicAttackSpeedProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
-    },
-    {
-      "name": "DisplayLevelingLogicAttackPower",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_leveling_logic_attack_power",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/DisplayLevelingLogicAttackPowerProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
-    },
-    {
-      "name": "DisplayLevelingLogicProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_leveling_logic_protection",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/DisplayLevelingLogicProtectionProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
     },
     {
       "name": "DisplayLevelingLogicMS",
@@ -1198,46 +982,6 @@
       "path": "~/Items"
     },
     {
-      "name": "ReturnNextHealthValue",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_next_health_value",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnNextHealthValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/Next"
-    },
-    {
-      "name": "ReturnNextAttackSpeedValue",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_next_attack_speed_value",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttackSpeedValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/Next"
-    },
-    {
       "name": "ReturnNextResistanceValue",
       "type": "procedure",
       "compiles": true,
@@ -1247,46 +991,6 @@
         "return_type": "string",
         "files": [
           "src/main/java/tn/mbs/memory/procedures/ReturnNextResistanceValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/Next"
-    },
-    {
-      "name": "ReturnNextAttackPowerValue",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_next_attack_power_value",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttackPowerValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/Next"
-    },
-    {
-      "name": "ReturnNextProtectionValue",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_next_protection_value",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnNextProtectionValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -1822,6 +1526,302 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "AddPointsAttributeOne",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_one",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeOneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "AddPointsAttributeTwo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_two",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeTwoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "AddPointsAttributeThree",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_three",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeThreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "DisplayLogicAttributeOne",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_one",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeOneProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "ReturnNextAttributeOne",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_one",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeOneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnCurrentAttributeOne",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_one",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeOneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnNextAttributeTwo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_two",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeTwoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnNextAttributeThree",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_three",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeThreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnCurrentAttributeThree",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_three",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeThreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnCurrentAttributeTwo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_two",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeTwoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "DisplayLogicAttributeTwo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_two",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeTwoProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "DisplayLogicAttributeThree",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_three",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeThreeProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "DisplayLogicAttributeForth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_forth",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeForthProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "AddPointsAttributeForth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_forth",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeForthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "ReturnNextAttributeForth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_forth",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeForthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnCurrentAttributeForth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_forth",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeForthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
     }
   ],
   "variable_elements": [
@@ -1850,7 +1850,7 @@
       "value": "2.0"
     },
     {
-      "name": "armor",
+      "name": "attribute_4",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -2110,6 +2110,10 @@
               {
                 "name": "Display Leveling Logics",
                 "children": []
+              },
+              {
+                "name": "Add Points",
+                "children": []
               }
             ]
           },
@@ -2127,10 +2131,6 @@
           },
           {
             "name": "Items",
-            "children": []
-          },
-          {
-            "name": "Blocks",
             "children": []
           }
         ]
