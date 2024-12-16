@@ -23,7 +23,7 @@
 	init_val_attribute_two = 2.0
 	init_val_attribute_three = 4.0
 	init_val_attribute_forth = 0.0
-	init_val_attribute_fifth = 0.1
+	init_val_attribute_fifth = 30.0
 	init_val_attribute_sixth = 0.0
 	init_val_attribute_seventh = 0.0
 	init_val_starting_level = 0.0

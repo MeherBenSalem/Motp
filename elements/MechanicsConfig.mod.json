@@ -16,7 +16,7 @@
             },
             "logicField": 0,
             "numberField": 0.0,
-            "textDefault": "Vitality",
+            "textDefault": "Vitality : ",
             "comment": "",
             "vardisplay": "display_name",
             "varname": "display_name_att_1",
@@ -34,12 +34,12 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "",
-            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "comment": "",
             "vardisplay": "cmd_to_exc",
             "varname": "cmd_att_1",
-            "enablecomment": true,
+            "enablecomment": false,
             "stringlist": [
-              "/attribute @p generic.max_health base set (variable)"
+              "/attribute @p generic.max_health base set"
             ]
           },
           {
@@ -125,7 +125,7 @@
             },
             "logicField": 0,
             "numberField": 0.0,
-            "textDefault": "Attack Power",
+            "textDefault": "Attack Power : ",
             "comment": "",
             "vardisplay": "display_name",
             "varname": "display_name_att_2",
@@ -143,12 +143,12 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "/attribute @p generic.attack_damage base set (variable)",
-            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "comment": "",
             "vardisplay": "cmd_to_exc",
             "varname": "cmd_att_2",
-            "enablecomment": true,
+            "enablecomment": false,
             "stringlist": [
-              "/attribute @p generic.attack_damage base set (variable)"
+              "/attribute @p generic.attack_damage base set"
             ]
           },
           {
@@ -194,7 +194,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.5,
+            "numberField": 1.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "base_value_per_point",
@@ -234,7 +234,7 @@
             },
             "logicField": 0,
             "numberField": 0.0,
-            "textDefault": "Attack Speed",
+            "textDefault": "Attack Speed : ",
             "comment": "",
             "vardisplay": "display_name",
             "varname": "display_name_att_3",
@@ -252,12 +252,12 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "/attribute @p generic.attack_speed base set (variable)",
-            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "comment": "",
             "vardisplay": "cmd_to_exc",
             "varname": "cmd_att_3",
-            "enablecomment": true,
+            "enablecomment": false,
             "stringlist": [
-              "/attribute @p generic.attack_speed base set (variable)"
+              "/attribute @p generic.attack_speed base set"
             ]
           },
           {
@@ -286,7 +286,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 30.0,
+            "numberField": 20.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "max_level",
@@ -303,7 +303,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.3,
+            "numberField": 1.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "base_value_per_point",
@@ -343,7 +343,7 @@
             },
             "logicField": 0,
             "numberField": 0.0,
-            "textDefault": "Protection",
+            "textDefault": "Protection : ",
             "comment": "",
             "vardisplay": "display_name",
             "varname": "display_name_att_4",
@@ -361,12 +361,12 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "/attribute @p generic.armor base set (variable)",
-            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "comment": "",
             "vardisplay": "cmd_to_exc",
             "varname": "cmd_att_4",
-            "enablecomment": true,
+            "enablecomment": false,
             "stringlist": [
-              "/attribute @p generic.armor base set (variable)"
+              "/attribute @p generic.armor base set [param(0.1)]"
             ]
           },
           {
@@ -395,7 +395,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 30.0,
+            "numberField": 200.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "max_level",
@@ -412,7 +412,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.1,
+            "numberField": 1.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "base_value_per_point",
@@ -452,7 +452,7 @@
             },
             "logicField": 0,
             "numberField": 0.0,
-            "textDefault": "Agility",
+            "textDefault": "Agility : ",
             "comment": "",
             "vardisplay": "display_name",
             "varname": "display_name_att_5",
@@ -470,12 +470,12 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "/attribute @p generic.movement_speed base set (variable)",
-            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "comment": "",
             "vardisplay": "cmd_to_exc",
             "varname": "cmd_att_5",
-            "enablecomment": true,
+            "enablecomment": false,
             "stringlist": [
-              "/attribute @p generic.movement_speed base set (variable)"
+              "/attribute @p generic.movement_speed base set [param(0.005)]"
             ]
           },
           {
@@ -504,7 +504,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.5,
+            "numberField": 50.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "max_level",
@@ -521,7 +521,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.005,
+            "numberField": 1.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "base_value_per_point",
@@ -561,7 +561,7 @@
             },
             "logicField": 0,
             "numberField": 0.0,
-            "textDefault": "Fortitude",
+            "textDefault": "Fortitude : ",
             "comment": "",
             "vardisplay": "display_name",
             "varname": "display_name_att_6",
@@ -579,12 +579,12 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "/attribute @p generic.knockback_resistance base set (variable) ",
-            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "comment": "",
             "vardisplay": "cmd_to_exc",
             "varname": "cmd_att_6",
-            "enablecomment": true,
+            "enablecomment": false,
             "stringlist": [
-              "/attribute @p generic.knockback_resistance base set (variable) "
+              "/attribute @p generic.knockback_resistance base set [param(0.01)]"
             ]
           },
           {
@@ -613,7 +613,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 1.0,
+            "numberField": 100.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "max_level",
@@ -630,7 +630,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 1.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "base_value_per_point",
@@ -670,7 +670,7 @@
             },
             "logicField": 0,
             "numberField": 0.0,
-            "textDefault": "Exploration",
+            "textDefault": "Exploration : ",
             "comment": "",
             "vardisplay": "display_name",
             "varname": "display_name_att_7",
@@ -688,12 +688,12 @@
             "logicField": 0,
             "numberField": 0.0,
             "textDefault": "/attribute @p generic.luck base set (variable)",
-            "comment": "Make sure the command contain '(variable)' so you can update the attribute",
+            "comment": "",
             "vardisplay": "cmd_to_exc",
             "varname": "cmd_att_7",
-            "enablecomment": true,
+            "enablecomment": false,
             "stringlist": [
-              "/attribute @p generic.luck base set (variable)"
+              "/attribute @p generic.luck base set [param(0.5)]"
             ]
           },
           {
@@ -722,7 +722,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 10.0,
+            "numberField": 100.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "max_level",
@@ -739,7 +739,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.05,
+            "numberField": 1.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "base_value_per_point",

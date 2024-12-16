@@ -1788,7 +1788,7 @@
     {
       "name": "AddPointsAttributeSixth",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "add_points_attribute_sixth",
       "metadata": {
@@ -1807,7 +1807,7 @@
     {
       "name": "AddPointsAttributeSeventh",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "add_points_attribute_seventh",
       "metadata": {

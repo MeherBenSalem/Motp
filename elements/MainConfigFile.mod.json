@@ -319,7 +319,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.1,
+            "numberField": 30.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "init_val_attribute_fifth",

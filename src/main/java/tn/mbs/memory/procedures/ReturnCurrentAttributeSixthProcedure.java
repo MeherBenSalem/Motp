@@ -10,6 +10,6 @@ public class ReturnCurrentAttributeSixthProcedure {
 		if (entity == null)
 			return "";
 		return MainConfigFileConfiguration.GLOBAL_STATS_UI_COLOR.get() + ""
-				+ new java.text.DecimalFormat("##.##").format((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6 * 10);
+				+ new java.text.DecimalFormat("##.##").format((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6);
 	}
 }

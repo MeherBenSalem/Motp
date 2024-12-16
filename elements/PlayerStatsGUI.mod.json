@@ -13,10 +13,10 @@
       {
         "type": "image",
         "data": {
-          "image": "player_stats_gui.png",
+          "image": "bg.png",
           "use1Xscale": false,
-          "x": 31,
-          "y": 19
+          "x": 36,
+          "y": 14
         }
       },
       {
@@ -30,44 +30,6 @@
           "followMouseMovement": true,
           "x": 71,
           "y": 154
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_health",
-          "text": {
-            "fixedValue": "Vitality :",
-            "name": "ReturnAttributeOneName"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeOne"
-          },
-          "x": 156,
-          "y": 54
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_hp",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnCurrentAttributeOne"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeOne"
-          },
-          "x": 301,
-          "y": 54
         }
       },
       {
@@ -133,504 +95,15 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_resistance",
-          "text": {
-            "fixedValue": "Fortitude : ",
-            "name": "ReturnAttributeSixthName"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSixth"
-          },
-          "x": 156,
-          "y": 154
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_return_current_resistance",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnCurrentAttributeSixth"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSixth"
-          },
-          "x": 301,
-          "y": 154
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_armor",
-          "text": {
-            "fixedValue": "Protection :",
-            "name": "ReturnAttributeForthName"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeForth"
-          },
-          "x": 156,
-          "y": 114
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_exploration",
-          "text": {
-            "fixedValue": "Exploration :",
-            "name": "ReturnAttributeSeventhName"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSeventh"
-          },
-          "x": 156,
-          "y": 176
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_return_current_armor",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnCurrentAttributeForth"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeForth"
-          },
-          "x": 301,
-          "y": 114
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_attack_damage",
-          "text": {
-            "fixedValue": "Attack Power :",
-            "name": "ReturnAttributeTwoName"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeTwo"
-          },
-          "x": 156,
-          "y": 74
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_return_current_attack_damag",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnCurrentAttributeTwo"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeTwo"
-          },
-          "x": 301,
-          "y": 74
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_movement_speed",
-          "text": {
-            "fixedValue": "Agility :",
-            "name": "ReturnAttributeFifthName"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeFifth"
-          },
-          "x": 156,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_return_current_movement_spe",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnCurrentAttributeFifth"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeFifth"
-          },
-          "x": 301,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_attack_speed",
-          "text": {
-            "fixedValue": "Attack Speed :",
-            "name": "ReturnAttributeThreeName"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeThree"
-          },
-          "x": 156,
-          "y": 94
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_return_current_attack_speed",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnCurrentAttributeThree"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeThree"
-          },
-          "x": 301,
-          "y": 94
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_pressed",
-          "image": "pressed.png",
-          "hoveredImage": "unpressed.png",
-          "onClick": {
-            "name": "AddPointsAttributeOne"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeOne"
-          },
-          "x": 331,
-          "y": 49
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_pressed3",
-          "image": "pressed.png",
-          "hoveredImage": "unpressed.png",
-          "onClick": {
-            "name": "AddPointsAttributeTwo"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeTwo"
-          },
-          "x": 331,
-          "y": 69
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_pressed1",
-          "image": "pressed.png",
-          "hoveredImage": "unpressed.png",
-          "onClick": {
-            "name": "AddPointsAttributeThree"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeThree"
-          },
-          "x": 331,
-          "y": 89
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_pressed2",
-          "image": "pressed.png",
-          "hoveredImage": "unpressed.png",
-          "onClick": {
-            "name": "AddPointsAttributeForth"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeForth"
-          },
-          "x": 331,
-          "y": 109
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_pressed4",
-          "image": "pressed.png",
-          "hoveredImage": "unpressed.png",
-          "onClick": {
-            "name": "AddPointsAttributeFifth"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeFifth"
-          },
-          "x": 331,
-          "y": 129
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_pressed5",
-          "image": "pressed.png",
-          "hoveredImage": "unpressed.png",
-          "onClick": {
-            "name": "AddPointsAttributeSixth"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSixth"
-          },
-          "x": 331,
-          "y": 149
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_pressed6",
-          "image": "pressed.png",
-          "hoveredImage": "unpressed.png",
-          "onClick": {
-            "name": "AddPointsAttributeSeventh"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSeventh"
-          },
-          "x": 331,
-          "y": 174
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_return_current_exploration",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnCurrentAttributeSeventh"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSeventh"
-          },
-          "x": 301,
-          "y": 177
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_represents_your_overall_durabili",
-          "text": {
-            "fixedValue": "§7Represents your overall durability. §7More health means you can survive longer in battle. ",
-            "name": "ReturnAttributeOneTip"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeOne"
-          },
-          "width": 15,
-          "height": 14,
-          "x": 136,
-          "y": 53
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_defines_the_amount_of_harm_you_c",
-          "text": {
-            "fixedValue": "§7Defines the amount of harm you can inflict with each attack. ",
-            "name": "ReturnAttributeTwoTip"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeTwo"
-          },
-          "width": 17,
-          "height": 17,
-          "x": 134,
-          "y": 71
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_determines_how_quickly_you_can_s",
-          "text": {
-            "fixedValue": "§7Determines how quickly you can swing your weapon. ",
-            "name": "ReturnAttributeThreeTip"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeThree"
-          },
-          "width": 15,
-          "height": 17,
-          "x": 135,
-          "y": 92
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_reduces_the_amount_of_damage_you",
-          "text": {
-            "fixedValue": "§7Reduces the amount of damage you take from enemy attacks. ",
-            "name": "ReturnAttributeForthTip"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeForth"
-          },
-          "width": 15,
-          "height": 16,
-          "x": 137,
-          "y": 111
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_influences_how_fast_you_can_move",
-          "text": {
-            "fixedValue": "§7Influences how fast you can move. ",
-            "name": "ReturnAttributeFifthTip"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeFifth"
-          },
-          "width": 13,
-          "height": 16,
-          "x": 137,
-          "y": 131
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_reduces_the_distance_you_are_pus",
-          "text": {
-            "fixedValue": "§7Reduces the distance you are pushed back when hit by an enemy or explosion",
-            "name": "ReturnAttributeSixthTip"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSixth"
-          },
-          "width": 15,
-          "height": 17,
-          "x": 136,
-          "y": 151
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_influences_the_chances_of_receiv",
-          "text": {
-            "fixedValue": "§7Influences the chances of receiving better loot or triggering beneficial events",
-            "name": "ReturnAttributeSeventhTip"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSeventh"
-          },
-          "width": 15,
-          "height": 16,
-          "x": 135,
-          "y": 173
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_empty7",
-          "text": {
-            "fixedValue": "?"
-          },
-          "color": {
-            "value": -13553359,
-            "falpha": 0.0
-          },
-          "x": 166,
-          "y": 29
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_empty8",
-          "text": {
-            "fixedValue": "?"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 51,
-          "y": 184
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_represents_your_overall_progress",
           "text": {
             "fixedValue": "§7Represents your overall progress and power"
           },
-          "width": 10,
-          "height": 10,
-          "x": 46,
+          "width": 39,
+          "height": 11,
+          "x": 59,
           "y": 184
         }
       },
@@ -641,129 +114,10 @@
           "text": {
             "fixedValue": "§7Indicates the number of points you can allocate to improve your stats"
           },
-          "width": 10,
-          "height": 10,
-          "x": 161,
+          "width": 89,
+          "height": 11,
+          "x": 175,
           "y": 29
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_proc_return_next_health_value",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnNextAttributeOne"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeOne"
-          },
-          "width": 20,
-          "height": 20,
-          "x": 331,
-          "y": 49
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_proc_return_next_attack_power_va",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnNextAttributeTwo"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeTwo"
-          },
-          "width": 20,
-          "height": 20,
-          "x": 331,
-          "y": 69
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_proc_return_next_attack_speed_va",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnNextAttributeThree"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeThree"
-          },
-          "width": 20,
-          "height": 20,
-          "x": 331,
-          "y": 89
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_proc_return_next_protection_valu",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnNextAttributeForth"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeForth"
-          },
-          "width": 20,
-          "height": 20,
-          "x": 331,
-          "y": 109
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_proc_return_next_movement_speed",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnNextAttributeFifth"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeFifth"
-          },
-          "width": 20,
-          "height": 20,
-          "x": 331,
-          "y": 129
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_proc_return_next_resistance_valu",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnNextAttributeSixth"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSixth"
-          },
-          "width": 20,
-          "height": 20,
-          "x": 331,
-          "y": 149
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_proc_return_next_exploration_val",
-          "text": {
-            "fixedValue": "",
-            "name": "ReturnNextAttributeSeventh"
-          },
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSeventh"
-          },
-          "width": 20,
-          "height": 20,
-          "x": 331,
-          "y": 174
         }
       },
       {
@@ -778,8 +132,32 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 57,
-          "y": 40
+          "x": 81,
+          "y": 30
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeOne"
+          },
+          "x": 146,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeOne"
+          },
+          "x": 135,
+          "y": 57
         }
       },
       {
@@ -790,68 +168,101 @@
           "displayCondition": {
             "name": "DisplayLogicAttributeOne"
           },
-          "x": 136,
-          "y": 52
+          "x": 139,
+          "y": 61
         }
       },
       {
-        "type": "image",
+        "type": "imagebutton",
         "data": {
-          "image": "att_7.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "DisplayLogicAttributeSeventh"
+          "name": "imagebutton_button_notclicked",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeOne"
           },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeOne"
+          },
+          "x": 225,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_on",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeOne"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeOne"
+          },
+          "x": 160,
+          "y": 66
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_one_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeOneTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeOne"
+          },
+          "width": 24,
+          "height": 24,
           "x": 135,
-          "y": 173
+          "y": 57
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_one",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeOne"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeOne"
+          },
+          "width": 12,
+          "height": 12,
+          "x": 225,
+          "y": 62
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "att_6.png",
+          "image": "bg_attributes.png",
           "use1Xscale": false,
           "displayCondition": {
-            "name": "DisplayLogicAttributeSixth"
+            "name": "DisplayLogicAttributeTwo"
           },
-          "x": 135,
-          "y": 151
+          "x": 267,
+          "y": 54
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "att_5.png",
+          "image": "iconbg.png",
           "use1Xscale": false,
           "displayCondition": {
-            "name": "DisplayLogicAttributeFifth"
+            "name": "DisplayLogicAttributeTwo"
           },
-          "x": 135,
-          "y": 131
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "att_4.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "DisplayLogicAttributeForth"
-          },
-          "x": 137,
-          "y": 111
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "att_3.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "DisplayLogicAttributeThree"
-          },
-          "x": 135,
-          "y": 92
+          "x": 257,
+          "y": 57
         }
       },
       {
@@ -862,14 +273,662 @@
           "displayCondition": {
             "name": "DisplayLogicAttributeTwo"
           },
+          "x": 261,
+          "y": 61
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked1",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeTwo"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTwo"
+          },
+          "x": 346,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_tw",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeTwo"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTwo"
+          },
+          "x": 283,
+          "y": 64
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_two_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeTwoTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTwo"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 257,
+          "y": 57
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_two",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeTwo"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTwo"
+          },
+          "width": 11,
+          "height": 11,
+          "x": 347,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeThree"
+          },
+          "x": 146,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeFifth"
+          },
+          "x": 146,
+          "y": 116
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSeventh"
+          },
+          "x": 146,
+          "y": 148
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "x": 146,
+          "y": 180
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
+          },
+          "x": 267,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSixth"
+          },
+          "x": 267,
+          "y": 116
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "x": 267,
+          "y": 148
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bg_attributes.png",
+          "use1Xscale": false,
+          "x": 267,
+          "y": 180
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeThree"
+          },
           "x": 135,
-          "y": 72
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
+          },
+          "x": 257,
+          "y": 88
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeFifth"
+          },
+          "x": 135,
+          "y": 120
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSixth"
+          },
+          "x": 257,
+          "y": 120
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSeventh"
+          },
+          "x": 135,
+          "y": 151
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "x": 257,
+          "y": 151
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "x": 135,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iconbg.png",
+          "use1Xscale": false,
+          "x": 257,
+          "y": 184
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeThree"
+          },
+          "x": 139,
+          "y": 93
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
+          },
+          "x": 261,
+          "y": 92
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeFifth"
+          },
+          "x": 139,
+          "y": 124
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSixth"
+          },
+          "x": 261,
+          "y": 124
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSeventh"
+          },
+          "x": 140,
+          "y": 155
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked2",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeThree"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeThree"
+          },
+          "x": 225,
+          "y": 94
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked3",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeForth"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
+          },
+          "x": 346,
+          "y": 94
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked4",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeFifth"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeFifth"
+          },
+          "x": 225,
+          "y": 125
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked5",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeSixth"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSixth"
+          },
+          "x": 346,
+          "y": 125
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked6",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeSeventh"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSeventh"
+          },
+          "x": 225,
+          "y": 157
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_th",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeThree"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeThree"
+          },
+          "x": 160,
+          "y": 96
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_fo",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeForth"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
+          },
+          "x": 283,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_fi",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeFifth"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeFifth"
+          },
+          "x": 160,
+          "y": 128
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_si",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeSixth"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSixth"
+          },
+          "x": 283,
+          "y": 128
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_se",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeSeventh"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSeventh"
+          },
+          "x": 160,
+          "y": 160
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_three_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeThreeTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeThree"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 135,
+          "y": 89
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_forth_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeForthTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 257,
+          "y": 88
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_fifth_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeFifthTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeFifth"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 135,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_sixth_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeSixthTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSixth"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 257,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_seventh_ti",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeSeventhTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSeventh"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 136,
+          "y": 151
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_three",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeThree"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeThree"
+          },
+          "width": 11,
+          "height": 11,
+          "x": 226,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_forth",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeForth"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeForth"
+          },
+          "width": 12,
+          "height": 11,
+          "x": 347,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_fifth",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeFifth"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeFifth"
+          },
+          "width": 11,
+          "height": 11,
+          "x": 226,
+          "y": 126
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_sixth",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeSixth"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSixth"
+          },
+          "width": 12,
+          "height": 12,
+          "x": 346,
+          "y": 125
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_seven",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeSeventh"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSeventh"
+          },
+          "width": 11,
+          "height": 11,
+          "x": 226,
+          "y": 158
         }
       }
     ],
     "gridSettings": {
-      "sx": 10,
-      "sy": 10,
+      "sx": 5,
+      "sy": 5,
       "ox": 30,
       "oy": 6,
       "snapOnGrid": false

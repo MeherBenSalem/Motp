@@ -58,7 +58,7 @@ public class MainConfigFileConfiguration {
 		INIT_VAL_2 = BUILDER.define("init_val_attribute_two", (double) 2);
 		INIT_VAL_3 = BUILDER.define("init_val_attribute_three", (double) 4);
 		INIT_VAL_4 = BUILDER.define("init_val_attribute_forth", (double) 0);
-		INIT_VAL_5 = BUILDER.define("init_val_attribute_fifth", (double) 0.1);
+		INIT_VAL_5 = BUILDER.define("init_val_attribute_fifth", (double) 30);
 		INIT_VAL_6 = BUILDER.define("init_val_attribute_sixth", (double) 0);
 		INIT_VAL_7 = BUILDER.define("init_val_attribute_seventh", (double) 0);
 		INIT_VAL_STARTING_LEVEL = BUILDER.define("init_val_starting_level", (double) 0);

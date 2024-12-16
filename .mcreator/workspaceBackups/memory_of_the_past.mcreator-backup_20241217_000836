@@ -85,26 +85,6 @@
       "path": "~/GUI"
     },
     {
-      "name": "ReturnCurrentResistance",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_current_resistance",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentResistanceProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
       "name": "ReturnCurrentLevel",
       "type": "procedure",
       "compiles": true,
@@ -143,25 +123,6 @@
         ]
       },
       "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
-      "name": "AddResistancePoints",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "add_resistance_points",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/AddResistancePointsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic/Add Points"
     },
     {
       "name": "WhenPlayerRespawns",
@@ -472,45 +433,6 @@
       "path": "~/Items"
     },
     {
-      "name": "ReturnCurrentExploration",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_current_exploration",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentExplorationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
-      "name": "AddExplorationPoints",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "add_exploration_points",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/AddExplorationPointsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic/Add Points"
-    },
-    {
       "name": "YouHavePoints",
       "type": "procedure",
       "compiles": true,
@@ -542,36 +464,6 @@
         ]
       },
       "path": "~/Configurations"
-    },
-    {
-      "name": "DisplayLevelingLogicFortitude",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_leveling_logic_fortitude",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/DisplayLevelingLogicFortitudeProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
-    },
-    {
-      "name": "DisplayLevelingLogicExploration",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_leveling_logic_exploration",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/DisplayLevelingLogicExplorationProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
     },
     {
       "name": "DisplayOverlay",
@@ -926,46 +818,6 @@
         ]
       },
       "path": "~/Items"
-    },
-    {
-      "name": "ReturnNextResistanceValue",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_next_resistance_value",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnNextResistanceValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/Next"
-    },
-    {
-      "name": "ReturnNextExplorationValue",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_next_exploration_value",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnNextExplorationValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/Next"
     },
     {
       "name": "MechanicsConfig",
@@ -1822,6 +1674,154 @@
         "dependencies": []
       },
       "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "ReturnNextAttributeSixth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_sixth",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeSixthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnNextAttributeSeventh",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_seventh",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeSeventhProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnCurrentAttributeSixth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_sixth",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeSixthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnCurrentAttributeSeventh",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_seventh",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeSeventhProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "DisplayLogicAttributeSixth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_sixth",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeSixthProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "DisplayLogicAttributeSeventh",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_seventh",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeSeventhProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "AddPointsAttributeSixth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_sixth",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeSixthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "AddPointsAttributeSeventh",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_seventh",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeSeventhProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
     }
   ],
   "variable_elements": [
@@ -1832,7 +1832,7 @@
       "value": "20.0"
     },
     {
-      "name": "knockback_resistance",
+      "name": "attribute_6",
       "type": "number",
       "scope": "player_persistent",
       "value": "0.0"
@@ -1886,7 +1886,7 @@
       "value": "100.0"
     },
     {
-      "name": "exploration",
+      "name": "attribute_7",
       "type": "number",
       "scope": "player_persistent",
       "value": "0.0"
@@ -2160,7 +2160,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",
@@ -2172,7 +2172,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.20.1",
-    "credits": "No Credits yet",
+    "credits": "Thank you @porogulaemeo",
     "modElementsPackage": "tn.mbs.memory"
   },
   "mcreatorVersion": 202400232117

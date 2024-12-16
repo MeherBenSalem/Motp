@@ -1,191 +1,48 @@
-[16Dec2024 18:54:06.764] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\UwU\.mcreator\gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
-[16Dec2024 18:54:06.767] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.12 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[16Dec2024 18:54:06.874] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[16Dec2024 18:54:06.939] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[16Dec2024 18:54:07.109] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[16Dec2024 18:54:07.194] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/UwU/.mcreator/gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[16Dec2024 18:54:07.256] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 3050/PCIe/SSE2 GL version 4.6.0 NVIDIA 566.36, NVIDIA Corporation
-[16Dec2024 18:54:07.513] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\UwU\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[16Dec2024 18:54:07.515] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\UwU\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[16Dec2024 18:54:07.517] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\UwU\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar is missing mods.toml file
-[16Dec2024 18:54:07.520] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\UwU\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file
-[16Dec2024 18:54:07.590] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[16Dec2024 18:54:08.695] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\UwU\.mcreator\gradle\caches\forge_gradle\assets, --assetIndex, 5]
-[16Dec2024 18:54:12.314] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 167 milliseconds
-[16Dec2024 18:54:14.016] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/UwU/.mcreator/gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_official_1.20.1/forge-1.20.1-47.3.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[16Dec2024 18:54:14.016] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/UwU/.mcreator/gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_official_1.20.1/forge-1.20.1-47.3.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[16Dec2024 18:54:14.030] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[16Dec2024 18:54:14.035] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[16Dec2024 18:54:14.159] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[16Dec2024 18:54:14.413] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.0, for MC 1.20.1 with MCP 20230612.114412
-[16Dec2024 18:54:14.416] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.0 Initialized
-[16Dec2024 18:54:15.324] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
-[16Dec2024 18:54:15.439] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[16Dec2024 18:54:15.543] [Worker-Main-9/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[16Dec2024 18:54:15.587] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[16Dec2024 18:54:16.353] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.3.0 Target: null
-[16Dec2024 18:54:16.454] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:trophy_1' referenced from: memory_of_the_past:level_100_trophy_reward#facing=north: java.io.FileNotFoundException: minecraft:models/trophy_1.json
-[16Dec2024 18:54:16.462] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:lesser_memory_frag' referenced from: memory_of_the_past:lesser_drop_of_knowledge#inventory: java.io.FileNotFoundException: minecraft:models/lesser_memory_frag.json
-[16Dec2024 18:54:16.463] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:better_memory_frag' referenced from: memory_of_the_past:better_drop_of_knowledge#inventory: java.io.FileNotFoundException: minecraft:models/better_memory_frag.json
-[16Dec2024 18:54:18.112] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[16Dec2024 18:54:18.112] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[16Dec2024 18:54:18.147] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (High Definition Audio Device)
-[16Dec2024 18:54:18.148] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[16Dec2024 18:54:18.277] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
-[16Dec2024 18:54:18.288] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
-[16Dec2024 18:54:18.289] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
-[16Dec2024 18:54:18.289] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
-[16Dec2024 18:54:18.291] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
-[16Dec2024 18:54:18.294] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
-[16Dec2024 18:54:18.296] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
-[16Dec2024 18:54:18.297] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
-[16Dec2024 18:54:18.298] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
-[16Dec2024 18:54:18.588] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[16Dec2024 18:54:18.647] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[16Dec2024 18:54:18.648] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[16Dec2024 18:54:18.649] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[16Dec2024 18:54:18.941] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[16Dec2024 18:54:21.690] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[16Dec2024 18:54:23.426] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
-[16Dec2024 18:54:23.539] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1275 advancements
-[16Dec2024 18:54:24.024] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[16Dec2024 18:54:24.025] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[16Dec2024 18:54:25.245] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[16Dec2024 18:54:27.692] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[16Dec2024 18:54:27.692] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[16Dec2024 18:54:27.692] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[16Dec2024 18:54:27.692] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[16Dec2024 18:54:27.692] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[16Dec2024 18:54:27.767] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[16Dec2024 18:54:28.270] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 34%
-[16Dec2024 18:54:28.623] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[16Dec2024 18:54:28.627] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3375 ms
-[16Dec2024 18:54:28.744] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 5, from 10
-[16Dec2024 18:54:28.748] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[16Dec2024 18:54:28.827] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[16Dec2024 18:54:29.167] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[16Dec2024 18:54:29.213] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:5eff12a5] logged in with entity id 165 at (-30.096862527144285, 128.0, -12.96031766072033)
-[16Dec2024 18:54:29.268] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[16Dec2024 18:54:29.346] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.34000000000000014 
-[16Dec2024 18:54:29.732] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2 advancements
-[16Dec2024 18:54:35.756] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.35000000000000014 
-[16Dec2024 18:54:35.757] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.35000000000000014 
-[16Dec2024 18:54:36.078] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.36000000000000015 
-[16Dec2024 18:54:36.080] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.36000000000000015 
-[16Dec2024 18:54:36.321] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.37000000000000016 
-[16Dec2024 18:54:36.329] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.37000000000000016 
-[16Dec2024 18:54:36.508] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.38000000000000017 
-[16Dec2024 18:54:36.509] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.38000000000000017 
-[16Dec2024 18:54:36.680] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.3900000000000002 
-[16Dec2024 18:54:36.681] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.3900000000000002 
-[16Dec2024 18:54:36.845] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4000000000000002 
-[16Dec2024 18:54:36.846] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4000000000000002 
-[16Dec2024 18:54:37.010] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4100000000000002 
-[16Dec2024 18:54:37.012] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4100000000000002 
-[16Dec2024 18:54:37.201] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4200000000000002 
-[16Dec2024 18:54:37.202] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4200000000000002 
-[16Dec2024 18:54:37.360] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4300000000000002 
-[16Dec2024 18:54:37.361] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4300000000000002 
-[16Dec2024 18:54:37.519] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4400000000000002 
-[16Dec2024 18:54:37.520] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.4400000000000002 
-[16Dec2024 18:54:37.670] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.45000000000000023 
-[16Dec2024 18:54:37.671] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.45000000000000023 
-[16Dec2024 18:54:37.842] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.46000000000000024 
-[16Dec2024 18:54:37.843] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.46000000000000024 
-[16Dec2024 18:54:38.016] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.47000000000000025 
-[16Dec2024 18:54:38.017] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.47000000000000025 
-[16Dec2024 18:54:38.190] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.48000000000000026 
-[16Dec2024 18:54:38.191] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.48000000000000026 
-[16Dec2024 18:54:38.360] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.49000000000000027 
-[16Dec2024 18:54:38.361] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.49000000000000027 
-[16Dec2024 18:54:38.521] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5000000000000002 
-[16Dec2024 18:54:38.522] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5000000000000002 
-[16Dec2024 18:54:38.686] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5100000000000002 
-[16Dec2024 18:54:38.687] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5100000000000002 
-[16Dec2024 18:54:38.859] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5200000000000002 
-[16Dec2024 18:54:38.859] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5200000000000002 
-[16Dec2024 18:54:39.027] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5300000000000002 
-[16Dec2024 18:54:39.030] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5300000000000002 
-[16Dec2024 18:54:39.177] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5400000000000003 
-[16Dec2024 18:54:39.180] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5400000000000003 
-[16Dec2024 18:54:39.352] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5500000000000003 
-[16Dec2024 18:54:39.352] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5500000000000003 
-[16Dec2024 18:54:39.540] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5600000000000003 
-[16Dec2024 18:54:39.542] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5600000000000003 
-[16Dec2024 18:54:39.682] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5700000000000003 
-[16Dec2024 18:54:39.683] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5700000000000003 
-[16Dec2024 18:54:39.841] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5800000000000003 
-[16Dec2024 18:54:39.842] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5800000000000003 
-[16Dec2024 18:54:40.010] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5900000000000003 
-[16Dec2024 18:54:40.011] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.5900000000000003 
-[16Dec2024 18:54:40.175] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6000000000000003 
-[16Dec2024 18:54:40.179] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6000000000000003 
-[16Dec2024 18:54:40.340] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6100000000000003 
-[16Dec2024 18:54:40.341] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6100000000000003 
-[16Dec2024 18:54:40.508] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6200000000000003 
-[16Dec2024 18:54:40.509] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6200000000000003 
-[16Dec2024 18:54:40.678] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6300000000000003 
-[16Dec2024 18:54:40.679] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6300000000000003 
-[16Dec2024 18:54:40.833] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6400000000000003 
-[16Dec2024 18:54:40.833] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6400000000000003 
-[16Dec2024 18:54:41.001] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6500000000000004 
-[16Dec2024 18:54:41.002] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6500000000000004 
-[16Dec2024 18:54:41.163] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6600000000000004 
-[16Dec2024 18:54:41.164] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6600000000000004 
-[16Dec2024 18:54:41.340] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6700000000000004 
-[16Dec2024 18:54:41.341] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6700000000000004 
-[16Dec2024 18:54:41.509] [Render thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6800000000000004 
-[16Dec2024 18:54:41.509] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6800000000000004 
-[16Dec2024 18:54:51.556] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.6900000000000004 
-[16Dec2024 18:54:51.556] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7000000000000004 
-[16Dec2024 18:54:51.557] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7100000000000004 
-[16Dec2024 18:54:51.557] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7200000000000004 
-[16Dec2024 18:54:51.557] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7300000000000004 
-[16Dec2024 18:54:51.557] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7400000000000004 
-[16Dec2024 18:54:51.557] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7500000000000004 
-[16Dec2024 18:54:51.559] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7600000000000005 
-[16Dec2024 18:54:51.559] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7700000000000005 
-[16Dec2024 18:54:51.559] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7800000000000005 
-[16Dec2024 18:54:51.560] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.7900000000000005 
-[16Dec2024 18:54:51.560] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8000000000000005 
-[16Dec2024 18:54:51.560] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8100000000000005 
-[16Dec2024 18:54:51.561] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8200000000000005 
-[16Dec2024 18:54:51.561] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8300000000000005 
-[16Dec2024 18:54:51.562] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8400000000000005 
-[16Dec2024 18:54:51.562] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8500000000000005 
-[16Dec2024 18:54:51.562] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8600000000000005 
-[16Dec2024 18:54:51.563] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8700000000000006 
-[16Dec2024 18:54:51.563] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8800000000000006 
-[16Dec2024 18:54:51.564] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.8900000000000006 
-[16Dec2024 18:54:51.564] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9000000000000006 
-[16Dec2024 18:54:51.564] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9100000000000006 
-[16Dec2024 18:54:51.565] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9200000000000006 
-[16Dec2024 18:54:51.565] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9300000000000006 
-[16Dec2024 18:54:51.566] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9400000000000006 
-[16Dec2024 18:54:51.566] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9500000000000006 
-[16Dec2024 18:54:51.566] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9600000000000006 
-[16Dec2024 18:54:51.566] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9700000000000006 
-[16Dec2024 18:54:51.567] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9800000000000006 
-[16Dec2024 18:54:51.567] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 0.9900000000000007 
-[16Dec2024 18:54:51.567] [Server thread/INFO] [tn.mbs.memory.MemoryOfThePastMod/]: /attribute @p generic.knockback_resistance base set 1.0000000000000007 
-[16Dec2024 18:55:06.510] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Value of attribute Knockback Resistance for entity Dev is 0.0
-[16Dec2024 18:55:11.903] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Base value of attribute Knockback Resistance for entity Dev is 0.0
-[16Dec2024 18:55:21.358] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Base value for attribute Knockback Resistance for entity Dev set to 1.0000000000000007
-[16Dec2024 18:56:04.273] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[16Dec2024 18:56:04.295] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[16Dec2024 18:56:04.309] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[16Dec2024 18:56:04.312] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[16Dec2024 18:56:04.878] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[16Dec2024 18:56:04.878] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[16Dec2024 18:56:04.898] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[16Dec2024 18:56:04.924] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[16Dec2024 18:56:04.924] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[16Dec2024 18:56:04.924] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[16Dec2024 18:56:05.456] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[16Dec2024 18:56:05.949] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[16Dec2024 18:56:05.950] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[16Dec2024 18:56:05.980] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[16Dec2024 18:56:05.980] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[16Dec2024 18:56:05.980] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[16Dec2024 18:56:05.980] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
-[16Dec2024 18:56:07.630] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[17Dec2024 00:06:53.895] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\UwU\.mcreator\gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[17Dec2024 00:06:53.898] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.12 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[17Dec2024 00:06:54.002] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[17Dec2024 00:06:54.083] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[17Dec2024 00:06:54.264] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[17Dec2024 00:06:54.347] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/UwU/.mcreator/gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[17Dec2024 00:06:54.395] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 3050/PCIe/SSE2 GL version 4.6.0 NVIDIA 566.36, NVIDIA Corporation
+[17Dec2024 00:06:54.683] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\UwU\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.0\d7ebc62120f202109e300e084ca1a31a7b946a62\javafmllanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[17Dec2024 00:06:54.685] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\UwU\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.0\1bf3e845ea0ce750096da8c71c8364b188ab74d4\lowcodelanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[17Dec2024 00:06:54.689] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\UwU\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.0\6093682e943ddccbabf70539319d7f2fe64db2e7\mclanguage-1.20.1-47.3.0.jar is missing mods.toml file
+[17Dec2024 00:06:54.692] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\UwU\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.0\3b6be96aba3e323f3c918e8ef6a96312d82d76ad\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file
+[17Dec2024 00:06:54.778] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[17Dec2024 00:06:55.855] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\UwU\.mcreator\gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[17Dec2024 00:06:59.681] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 180 milliseconds
+[17Dec2024 00:07:01.736] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/UwU/.mcreator/gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_official_1.20.1/forge-1.20.1-47.3.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[17Dec2024 00:07:01.736] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/UwU/.mcreator/gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_official_1.20.1/forge-1.20.1-47.3.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[17Dec2024 00:07:01.756] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[17Dec2024 00:07:01.763] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[17Dec2024 00:07:01.896] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[17Dec2024 00:07:02.230] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.0, for MC 1.20.1 with MCP 20230612.114412
+[17Dec2024 00:07:02.234] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.0 Initialized
+[17Dec2024 00:07:03.161] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
+[17Dec2024 00:07:03.270] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[17Dec2024 00:07:03.360] [Worker-Main-11/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[17Dec2024 00:07:03.554] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[17Dec2024 00:07:03.941] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.3.0 Target: null
+[17Dec2024 00:07:04.140] [Worker-Main-4/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:trophy_1' referenced from: memory_of_the_past:level_100_trophy_reward#facing=north: java.io.FileNotFoundException: minecraft:models/trophy_1.json
+[17Dec2024 00:07:04.146] [Worker-Main-4/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:lesser_memory_frag' referenced from: memory_of_the_past:lesser_drop_of_knowledge#inventory: java.io.FileNotFoundException: minecraft:models/lesser_memory_frag.json
+[17Dec2024 00:07:04.147] [Worker-Main-4/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:better_memory_frag' referenced from: memory_of_the_past:better_drop_of_knowledge#inventory: java.io.FileNotFoundException: minecraft:models/better_memory_frag.json
+[17Dec2024 00:07:05.746] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[17Dec2024 00:07:05.747] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[17Dec2024 00:07:05.782] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Headphones (High Definition Audio Device)
+[17Dec2024 00:07:05.783] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[17Dec2024 00:07:05.903] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
+[17Dec2024 00:07:05.912] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
+[17Dec2024 00:07:05.912] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
+[17Dec2024 00:07:05.913] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
+[17Dec2024 00:07:05.913] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
+[17Dec2024 00:07:05.915] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
+[17Dec2024 00:07:05.916] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
+[17Dec2024 00:07:05.916] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
+[17Dec2024 00:07:05.918] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
+[17Dec2024 00:07:06.153] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[17Dec2024 00:07:06.216] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[17Dec2024 00:07:06.217] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[17Dec2024 00:07:06.217] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[17Dec2024 00:07:06.480] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[17Dec2024 00:08:20.160] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

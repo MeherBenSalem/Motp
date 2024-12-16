@@ -3,7 +3,6 @@ package tn.mbs.memory.procedures;
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
 import tn.mbs.memory.configuration.MechanicsConfigConfiguration;
 import tn.mbs.memory.configuration.MainConfigFileConfiguration;
-import tn.mbs.memory.MemoryOfThePastMod;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -35,6 +34,7 @@ public class OnPlayerSpawnProcedure {
 			return;
 		String stringCommand = "";
 		double commandParam = 0;
+		double finalValue = 0;
 		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level <= 0) {
 			{
 				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_1.get();
@@ -101,70 +101,6 @@ public class OnPlayerSpawnProcedure {
 					});
 				}
 			}
-		} else {
-			if (entity.getPersistentData().getDouble("motp_att_1") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
-				{
-					double _setval = entity.getPersistentData().getDouble("motp_att_1");
-					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attribute_1 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
-			if (entity.getPersistentData().getDouble("motp_att_2") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2) {
-				{
-					double _setval = entity.getPersistentData().getDouble("motp_att_2");
-					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attribute_2 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
-			if (entity.getPersistentData().getDouble("motp_att_3") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3) {
-				{
-					double _setval = entity.getPersistentData().getDouble("motp_att_3");
-					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attribute_3 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
-			if (entity.getPersistentData().getDouble("motp_att_4") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_4) {
-				{
-					double _setval = entity.getPersistentData().getDouble("motp_att_4");
-					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attribute_4 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
-			if (entity.getPersistentData().getDouble("motp_att_5") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_5) {
-				{
-					double _setval = entity.getPersistentData().getDouble("motp_att_5");
-					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attribute_5 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
-			if (entity.getPersistentData().getDouble("motp_att_6") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6) {
-				{
-					double _setval = entity.getPersistentData().getDouble("motp_att_6");
-					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attribute_6 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
-			if (entity.getPersistentData().getDouble("motp_att_7") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7) {
-				{
-					double _setval = entity.getPersistentData().getDouble("motp_att_7");
-					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.attribute_7 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
 		}
 		entity.getPersistentData().putDouble("motp_att_1", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1));
 		entity.getPersistentData().putDouble("motp_att_2", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2));
@@ -174,179 +110,255 @@ public class OnPlayerSpawnProcedure {
 		entity.getPersistentData().putDouble("motp_att_6", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6));
 		entity.getPersistentData().putDouble("motp_att_7", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7));
 		entity.getPersistentData().putDouble("motp_level", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level));
-		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_1.get()) {
-			stringCommand = stringiterator;
-			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
-				commandParam = Math.round(new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+		if (!MechanicsConfigConfiguration.LOCK_ATT_1.get()) {
+			for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_1.get()) {
+				stringCommand = stringiterator;
+				if (stringCommand.contains("base set")) {
+					commandParam = 0;
+					finalValue = 0;
+					if (stringCommand.contains("[param(")) {
+						commandParam = new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param(") + 7), (int) stringCommand.indexOf(")]")));
+						if (commandParam > 0) {
+							for (int index0 = 0; index0 < (int) (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1; index0++) {
+								finalValue = finalValue + commandParam;
+							}
 						}
-						return 0;
+					} else {
+						finalValue = entity.getPersistentData().getDouble("motp_att_1");
 					}
-				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
-				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_1") * commandParam);
-			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_1"));
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("base set") + 8));
+					stringCommand = stringCommand + " " + finalValue;
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					}
 				}
 			}
 		}
-		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_2.get()) {
-			stringCommand = stringiterator;
-			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
-				commandParam = Math.round(new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+		if (!MechanicsConfigConfiguration.LOCK_ATT_2.get()) {
+			for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_2.get()) {
+				stringCommand = stringiterator;
+				if (stringCommand.contains("base set")) {
+					commandParam = 0;
+					finalValue = 0;
+					if (stringCommand.contains("[param(")) {
+						commandParam = new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param(") + 7), (int) stringCommand.indexOf(")]")));
+						if (commandParam > 0) {
+							for (int index1 = 0; index1 < (int) (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2; index1++) {
+								finalValue = finalValue + commandParam;
+							}
 						}
-						return 0;
+					} else {
+						finalValue = entity.getPersistentData().getDouble("motp_att_2");
 					}
-				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
-				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_2") * commandParam);
-			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_2"));
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("base set") + 8));
+					stringCommand = stringCommand + " " + finalValue;
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					}
 				}
 			}
 		}
-		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_3.get()) {
-			stringCommand = stringiterator;
-			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
-				commandParam = Math.round(new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+		if (!MechanicsConfigConfiguration.LOCK_ATT_3.get()) {
+			for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_3.get()) {
+				stringCommand = stringiterator;
+				if (stringCommand.contains("base set")) {
+					commandParam = 0;
+					finalValue = 0;
+					if (stringCommand.contains("[param(")) {
+						commandParam = new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param(") + 7), (int) stringCommand.indexOf(")]")));
+						if (commandParam > 0) {
+							for (int index2 = 0; index2 < (int) (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3; index2++) {
+								finalValue = finalValue + commandParam;
+							}
 						}
-						return 0;
+					} else {
+						finalValue = entity.getPersistentData().getDouble("motp_att_3");
 					}
-				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
-				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_3") * commandParam);
-			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_3"));
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("base set") + 8));
+					stringCommand = stringCommand + " " + finalValue;
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					}
 				}
 			}
 		}
-		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_4.get()) {
-			stringCommand = stringiterator;
-			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
-				commandParam = Math.round(new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+		if (!MechanicsConfigConfiguration.LOCK_ATT_4.get()) {
+			for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_4.get()) {
+				stringCommand = stringiterator;
+				if (stringCommand.contains("base set")) {
+					commandParam = 0;
+					finalValue = 0;
+					if (stringCommand.contains("[param(")) {
+						commandParam = new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param(") + 7), (int) stringCommand.indexOf(")]")));
+						if (commandParam > 0) {
+							for (int index3 = 0; index3 < (int) (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_4; index3++) {
+								finalValue = finalValue + commandParam;
+							}
 						}
-						return 0;
+					} else {
+						finalValue = entity.getPersistentData().getDouble("motp_att_4");
 					}
-				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
-				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_4") * commandParam);
-			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_4"));
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("base set") + 8));
+					stringCommand = stringCommand + " " + finalValue;
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					}
 				}
 			}
 		}
-		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_5.get()) {
-			stringCommand = stringiterator;
-			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
-				commandParam = Math.round(new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+		if (!MechanicsConfigConfiguration.LOCK_ATT_5.get()) {
+			for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_5.get()) {
+				stringCommand = stringiterator;
+				if (stringCommand.contains("base set")) {
+					commandParam = 0;
+					finalValue = 0;
+					if (stringCommand.contains("[param(")) {
+						commandParam = new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param(") + 7), (int) stringCommand.indexOf(")]")));
+						if (commandParam > 0) {
+							for (int index4 = 0; index4 < (int) (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_5; index4++) {
+								finalValue = finalValue + commandParam;
+							}
 						}
-						return 0;
+					} else {
+						finalValue = entity.getPersistentData().getDouble("motp_att_5");
 					}
-				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
-				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_5") * commandParam);
-			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_5"));
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("base set") + 8));
+					stringCommand = stringCommand + " " + finalValue;
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					}
 				}
 			}
 		}
-		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_6.get()) {
-			stringCommand = stringiterator;
-			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
-				commandParam = Math.round(new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+		if (!MechanicsConfigConfiguration.LOCK_ATT_6.get()) {
+			for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_6.get()) {
+				stringCommand = stringiterator;
+				if (stringCommand.contains("base set")) {
+					commandParam = 0;
+					finalValue = 0;
+					if (stringCommand.contains("[param(")) {
+						commandParam = new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param(") + 7), (int) stringCommand.indexOf(")]")));
+						if (commandParam > 0) {
+							for (int index5 = 0; index5 < (int) (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6; index5++) {
+								finalValue = finalValue + commandParam;
+							}
 						}
-						return 0;
+					} else {
+						finalValue = entity.getPersistentData().getDouble("motp_att_6");
 					}
-				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
-				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_6") * commandParam);
-			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_6"));
-			}
-			MemoryOfThePastMod.LOGGER.info(stringCommand);
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("base set") + 8));
+					stringCommand = stringCommand + " " + finalValue;
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					}
 				}
 			}
 		}
-		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_7.get()) {
-			stringCommand = stringiterator;
-			if (stringCommand.contains("[param]") && stringCommand.contains("[paramEnd]")) {
-				commandParam = Math.round(new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+		if (!MechanicsConfigConfiguration.LOCK_ATT_7.get()) {
+			for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_7.get()) {
+				stringCommand = stringiterator;
+				if (stringCommand.contains("base set")) {
+					commandParam = 0;
+					finalValue = 0;
+					if (stringCommand.contains("[param(")) {
+						commandParam = new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param(") + 7), (int) stringCommand.indexOf(")]")));
+						if (commandParam > 0) {
+							for (int index6 = 0; index6 < (int) (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7; index6++) {
+								finalValue = finalValue + commandParam;
+							}
 						}
-						return 0;
+					} else {
+						finalValue = entity.getPersistentData().getDouble("motp_att_7");
 					}
-				}.convert(stringCommand.substring((int) (stringCommand.indexOf("[param]") + 7), (int) stringCommand.indexOf("[paramEnd]"))));
-				stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("(variable)") + 10));
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_7") * commandParam);
-			} else {
-				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_7"));
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					stringCommand = stringCommand.substring(0, (int) (stringCommand.indexOf("base set") + 8));
+					stringCommand = stringCommand + " " + finalValue;
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), stringCommand);
+					}
 				}
 			}
 		}

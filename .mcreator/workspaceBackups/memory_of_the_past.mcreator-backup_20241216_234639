@@ -229,7 +229,7 @@
     {
       "name": "ManageLevelUp",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "manage_level_up",
       "metadata": {
@@ -755,7 +755,7 @@
     {
       "name": "AutoConsumerItemItemInInventoryTick",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "auto_consumer_item_item_in_inventory_tick",
       "metadata": {
@@ -1045,7 +1045,7 @@
     {
       "name": "GiveXpNoDrop",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "give_xp_no_drop",
       "metadata": {

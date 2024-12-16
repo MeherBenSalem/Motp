@@ -2160,7 +2160,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",
@@ -2172,7 +2172,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.20.1",
-    "credits": "No Credits yet",
+    "credits": "Thank you @porogulaemeo",
     "modElementsPackage": "tn.mbs.memory"
   },
   "mcreatorVersion": 202400232117
