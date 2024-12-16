@@ -42,7 +42,7 @@ public class ManageLevelUpProcedure {
 			AddedXp = (double) MainConfigFileConfiguration.GREATER_XP_VALUE.get();
 		}
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(MemoryOfThePastModItems.EXPERIENCE_ENHANCER_ARTIFACT.get())) : false)
-				&& (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).exploration >= 4) {
+				&& (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7 >= 4) {
 			AddedXp = AddedXp * (double) MainConfigFileConfiguration.BONUS_EXPERIENCE_FACTOR.get();
 		}
 		{

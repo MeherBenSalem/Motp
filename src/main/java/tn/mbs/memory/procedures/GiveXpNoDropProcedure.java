@@ -45,7 +45,7 @@ public class GiveXpNoDropProcedure {
 			}
 		}
 		if ((sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(MemoryOfThePastModItems.EXPERIENCE_ENHANCER_ARTIFACT.get())) : false)
-				&& (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).exploration >= 4) {
+				&& (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7 >= 4) {
 			AddedXp = (double) MainConfigFileConfiguration.GREATER_XP_VALUE.get() * (double) MainConfigFileConfiguration.BONUS_EXPERIENCE_FACTOR.get();
 		}
 		{

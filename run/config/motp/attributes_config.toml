@@ -40,16 +40,25 @@
 	#Make sure the command contain '(variable)' so you can update the attribute
 	cmd_to_exc = ["/attribute @p generic.movement_speed base set (variable)"]
 	tip_to_display = "§7Influences how fast you can move"
+	max_level = 0.5
+	base_value_per_point = 0.005
+	lock = false
 
 ["Attribute 6"]
 	display_name = "Fortitude"
 	#Make sure the command contain '(variable)' so you can update the attribute
 	cmd_to_exc = ["/attribute @p generic.knockback_resistance base set (variable) "]
 	tip_to_display = "§7Reduces the distance you are pushed back when hit by an enemy or explosion"
+	max_level = 1.0
+	base_value_per_point = 0.01
+	lock = false
 
 ["Attribute 7"]
 	display_name = "Exploration"
 	#Make sure the command contain '(variable)' so you can update the attribute
 	cmd_to_exc = ["/attribute @p generic.luck base set (variable)"]
 	tip_to_display = "§7Influences the chances of receiving better loot or triggering beneficial events"
+	max_level = 10.0
+	base_value_per_point = 0.05
+	lock = false
 

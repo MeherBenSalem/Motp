@@ -68,8 +68,8 @@ public class MemoryOfThePastModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.attribute_1 = original.attribute_1;
-			clone.knockback_resistance = original.knockback_resistance;
-			clone.movement_speed = original.movement_speed;
+			clone.attribute_6 = original.attribute_6;
+			clone.attribute_5 = original.attribute_5;
 			clone.attribute_2 = original.attribute_2;
 			clone.attribute_4 = original.attribute_4;
 			clone.attribute_3 = original.attribute_3;
@@ -77,7 +77,7 @@ public class MemoryOfThePastModVariables {
 			clone.SparePoints = original.SparePoints;
 			clone.currentXpTLevel = original.currentXpTLevel;
 			clone.nextevelXp = original.nextevelXp;
-			clone.exploration = original.exploration;
+			clone.attribute_7 = original.attribute_7;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -115,8 +115,8 @@ public class MemoryOfThePastModVariables {
 
 	public static class PlayerVariables {
 		public double attribute_1 = 20.0;
-		public double knockback_resistance = 0.0;
-		public double movement_speed = 0.1;
+		public double attribute_6 = 0.0;
+		public double attribute_5 = 0.1;
 		public double attribute_2 = 2.0;
 		public double attribute_4 = 0;
 		public double attribute_3 = 4.0;
@@ -124,7 +124,7 @@ public class MemoryOfThePastModVariables {
 		public double SparePoints = 1.0;
 		public double currentXpTLevel = 0.0;
 		public double nextevelXp = 100.0;
-		public double exploration = 0.0;
+		public double attribute_7 = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -134,8 +134,8 @@ public class MemoryOfThePastModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("attribute_1", attribute_1);
-			nbt.putDouble("knockback_resistance", knockback_resistance);
-			nbt.putDouble("movement_speed", movement_speed);
+			nbt.putDouble("attribute_6", attribute_6);
+			nbt.putDouble("attribute_5", attribute_5);
 			nbt.putDouble("attribute_2", attribute_2);
 			nbt.putDouble("attribute_4", attribute_4);
 			nbt.putDouble("attribute_3", attribute_3);
@@ -143,15 +143,15 @@ public class MemoryOfThePastModVariables {
 			nbt.putDouble("SparePoints", SparePoints);
 			nbt.putDouble("currentXpTLevel", currentXpTLevel);
 			nbt.putDouble("nextevelXp", nextevelXp);
-			nbt.putDouble("exploration", exploration);
+			nbt.putDouble("attribute_7", attribute_7);
 			return nbt;
 		}
 
 		public void readNBT(Tag tag) {
 			CompoundTag nbt = (CompoundTag) tag;
 			attribute_1 = nbt.getDouble("attribute_1");
-			knockback_resistance = nbt.getDouble("knockback_resistance");
-			movement_speed = nbt.getDouble("movement_speed");
+			attribute_6 = nbt.getDouble("attribute_6");
+			attribute_5 = nbt.getDouble("attribute_5");
 			attribute_2 = nbt.getDouble("attribute_2");
 			attribute_4 = nbt.getDouble("attribute_4");
 			attribute_3 = nbt.getDouble("attribute_3");
@@ -159,7 +159,7 @@ public class MemoryOfThePastModVariables {
 			SparePoints = nbt.getDouble("SparePoints");
 			currentXpTLevel = nbt.getDouble("currentXpTLevel");
 			nextevelXp = nbt.getDouble("nextevelXp");
-			exploration = nbt.getDouble("exploration");
+			attribute_7 = nbt.getDouble("attribute_7");
 		}
 	}
 
@@ -185,8 +185,8 @@ public class MemoryOfThePastModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.attribute_1 = message.data.attribute_1;
-					variables.knockback_resistance = message.data.knockback_resistance;
-					variables.movement_speed = message.data.movement_speed;
+					variables.attribute_6 = message.data.attribute_6;
+					variables.attribute_5 = message.data.attribute_5;
 					variables.attribute_2 = message.data.attribute_2;
 					variables.attribute_4 = message.data.attribute_4;
 					variables.attribute_3 = message.data.attribute_3;
@@ -194,7 +194,7 @@ public class MemoryOfThePastModVariables {
 					variables.SparePoints = message.data.SparePoints;
 					variables.currentXpTLevel = message.data.currentXpTLevel;
 					variables.nextevelXp = message.data.nextevelXp;
-					variables.exploration = message.data.exploration;
+					variables.attribute_7 = message.data.attribute_7;
 				}
 			});
 			context.setPacketHandled(true);

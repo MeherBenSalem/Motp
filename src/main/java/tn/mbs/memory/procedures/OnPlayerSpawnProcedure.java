@@ -3,6 +3,7 @@ package tn.mbs.memory.procedures;
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
 import tn.mbs.memory.configuration.MechanicsConfigConfiguration;
 import tn.mbs.memory.configuration.MainConfigFileConfiguration;
+import tn.mbs.memory.MemoryOfThePastMod;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -64,23 +65,23 @@ public class OnPlayerSpawnProcedure {
 				});
 			}
 			{
-				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_6.get();
+				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_5.get();
 				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.knockback_resistance = _setval;
+					capability.attribute_5 = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_5.get();
+				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_6.get();
 				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.movement_speed = _setval;
+					capability.attribute_6 = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
 				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_7.get();
 				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.exploration = _setval;
+					capability.attribute_7 = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -137,29 +138,29 @@ public class OnPlayerSpawnProcedure {
 					});
 				}
 			}
-			if (entity.getPersistentData().getDouble("motp_att_5") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).movement_speed) {
+			if (entity.getPersistentData().getDouble("motp_att_5") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_5) {
 				{
 					double _setval = entity.getPersistentData().getDouble("motp_att_5");
 					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.movement_speed = _setval;
+						capability.attribute_5 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 			}
-			if (entity.getPersistentData().getDouble("motp_att_6") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).knockback_resistance) {
+			if (entity.getPersistentData().getDouble("motp_att_6") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6) {
 				{
 					double _setval = entity.getPersistentData().getDouble("motp_att_6");
 					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.knockback_resistance = _setval;
+						capability.attribute_6 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 			}
-			if (entity.getPersistentData().getDouble("motp_att_7") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).exploration) {
+			if (entity.getPersistentData().getDouble("motp_att_7") > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7) {
 				{
 					double _setval = entity.getPersistentData().getDouble("motp_att_7");
 					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.exploration = _setval;
+						capability.attribute_7 = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -169,9 +170,9 @@ public class OnPlayerSpawnProcedure {
 		entity.getPersistentData().putDouble("motp_att_2", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2));
 		entity.getPersistentData().putDouble("motp_att_3", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3));
 		entity.getPersistentData().putDouble("motp_att_4", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_4));
-		entity.getPersistentData().putDouble("motp_att_6", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).knockback_resistance));
-		entity.getPersistentData().putDouble("motp_att_5", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).movement_speed));
-		entity.getPersistentData().putDouble("motp_att_7", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).exploration));
+		entity.getPersistentData().putDouble("motp_att_5", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_5));
+		entity.getPersistentData().putDouble("motp_att_6", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6));
+		entity.getPersistentData().putDouble("motp_att_7", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7));
 		entity.getPersistentData().putDouble("motp_level", ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level));
 		for (String stringiterator : MechanicsConfigConfiguration.CMD_ATT_1.get()) {
 			stringCommand = stringiterator;
@@ -315,6 +316,7 @@ public class OnPlayerSpawnProcedure {
 			} else {
 				stringCommand = stringCommand.replace("(variable)", "" + entity.getPersistentData().getDouble("motp_att_6"));
 			}
+			MemoryOfThePastMod.LOGGER.info(stringCommand);
 			{
 				Entity _ent = entity;
 				if (!_ent.level().isClientSide() && _ent.getServer() != null) {

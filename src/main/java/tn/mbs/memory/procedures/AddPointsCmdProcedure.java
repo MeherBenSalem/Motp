@@ -37,15 +37,15 @@ public class AddPointsCmdProcedure {
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 5) {
 			for (int index4 = 0; index4 < (int) DoubleArgumentType.getDouble(arguments, "count"); index4++) {
-				AddMvPointsProcedure.execute(entity);
+				AddPointsAttributeFifthProcedure.execute(entity);
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 6) {
 			for (int index5 = 0; index5 < (int) DoubleArgumentType.getDouble(arguments, "count"); index5++) {
-				AddResistancePointsProcedure.execute(entity);
+				AddPointsAttributeSixthProcedure.execute(entity);
 			}
 		} else {
 			for (int index6 = 0; index6 < (int) DoubleArgumentType.getDouble(arguments, "count"); index6++) {
-				AddExplorationPointsProcedure.execute(entity);
+				AddPointsAttributeSeventhProcedure.execute(entity);
 			}
 		}
 	}

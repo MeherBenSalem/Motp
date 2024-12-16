@@ -145,7 +145,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicFortitude"
+            "name": "DisplayLogicAttributeSixth"
           },
           "x": 156,
           "y": 154
@@ -157,14 +157,14 @@
           "name": "label_proc_return_current_resistance",
           "text": {
             "fixedValue": "",
-            "name": "ReturnCurrentResistance"
+            "name": "ReturnCurrentAttributeSixth"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicFortitude"
+            "name": "DisplayLogicAttributeSixth"
           },
           "x": 301,
           "y": 154
@@ -202,7 +202,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicExploration"
+            "name": "DisplayLogicAttributeSeventh"
           },
           "x": 156,
           "y": 176
@@ -278,7 +278,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicMS"
+            "name": "DisplayLogicAttributeFifth"
           },
           "x": 156,
           "y": 134
@@ -290,14 +290,14 @@
           "name": "label_proc_return_current_movement_spe",
           "text": {
             "fixedValue": "",
-            "name": "ReturnCurrentMovementSpeed"
+            "name": "ReturnCurrentAttributeFifth"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicMS"
+            "name": "DisplayLogicAttributeFifth"
           },
           "x": 301,
           "y": 134
@@ -412,10 +412,10 @@
           "image": "pressed.png",
           "hoveredImage": "unpressed.png",
           "onClick": {
-            "name": "AddMvPoints"
+            "name": "AddPointsAttributeFifth"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicMS"
+            "name": "DisplayLogicAttributeFifth"
           },
           "x": 331,
           "y": 129
@@ -428,10 +428,10 @@
           "image": "pressed.png",
           "hoveredImage": "unpressed.png",
           "onClick": {
-            "name": "AddResistancePoints"
+            "name": "AddPointsAttributeSixth"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicFortitude"
+            "name": "DisplayLogicAttributeSixth"
           },
           "x": 331,
           "y": 149
@@ -444,10 +444,10 @@
           "image": "pressed.png",
           "hoveredImage": "unpressed.png",
           "onClick": {
-            "name": "AddExplorationPoints"
+            "name": "AddPointsAttributeSeventh"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicExploration"
+            "name": "DisplayLogicAttributeSeventh"
           },
           "x": 331,
           "y": 174
@@ -459,14 +459,14 @@
           "name": "label_proc_return_current_exploration",
           "text": {
             "fixedValue": "",
-            "name": "ReturnCurrentExploration"
+            "name": "ReturnCurrentAttributeSeventh"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicExploration"
+            "name": "DisplayLogicAttributeSeventh"
           },
           "x": 301,
           "y": 177
@@ -549,7 +549,7 @@
             "name": "ReturnAttributeFifthTip"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicMS"
+            "name": "DisplayLogicAttributeFifth"
           },
           "width": 13,
           "height": 16,
@@ -566,7 +566,7 @@
             "name": "ReturnAttributeSixthTip"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicFortitude"
+            "name": "DisplayLogicAttributeSixth"
           },
           "width": 15,
           "height": 17,
@@ -583,7 +583,7 @@
             "name": "ReturnAttributeSeventhTip"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicExploration"
+            "name": "DisplayLogicAttributeSeventh"
           },
           "width": 15,
           "height": 16,
@@ -721,10 +721,10 @@
           "name": "tooltip_proc_return_next_movement_speed",
           "text": {
             "fixedValue": "",
-            "name": "ReturnNextMovementSpeedValue"
+            "name": "ReturnNextAttributeFifth"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicMS"
+            "name": "DisplayLogicAttributeFifth"
           },
           "width": 20,
           "height": 20,
@@ -738,10 +738,10 @@
           "name": "tooltip_proc_return_next_resistance_valu",
           "text": {
             "fixedValue": "",
-            "name": "ReturnNextResistanceValue"
+            "name": "ReturnNextAttributeSixth"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicFortitude"
+            "name": "DisplayLogicAttributeSixth"
           },
           "width": 20,
           "height": 20,
@@ -755,10 +755,10 @@
           "name": "tooltip_proc_return_next_exploration_val",
           "text": {
             "fixedValue": "",
-            "name": "ReturnNextExplorationValue"
+            "name": "ReturnNextAttributeSeventh"
           },
           "displayCondition": {
-            "name": "DisplayLevelingLogicExploration"
+            "name": "DisplayLogicAttributeSeventh"
           },
           "width": 20,
           "height": 20,
@@ -799,6 +799,9 @@
         "data": {
           "image": "att_7.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSeventh"
+          },
           "x": 135,
           "y": 173
         }
@@ -808,6 +811,9 @@
         "data": {
           "image": "att_6.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeSixth"
+          },
           "x": 135,
           "y": 151
         }
@@ -817,6 +823,9 @@
         "data": {
           "image": "att_5.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeFifth"
+          },
           "x": 135,
           "y": 131
         }

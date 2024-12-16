@@ -13,7 +13,7 @@ public class AutoConsumerItemItemInInventoryTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).exploration >= 1) {
+		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7 >= 1) {
 			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(MemoryOfThePastModItems.LESSER_DROP_OF_KNOWLEDGE.get())) : false) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = new ItemStack(MemoryOfThePastModItems.LESSER_DROP_OF_KNOWLEDGE.get());

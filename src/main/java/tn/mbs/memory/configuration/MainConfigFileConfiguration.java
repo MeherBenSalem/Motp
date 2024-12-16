@@ -5,15 +5,6 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public class MainConfigFileConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
-	public static final ForgeConfigSpec.ConfigValue<Double> MAX_MS_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Double> MS_VALUE_PER_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_MS;
-	public static final ForgeConfigSpec.ConfigValue<Double> MAX_FORT_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Double> FORT_VALUE_PER_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_FORT;
-	public static final ForgeConfigSpec.ConfigValue<Double> MAX_EX_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Double> EX_VALUE_PER_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_EX;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_LEVEL;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_XP;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_POINTS;
@@ -43,21 +34,6 @@ public class MainConfigFileConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> STARTING_XP_LEVEL;
 	public static final ForgeConfigSpec.ConfigValue<String> GLOBAL_STATS_UI_COLOR;
 	static {
-		BUILDER.push("Attribute_Fifth");
-		MAX_MS_LEVEL = BUILDER.comment("The display will always show value * 100").define("max_level", (double) 0.5);
-		MS_VALUE_PER_LEVEL = BUILDER.comment("The display will always show value * 100").define("value_per_level", (double) 0.005);
-		LOCK_MS = BUILDER.define("lock", false);
-		BUILDER.pop();
-		BUILDER.push("Attribute_Sixth");
-		MAX_FORT_LEVEL = BUILDER.comment("The display will always show value * 10").define("max_level", (double) 1);
-		FORT_VALUE_PER_LEVEL = BUILDER.comment("The display will always show value * 10").define("value_per_level", (double) 0.01);
-		LOCK_FORT = BUILDER.define("lock", false);
-		BUILDER.pop();
-		BUILDER.push("Attribute_Seventh");
-		MAX_EX_LEVEL = BUILDER.define("max_level", (double) 10);
-		EX_VALUE_PER_LEVEL = BUILDER.define("value_per_level", (double) 0.05);
-		LOCK_EX = BUILDER.define("lock", false);
-		BUILDER.pop();
 		BUILDER.push("HUD Overlay");
 		DISPLAY_LEVEL = BUILDER.define("display_level_overlay", true);
 		DISPLAY_XP = BUILDER.define("display_xp_overlay", true);

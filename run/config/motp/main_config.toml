@@ -1,23 +1,4 @@
 
-[Attribute_Fifth]
-	#The display will always show value * 100
-	max_level = 0.5
-	#The display will always show value * 100
-	value_per_level = 0.005
-	lock = false
-
-[Attribute_Sixth]
-	#The display will always show value * 10
-	max_level = 1.0
-	#The display will always show value * 10
-	value_per_level = 0.01
-	lock = false
-
-[Attribute_Seventh]
-	max_level = 10.0
-	value_per_level = 0.05
-	lock = false
-
 ["HUD Overlay"]
 	display_level_overlay = true
 	display_xp_overlay = true
