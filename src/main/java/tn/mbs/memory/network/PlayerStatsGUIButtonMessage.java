@@ -4,11 +4,14 @@ package tn.mbs.memory.network;
 import tn.mbs.memory.world.inventory.PlayerStatsGUIMenu;
 import tn.mbs.memory.procedures.AddPointsAttributeTwoProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeThreeProcedure;
+import tn.mbs.memory.procedures.AddPointsAttributeTenProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeSixthProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeSeventhProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeOneProcedure;
+import tn.mbs.memory.procedures.AddPointsAttributeNineProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeForthProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeFifthProcedure;
+import tn.mbs.memory.procedures.AddPointsAttributeEightProcedure;
 import tn.mbs.memory.MemoryOfThePastMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -95,6 +98,18 @@ public class PlayerStatsGUIButtonMessage {
 		if (buttonID == 6) {
 
 			AddPointsAttributeSeventhProcedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			AddPointsAttributeEightProcedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			AddPointsAttributeNineProcedure.execute(entity);
+		}
+		if (buttonID == 9) {
+
+			AddPointsAttributeTenProcedure.execute(entity);
 		}
 	}
 

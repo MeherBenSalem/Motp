@@ -1822,6 +1822,188 @@
         ]
       },
       "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "DisplayLogicAttributeEight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_eight",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeEightProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "DisplayLogicAttributeNine",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_nine",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeNineProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "DisplayLogicAttributeTen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_logic_attribute_ten",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisplayLogicAttributeTenProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Leveling Logic/Display Leveling Logics"
+    },
+    {
+      "name": "AddPointsAttributeEight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_eight",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeEightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "AddPointsAttributeNine",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_nine",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeNineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "AddPointsAttributeTen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_points_attribute_ten",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddPointsAttributeTenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "ReturnNextAttributeEight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_eight",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeEightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnNextAttributeNine",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_nine",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeNineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnNextAttributeTen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_ten",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeTenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnCurrentAttributeEight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_eight",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeEightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
     }
   ],
   "variable_elements": [
@@ -1890,6 +2072,24 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0.0"
+    },
+    {
+      "name": "attribute_8",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "attribute_9",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "attribute_10",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],

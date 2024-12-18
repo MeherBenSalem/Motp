@@ -20,32 +20,64 @@ public class AddPointsCmdProcedure {
 			});
 		}
 		if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 1) {
-			for (int index0 = 0; index0 < (int) DoubleArgumentType.getDouble(arguments, "count"); index0++) {
-				AddPointsAttributeOneProcedure.execute(entity);
+			if (DisplayLogicAttributeOneProcedure.execute()) {
+				for (int index0 = 0; index0 < (int) DoubleArgumentType.getDouble(arguments, "count"); index0++) {
+					AddPointsAttributeOneProcedure.execute(entity);
+				}
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 2) {
-			for (int index1 = 0; index1 < (int) DoubleArgumentType.getDouble(arguments, "count"); index1++) {
-				AddPointsAttributeTwoProcedure.execute(entity);
+			if (DisplayLogicAttributeOneProcedure.execute()) {
+				for (int index1 = 0; index1 < (int) DoubleArgumentType.getDouble(arguments, "count"); index1++) {
+					AddPointsAttributeTwoProcedure.execute(entity);
+				}
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 3) {
-			for (int index2 = 0; index2 < (int) DoubleArgumentType.getDouble(arguments, "count"); index2++) {
-				AddPointsAttributeThreeProcedure.execute(entity);
+			if (DisplayLogicAttributeThreeProcedure.execute()) {
+				for (int index2 = 0; index2 < (int) DoubleArgumentType.getDouble(arguments, "count"); index2++) {
+					AddPointsAttributeThreeProcedure.execute(entity);
+				}
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 4) {
-			for (int index3 = 0; index3 < (int) DoubleArgumentType.getDouble(arguments, "count"); index3++) {
-				AddPointsAttributeForthProcedure.execute(entity);
+			if (DisplayLogicAttributeForthProcedure.execute()) {
+				for (int index3 = 0; index3 < (int) DoubleArgumentType.getDouble(arguments, "count"); index3++) {
+					AddPointsAttributeForthProcedure.execute(entity);
+				}
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 5) {
-			for (int index4 = 0; index4 < (int) DoubleArgumentType.getDouble(arguments, "count"); index4++) {
-				AddPointsAttributeFifthProcedure.execute(entity);
+			if (DisplayLogicAttributeFifthProcedure.execute()) {
+				for (int index4 = 0; index4 < (int) DoubleArgumentType.getDouble(arguments, "count"); index4++) {
+					AddPointsAttributeFifthProcedure.execute(entity);
+				}
 			}
 		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 6) {
-			for (int index5 = 0; index5 < (int) DoubleArgumentType.getDouble(arguments, "count"); index5++) {
-				AddPointsAttributeSixthProcedure.execute(entity);
+			if (DisplayLogicAttributeSixthProcedure.execute()) {
+				for (int index5 = 0; index5 < (int) DoubleArgumentType.getDouble(arguments, "count"); index5++) {
+					DisplayLogicAttributeSixthProcedure.execute();
+				}
+			}
+		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 7) {
+			if (DisplayLogicAttributeSeventhProcedure.execute()) {
+				for (int index6 = 0; index6 < (int) DoubleArgumentType.getDouble(arguments, "count"); index6++) {
+					DisplayLogicAttributeSeventhProcedure.execute();
+				}
+			}
+		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 8) {
+			if (DisplayLogicAttributeEightProcedure.execute()) {
+				for (int index7 = 0; index7 < (int) DoubleArgumentType.getDouble(arguments, "count"); index7++) {
+					DisplayLogicAttributeEightProcedure.execute();
+				}
+			}
+		} else if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 9) {
+			if (DisplayLogicAttributeNineProcedure.execute()) {
+				for (int index8 = 0; index8 < (int) DoubleArgumentType.getDouble(arguments, "count"); index8++) {
+					AddPointsAttributeNineProcedure.execute(entity);
+				}
 			}
 		} else {
-			for (int index6 = 0; index6 < (int) DoubleArgumentType.getDouble(arguments, "count"); index6++) {
-				AddPointsAttributeSeventhProcedure.execute(entity);
+			if (DisplayLogicAttributeTenProcedure.execute()) {
+				for (int index9 = 0; index9 < (int) DoubleArgumentType.getDouble(arguments, "count"); index9++) {
+					AddPointsAttributeTenProcedure.execute(entity);
+				}
 			}
 		}
 	}

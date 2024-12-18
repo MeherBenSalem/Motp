@@ -20,7 +20,7 @@ import net.minecraft.client.KeyMapping;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class MemoryOfThePastModKeyMappings {
-	public static final KeyMapping OPEN_STATS_MENU_KEYBIND = new KeyMapping("key.memory_of_the_past.open_stats_menu_keybind", GLFW.GLFW_KEY_O, "key.categories.ui") {
+	public static final KeyMapping OPEN_STATS_MENU_KEYBIND = new KeyMapping("key.memory_of_the_past.open_stats_menu_keybind", GLFW.GLFW_KEY_O, "key.categories.motp") {
 		private boolean isDownOld = false;
 
 		@Override

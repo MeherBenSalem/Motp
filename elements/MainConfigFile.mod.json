@@ -319,7 +319,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 30.0,
+            "numberField": 20.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "init_val_attribute_fifth",
@@ -371,6 +371,57 @@
             },
             "logicField": 0,
             "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "init_val_attribute_eight",
+            "varname": "init_val_8",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "init_val_attribute_nine",
+            "varname": "init_val_9",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "init_val_attribute_ten",
+            "varname": "init_val_10",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "init_val_starting_level",

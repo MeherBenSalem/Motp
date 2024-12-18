@@ -23,10 +23,13 @@
 	init_val_attribute_two = 2.0
 	init_val_attribute_three = 4.0
 	init_val_attribute_forth = 0.0
-	init_val_attribute_fifth = 30.0
+	init_val_attribute_fifth = 20.0
 	init_val_attribute_sixth = 0.0
 	init_val_attribute_seventh = 0.0
-	init_val_starting_level = 0.0
+	init_val_attribute_eight = 0.0
+	init_val_attribute_nine = 0.0
+	init_val_attribute_ten = 0.0
+	init_val_starting_level = 1.0
 
 ["Leveling Scale"]
 	level_interval_first = 20000.0

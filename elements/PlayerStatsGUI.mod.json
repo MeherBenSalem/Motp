@@ -132,8 +132,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 81,
-          "y": 30
+          "x": 69,
+          "y": 35
         }
       },
       {
@@ -387,6 +387,9 @@
         "data": {
           "image": "bg_attributes.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeNine"
+          },
           "x": 146,
           "y": 180
         }
@@ -420,6 +423,9 @@
         "data": {
           "image": "bg_attributes.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeEight"
+          },
           "x": 267,
           "y": 148
         }
@@ -429,6 +435,9 @@
         "data": {
           "image": "bg_attributes.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTen"
+          },
           "x": 267,
           "y": 180
         }
@@ -498,6 +507,9 @@
         "data": {
           "image": "iconbg.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeEight"
+          },
           "x": 257,
           "y": 151
         }
@@ -507,6 +519,9 @@
         "data": {
           "image": "iconbg.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeNine"
+          },
           "x": 135,
           "y": 183
         }
@@ -516,6 +531,9 @@
         "data": {
           "image": "iconbg.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTen"
+          },
           "x": 257,
           "y": 184
         }
@@ -923,6 +941,249 @@
           "height": 11,
           "x": 226,
           "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeEight"
+          },
+          "x": 261,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeNine"
+          },
+          "x": 139,
+          "y": 187
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "att_10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTen"
+          },
+          "x": 261,
+          "y": 187
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked7",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeEight"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeEight"
+          },
+          "x": 346,
+          "y": 157
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_ei",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeEight"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeEight"
+          },
+          "x": 282,
+          "y": 161
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_eight_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeEightTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeEight"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 257,
+          "y": 151
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_eight",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeEight"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeEight"
+          },
+          "width": 11,
+          "height": 13,
+          "x": 347,
+          "y": 157
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked8",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeNine"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeNine"
+          },
+          "x": 225,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_notclicked9",
+          "image": "button_notclicked.png",
+          "hoveredImage": "button_clicked.png",
+          "onClick": {
+            "name": "AddPointsAttributeTen"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTen"
+          },
+          "x": 346,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_ni",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeNine"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeNine"
+          },
+          "x": 160,
+          "y": 192
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_current_attribute_te",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnCurrentAttributeTen"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTen"
+          },
+          "x": 282,
+          "y": 193
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_nine_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeNineTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeNine"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 134,
+          "y": 183
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_attribute_ten_tip",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAttributeTenTip"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTen"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 257,
+          "y": 184
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_nine",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeNine"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeNine"
+          },
+          "width": 13,
+          "height": 14,
+          "x": 225,
+          "y": 187
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_next_attribute_ten",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNextAttributeTen"
+          },
+          "displayCondition": {
+            "name": "DisplayLogicAttributeTen"
+          },
+          "width": 13,
+          "height": 13,
+          "x": 346,
+          "y": 188
         }
       }
     ],

@@ -25,6 +25,9 @@ public class MainConfigFileConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_5;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_6;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_7;
+	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_8;
+	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_9;
+	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_10;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_STARTING_LEVEL;
 	public static final ForgeConfigSpec.ConfigValue<Double> LEVEL_INTERVAL_FIRST;
 	public static final ForgeConfigSpec.ConfigValue<Double> LEVEL_INTERVAL_SCALE_FIRST;
@@ -58,10 +61,13 @@ public class MainConfigFileConfiguration {
 		INIT_VAL_2 = BUILDER.define("init_val_attribute_two", (double) 2);
 		INIT_VAL_3 = BUILDER.define("init_val_attribute_three", (double) 4);
 		INIT_VAL_4 = BUILDER.define("init_val_attribute_forth", (double) 0);
-		INIT_VAL_5 = BUILDER.define("init_val_attribute_fifth", (double) 30);
+		INIT_VAL_5 = BUILDER.define("init_val_attribute_fifth", (double) 20);
 		INIT_VAL_6 = BUILDER.define("init_val_attribute_sixth", (double) 0);
 		INIT_VAL_7 = BUILDER.define("init_val_attribute_seventh", (double) 0);
-		INIT_VAL_STARTING_LEVEL = BUILDER.define("init_val_starting_level", (double) 0);
+		INIT_VAL_8 = BUILDER.define("init_val_attribute_eight", (double) 0);
+		INIT_VAL_9 = BUILDER.define("init_val_attribute_nine", (double) 0);
+		INIT_VAL_10 = BUILDER.define("init_val_attribute_ten", (double) 0);
+		INIT_VAL_STARTING_LEVEL = BUILDER.define("init_val_starting_level", (double) 1);
 		BUILDER.pop();
 		BUILDER.push("Leveling Scale");
 		LEVEL_INTERVAL_FIRST = BUILDER.define("level_interval_first", (double) 20000);

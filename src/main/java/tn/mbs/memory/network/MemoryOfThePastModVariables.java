@@ -78,6 +78,9 @@ public class MemoryOfThePastModVariables {
 			clone.currentXpTLevel = original.currentXpTLevel;
 			clone.nextevelXp = original.nextevelXp;
 			clone.attribute_7 = original.attribute_7;
+			clone.attribute_8 = original.attribute_8;
+			clone.attribute_9 = original.attribute_9;
+			clone.attribute_10 = original.attribute_10;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -125,6 +128,9 @@ public class MemoryOfThePastModVariables {
 		public double currentXpTLevel = 0.0;
 		public double nextevelXp = 100.0;
 		public double attribute_7 = 0.0;
+		public double attribute_8 = 0;
+		public double attribute_9 = 0;
+		public double attribute_10 = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -144,6 +150,9 @@ public class MemoryOfThePastModVariables {
 			nbt.putDouble("currentXpTLevel", currentXpTLevel);
 			nbt.putDouble("nextevelXp", nextevelXp);
 			nbt.putDouble("attribute_7", attribute_7);
+			nbt.putDouble("attribute_8", attribute_8);
+			nbt.putDouble("attribute_9", attribute_9);
+			nbt.putDouble("attribute_10", attribute_10);
 			return nbt;
 		}
 
@@ -160,6 +169,9 @@ public class MemoryOfThePastModVariables {
 			currentXpTLevel = nbt.getDouble("currentXpTLevel");
 			nextevelXp = nbt.getDouble("nextevelXp");
 			attribute_7 = nbt.getDouble("attribute_7");
+			attribute_8 = nbt.getDouble("attribute_8");
+			attribute_9 = nbt.getDouble("attribute_9");
+			attribute_10 = nbt.getDouble("attribute_10");
 		}
 	}
 
@@ -195,6 +207,9 @@ public class MemoryOfThePastModVariables {
 					variables.currentXpTLevel = message.data.currentXpTLevel;
 					variables.nextevelXp = message.data.nextevelXp;
 					variables.attribute_7 = message.data.attribute_7;
+					variables.attribute_8 = message.data.attribute_8;
+					variables.attribute_9 = message.data.attribute_9;
+					variables.attribute_10 = message.data.attribute_10;
 				}
 			});
 			context.setPacketHandled(true);

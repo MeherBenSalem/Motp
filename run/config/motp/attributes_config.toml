@@ -1,14 +1,14 @@
 
 ["Attribute 1"]
-	display_name = "Vitality"
-	cmd_to_exc = ["/attribute @p generic.max_health base set"]
+	display_name = "Vitality : "
+	cmd_to_exc = ["/attribute @p generic.max_health base set", "/effect give @p minecraft:instant_health 2 3"]
 	tip_to_display = "§7Represents your overall durability. §7More health means you can survive longer in battle"
 	max_level = 100.0
 	base_value_per_point = 1.0
 	lock = false
 
 ["Attribute 2"]
-	display_name = "Attack Power"
+	display_name = "Attack Power : "
 	cmd_to_exc = ["/attribute @p generic.attack_damage base set"]
 	tip_to_display = "§7Defines the amount of harm you can inflict with each attack. "
 	max_level = 100.0
@@ -16,23 +16,23 @@
 	lock = false
 
 ["Attribute 3"]
-	display_name = "Attack Speed"
+	display_name = "Attack Speed : "
 	cmd_to_exc = ["/attribute @p generic.attack_speed base set"]
 	tip_to_display = "§7Determines how quickly you can swing your weapon. "
-	max_level = 30.0
+	max_level = 20.0
 	base_value_per_point = 1.0
 	lock = false
 
 ["Attribute 4"]
-	display_name = "Protection"
+	display_name = "Protection : "
 	cmd_to_exc = ["/attribute @p generic.armor base set [param(0.1)]"]
 	tip_to_display = "§7Reduces the amount of damage you take from enemy attacks"
-	max_level = 300.0
+	max_level = 200.0
 	base_value_per_point = 1.0
 	lock = false
 
 ["Attribute 5"]
-	display_name = "Agility"
+	display_name = "Agility : "
 	cmd_to_exc = ["/attribute @p generic.movement_speed base set [param(0.005)]"]
 	tip_to_display = "§7Influences how fast you can move"
 	max_level = 50.0
@@ -40,7 +40,7 @@
 	lock = false
 
 ["Attribute 6"]
-	display_name = "Fortitude"
+	display_name = "Fortitude : "
 	cmd_to_exc = ["/attribute @p generic.knockback_resistance base set [param(0.01)]"]
 	tip_to_display = "§7Reduces the distance you are pushed back when hit by an enemy or explosion"
 	max_level = 100.0
@@ -48,10 +48,34 @@
 	lock = false
 
 ["Attribute 7"]
-	display_name = "Exploration"
+	display_name = "Exploration : "
 	cmd_to_exc = ["/attribute @p generic.luck base set [param(0.5)]"]
 	tip_to_display = "§7Influences the chances of receiving better loot or triggering beneficial events"
 	max_level = 100.0
 	base_value_per_point = 1.0
 	lock = false
+
+["Attribute 8"]
+	display_name = ""
+	cmd_to_exc = []
+	tip_to_display = ""
+	max_level = 0.0
+	base_value_per_point = 0.0
+	lock = true
+
+["Attribute 9"]
+	"display_name " = ""
+	cmd_to_exc = []
+	"tip_to_display " = ""
+	max_level = 0.0
+	base_value_per_point = 0.0
+	lock = true
+
+["Attribute 10"]
+	"display_name " = ""
+	cmd_to_exc = []
+	"tip_to_display " = ""
+	max_level = 0.0
+	base_value_per_point = 0.0
+	lock = true
 

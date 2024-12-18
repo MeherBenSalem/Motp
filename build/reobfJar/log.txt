@@ -134,35 +134,39 @@ Adding Libraries to Inheritance
 Reading Input: C:\Users\UwU\MCreatorWorkspaces\motp\build\libs\modid-1.0.jar
 Adding input to inheritance map
 Processing entries
-Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$1/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
-Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$2/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
-Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$3/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
 Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$4/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
-Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$5/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
 Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$6/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$10/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$2/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$1/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$3/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$5/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$7/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/getVisualShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getVisualShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getVisualShape -> m_5909_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/propagatesSkylightDown(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z from net/minecraft/world/level/block/Block/propagatesSkylightDown(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z: propagatesSkylightDown -> m_7420_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/getVisualShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getVisualShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getVisualShape -> m_5909_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/propagatesSkylightDown(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z from net/minecraft/world/level/block/Block/propagatesSkylightDown(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z: propagatesSkylightDown -> m_7420_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/level/block/Block/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_5871_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/getLightBlock(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I from net/minecraft/world/level/block/state/BlockBehaviour/getLightBlock(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I: getLightBlock -> m_7753_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/level/block/Block/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_5871_
+Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/getLightBlock(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I from net/minecraft/world/level/block/state/BlockBehaviour/getLightBlock(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I: getLightBlock -> m_7753_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
+Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
 Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen/keyPressed(III)Z from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/keyPressed(III)Z: keyPressed -> m_7933_
 Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
 Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen/init()V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/init()V: init -> m_7856_
 Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen/renderLabels(Lnet/minecraft/client/gui/GuiGraphics;II)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/renderLabels(Lnet/minecraft/client/gui/GuiGraphics;II)V: renderLabels -> m_280003_
 Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen/renderBg(Lnet/minecraft/client/gui/GuiGraphics;FII)V from net/minecraft/client/gui/screens/inventory/AbstractContainerScreen/renderBg(Lnet/minecraft/client/gui/GuiGraphics;FII)V: renderBg -> m_7286_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/getVisualShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getVisualShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getVisualShape -> m_5909_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/getVisualShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getVisualShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getVisualShape -> m_5909_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/propagatesSkylightDown(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z from net/minecraft/world/level/block/Block/propagatesSkylightDown(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z: propagatesSkylightDown -> m_7420_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/propagatesSkylightDown(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z from net/minecraft/world/level/block/Block/propagatesSkylightDown(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z: propagatesSkylightDown -> m_7420_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/level/block/Block/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_5871_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/getLightBlock(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I from net/minecraft/world/level/block/state/BlockBehaviour/getLightBlock(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I: getLightBlock -> m_7753_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/level/block/Block/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_5871_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/state/BlockBehaviour/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
-Conflicting propagated mapping for tn/mbs/memory/block/Level200TrophyRewardBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/getLightBlock(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I from net/minecraft/world/level/block/state/BlockBehaviour/getLightBlock(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I: getLightBlock -> m_7753_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape; from net/minecraft/world/level/block/state/BlockBehaviour/getShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;: getShape -> m_5940_
-Conflicting propagated mapping for tn/mbs/memory/block/Level100TrophyRewardBlock/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$9/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
+Conflicting propagated mapping for tn/mbs/memory/client/gui/PlayerStatsGUIScreen$8/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V from net/minecraft/client/gui/components/AbstractWidget/render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V: render -> m_88315_
 Conflicting propagated mapping for tn/mbs/memory/world/inventory/PlayerStatsGUIMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/inventory/AbstractContainerMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6875_
 Conflicting propagated mapping for tn/mbs/memory/world/inventory/PlayerStatsGUIMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/inventory/AbstractContainerMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;: quickMoveStack -> m_7648_
 Conflicting propagated mapping for tn/mbs/memory/init/MemoryOfThePastModKeyMappings$1/setDown(Z)V from net/minecraft/client/KeyMapping/setDown(Z)V: setDown -> m_7249_
@@ -250,6 +254,16 @@ Writing Output: C:\Users\UwU\MCreatorWorkspaces\motp\build\reobfJar\output.jar
   assets/memory_of_the_past/textures/logo.png
   assets/memory_of_the_past/textures/screens/
   assets/memory_of_the_past/textures/screens/atlas/
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked1.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked2.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked3.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked4.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked5.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked6.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked7.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked8.png
+  assets/memory_of_the_past/textures/screens/atlas/imagebutton_button_notclicked9.png
   assets/memory_of_the_past/textures/screens/atlas/imagebutton_pressed.png
   assets/memory_of_the_past/textures/screens/atlas/imagebutton_pressed1.png
   assets/memory_of_the_past/textures/screens/atlas/imagebutton_pressed2.png
@@ -258,15 +272,20 @@ Writing Output: C:\Users\UwU\MCreatorWorkspaces\motp\build\reobfJar\output.jar
   assets/memory_of_the_past/textures/screens/atlas/imagebutton_pressed5.png
   assets/memory_of_the_past/textures/screens/atlas/imagebutton_pressed6.png
   assets/memory_of_the_past/textures/screens/att_1.png
+  assets/memory_of_the_past/textures/screens/att_10.png
   assets/memory_of_the_past/textures/screens/att_2.png
   assets/memory_of_the_past/textures/screens/att_3.png
   assets/memory_of_the_past/textures/screens/att_4.png
   assets/memory_of_the_past/textures/screens/att_5.png
   assets/memory_of_the_past/textures/screens/att_6.png
   assets/memory_of_the_past/textures/screens/att_7.png
-  assets/memory_of_the_past/textures/screens/player_stats_gui.png
-  assets/memory_of_the_past/textures/screens/pressed.png
-  assets/memory_of_the_past/textures/screens/unpressed.png
+  assets/memory_of_the_past/textures/screens/att_8.png
+  assets/memory_of_the_past/textures/screens/att_9.png
+  assets/memory_of_the_past/textures/screens/bg.png
+  assets/memory_of_the_past/textures/screens/bg_attributes.png
+  assets/memory_of_the_past/textures/screens/button_clicked.png
+  assets/memory_of_the_past/textures/screens/button_notclicked.png
+  assets/memory_of_the_past/textures/screens/iconbg.png
   data/
   data/memory_of_the_past/
   data/memory_of_the_past/advancements/
@@ -301,11 +320,15 @@ Writing Output: C:\Users\UwU\MCreatorWorkspaces\motp\build\reobfJar\output.jar
   tn/mbs/memory/client/
   tn/mbs/memory/client/gui/
   tn/mbs/memory/client/gui/PlayerStatsGUIScreen$1.class
+  tn/mbs/memory/client/gui/PlayerStatsGUIScreen$10.class
   tn/mbs/memory/client/gui/PlayerStatsGUIScreen$2.class
   tn/mbs/memory/client/gui/PlayerStatsGUIScreen$3.class
   tn/mbs/memory/client/gui/PlayerStatsGUIScreen$4.class
   tn/mbs/memory/client/gui/PlayerStatsGUIScreen$5.class
   tn/mbs/memory/client/gui/PlayerStatsGUIScreen$6.class
+  tn/mbs/memory/client/gui/PlayerStatsGUIScreen$7.class
+  tn/mbs/memory/client/gui/PlayerStatsGUIScreen$8.class
+  tn/mbs/memory/client/gui/PlayerStatsGUIScreen$9.class
   tn/mbs/memory/client/gui/PlayerStatsGUIScreen.class
   tn/mbs/memory/client/screens/
   tn/mbs/memory/client/screens/LevelOverlayOverlay.class
@@ -346,14 +369,17 @@ Writing Output: C:\Users\UwU\MCreatorWorkspaces\motp\build\reobfJar\output.jar
   tn/mbs/memory/network/OpenStatsMenuKeybindMessage.class
   tn/mbs/memory/network/PlayerStatsGUIButtonMessage.class
   tn/mbs/memory/procedures/
-  tn/mbs/memory/procedures/AddAromrPointsProcedure.class
-  tn/mbs/memory/procedures/AddExplorationPointsProcedure.class
-  tn/mbs/memory/procedures/AddMvPointsProcedure.class
+  tn/mbs/memory/procedures/AddPointsAttributeEightProcedure.class
+  tn/mbs/memory/procedures/AddPointsAttributeFifthProcedure.class
+  tn/mbs/memory/procedures/AddPointsAttributeForthProcedure.class
+  tn/mbs/memory/procedures/AddPointsAttributeNineProcedure.class
   tn/mbs/memory/procedures/AddPointsAttributeOneProcedure.class
+  tn/mbs/memory/procedures/AddPointsAttributeSeventhProcedure.class
+  tn/mbs/memory/procedures/AddPointsAttributeSixthProcedure.class
+  tn/mbs/memory/procedures/AddPointsAttributeTenProcedure.class
   tn/mbs/memory/procedures/AddPointsAttributeThreeProcedure.class
   tn/mbs/memory/procedures/AddPointsAttributeTwoProcedure.class
   tn/mbs/memory/procedures/AddPointsCmdProcedure.class
-  tn/mbs/memory/procedures/AddResistancePointsProcedure.class
   tn/mbs/memory/procedures/AutoConsumerItemItemInInventoryTickProcedure.class
   tn/mbs/memory/procedures/CheckLevelupRewardsProcedure$1.class
   tn/mbs/memory/procedures/CheckLevelupRewardsProcedure$2.class
@@ -362,13 +388,14 @@ Writing Output: C:\Users\UwU\MCreatorWorkspaces\motp\build\reobfJar\output.jar
   tn/mbs/memory/procedures/CheclLevelupRewardsAutoProcedure$2.class
   tn/mbs/memory/procedures/CheclLevelupRewardsAutoProcedure.class
   tn/mbs/memory/procedures/CurrentXpToLevelProcedure.class
-  tn/mbs/memory/procedures/DisplayLevelingLogicAttackPowerProcedure.class
-  tn/mbs/memory/procedures/DisplayLevelingLogicAttackSpeedProcedure.class
-  tn/mbs/memory/procedures/DisplayLevelingLogicExplorationProcedure.class
-  tn/mbs/memory/procedures/DisplayLevelingLogicFortitudeProcedure.class
-  tn/mbs/memory/procedures/DisplayLevelingLogicMSProcedure.class
-  tn/mbs/memory/procedures/DisplayLevelingLogicProtectionProcedure.class
+  tn/mbs/memory/procedures/DisplayLogicAttributeEightProcedure.class
+  tn/mbs/memory/procedures/DisplayLogicAttributeFifthProcedure.class
+  tn/mbs/memory/procedures/DisplayLogicAttributeForthProcedure.class
+  tn/mbs/memory/procedures/DisplayLogicAttributeNineProcedure.class
   tn/mbs/memory/procedures/DisplayLogicAttributeOneProcedure.class
+  tn/mbs/memory/procedures/DisplayLogicAttributeSeventhProcedure.class
+  tn/mbs/memory/procedures/DisplayLogicAttributeSixthProcedure.class
+  tn/mbs/memory/procedures/DisplayLogicAttributeTenProcedure.class
   tn/mbs/memory/procedures/DisplayLogicAttributeThreeProcedure.class
   tn/mbs/memory/procedures/DisplayLogicAttributeTwoProcedure.class
   tn/mbs/memory/procedures/DisplayOverlayProcedure.class
@@ -397,48 +424,63 @@ Writing Output: C:\Users\UwU\MCreatorWorkspaces\motp\build\reobfJar\output.jar
   tn/mbs/memory/procedures/ManageLevelUpProcedure.class
   tn/mbs/memory/procedures/OnOrbResetProcedure.class
   tn/mbs/memory/procedures/OnPlayerSpawnProcedure$1.class
+  tn/mbs/memory/procedures/OnPlayerSpawnProcedure$10.class
   tn/mbs/memory/procedures/OnPlayerSpawnProcedure$2.class
   tn/mbs/memory/procedures/OnPlayerSpawnProcedure$3.class
   tn/mbs/memory/procedures/OnPlayerSpawnProcedure$4.class
   tn/mbs/memory/procedures/OnPlayerSpawnProcedure$5.class
   tn/mbs/memory/procedures/OnPlayerSpawnProcedure$6.class
   tn/mbs/memory/procedures/OnPlayerSpawnProcedure$7.class
+  tn/mbs/memory/procedures/OnPlayerSpawnProcedure$8.class
+  tn/mbs/memory/procedures/OnPlayerSpawnProcedure$9.class
   tn/mbs/memory/procedures/OnPlayerSpawnProcedure.class
   tn/mbs/memory/procedures/OpenStatsMenuProcedure$1.class
   tn/mbs/memory/procedures/OpenStatsMenuProcedure.class
   tn/mbs/memory/procedures/OrbOfLevelingProcedureProcedure.class
   tn/mbs/memory/procedures/PlayerNameProcedure.class
   tn/mbs/memory/procedures/ResetPlayerCmdProcedure.class
+  tn/mbs/memory/procedures/ReturnAttributeEightNameProcedure.class
+  tn/mbs/memory/procedures/ReturnAttributeEightTipProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeFifthNameProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeFifthTipProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeForthNameProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeForthTipProcedure.class
+  tn/mbs/memory/procedures/ReturnAttributeNineNameProcedure.class
+  tn/mbs/memory/procedures/ReturnAttributeNineTipProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeOneNameProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeOneTipProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeSeventhNameProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeSeventhTipProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeSixthNameProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeSixthTipProcedure.class
+  tn/mbs/memory/procedures/ReturnAttributeTenNameProcedure.class
+  tn/mbs/memory/procedures/ReturnAttributeTenTipProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeThreeNameProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeThreeTipProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeTwoNameProcedure.class
   tn/mbs/memory/procedures/ReturnAttributeTwoTipProcedure.class
-  tn/mbs/memory/procedures/ReturnCurrentArmorProcedure.class
+  tn/mbs/memory/procedures/ReturnCurrentAttributeEightProcedure.class
+  tn/mbs/memory/procedures/ReturnCurrentAttributeFifthProcedure.class
+  tn/mbs/memory/procedures/ReturnCurrentAttributeForthProcedure.class
+  tn/mbs/memory/procedures/ReturnCurrentAttributeNineProcedure.class
   tn/mbs/memory/procedures/ReturnCurrentAttributeOneProcedure.class
+  tn/mbs/memory/procedures/ReturnCurrentAttributeSeventhProcedure.class
+  tn/mbs/memory/procedures/ReturnCurrentAttributeSixthProcedure.class
+  tn/mbs/memory/procedures/ReturnCurrentAttributeTenProcedure.class
   tn/mbs/memory/procedures/ReturnCurrentAttributeThreeProcedure.class
   tn/mbs/memory/procedures/ReturnCurrentAttributeTwoProcedure.class
-  tn/mbs/memory/procedures/ReturnCurrentExplorationProcedure.class
   tn/mbs/memory/procedures/ReturnCurrentLevelProcedure.class
-  tn/mbs/memory/procedures/ReturnCurrentMovementSpeedProcedure.class
-  tn/mbs/memory/procedures/ReturnCurrentResistanceProcedure.class
   tn/mbs/memory/procedures/ReturnExtraPointsProcedure.class
+  tn/mbs/memory/procedures/ReturnNextAttributeEightProcedure.class
+  tn/mbs/memory/procedures/ReturnNextAttributeFifthProcedure.class
+  tn/mbs/memory/procedures/ReturnNextAttributeForthProcedure.class
+  tn/mbs/memory/procedures/ReturnNextAttributeNineProcedure.class
   tn/mbs/memory/procedures/ReturnNextAttributeOneProcedure.class
+  tn/mbs/memory/procedures/ReturnNextAttributeSeventhProcedure.class
+  tn/mbs/memory/procedures/ReturnNextAttributeSixthProcedure.class
+  tn/mbs/memory/procedures/ReturnNextAttributeTenProcedure.class
   tn/mbs/memory/procedures/ReturnNextAttributeThreeProcedure.class
   tn/mbs/memory/procedures/ReturnNextAttributeTwoProcedure.class
-  tn/mbs/memory/procedures/ReturnNextExplorationValueProcedure.class
-  tn/mbs/memory/procedures/ReturnNextMovementSpeedValueProcedure.class
-  tn/mbs/memory/procedures/ReturnNextProtectionValueProcedure.class
-  tn/mbs/memory/procedures/ReturnNextResistanceValueProcedure.class
   tn/mbs/memory/procedures/VanillaDropRatesProcedure.class
   tn/mbs/memory/procedures/WhenPlayerRespawnsProcedure.class
   tn/mbs/memory/procedures/YouHavePointsProcedure.class
