@@ -399,7 +399,7 @@
       "registry_name": "orb_of_reseting_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/orb_of_reseting_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipe/orb_of_reseting_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -638,9 +638,9 @@
       "registry_name": "level_100_trophy_reward",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/loot_tables/blocks/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/item/level_100_trophy_reward.json",
           "src/main/java/tn/mbs/memory/block/Level100TrophyRewardBlock.java",
+          "src/main/resources/data/memory_of_the_past/loot_table/blocks/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/blockstates/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/block/level_100_trophy_reward.json"
         ]
@@ -659,7 +659,7 @@
           "src/main/java/tn/mbs/memory/block/Level200TrophyRewardBlock.java",
           "src/main/resources/assets/memory_of_the_past/blockstates/level_200_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/item/level_200_trophy_reward.json",
-          "src/main/resources/data/memory_of_the_past/loot_tables/blocks/level_200_trophy_reward.json"
+          "src/main/resources/data/memory_of_the_past/loot_table/blocks/level_200_trophy_reward.json"
         ]
       },
       "path": "~/Blocks"
@@ -672,7 +672,7 @@
       "registry_name": "first_level_up",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancements/first_level_up.json"
+          "src/main/resources/data/memory_of_the_past/advancement/first_level_up.json"
         ]
       },
       "path": "~/Advancements"
@@ -685,7 +685,7 @@
       "registry_name": "reach_level_50",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancements/reach_level_50.json"
+          "src/main/resources/data/memory_of_the_past/advancement/reach_level_50.json"
         ]
       },
       "path": "~/Advancements"
@@ -698,7 +698,7 @@
       "registry_name": "reach_level_100",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancements/reach_level_100.json"
+          "src/main/resources/data/memory_of_the_past/advancement/reach_level_100.json"
         ]
       },
       "path": "~/Advancements"
@@ -711,7 +711,7 @@
       "registry_name": "reach_level_200",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancements/reach_level_200.json"
+          "src/main/resources/data/memory_of_the_past/advancement/reach_level_200.json"
         ]
       },
       "path": "~/Advancements"
@@ -1109,7 +1109,7 @@
       "registry_name": "tome_of_rebirth_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/tome_of_rebirth_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipe/tome_of_rebirth_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1122,7 +1122,7 @@
       "registry_name": "auto_consumer_artifact_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/auto_consumer_artifact_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipe/auto_consumer_artifact_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1135,7 +1135,7 @@
       "registry_name": "artifact_enhancer_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/artifact_enhancer_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipe/artifact_enhancer_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -2004,6 +2004,136 @@
         ]
       },
       "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnCurrentAttributeNine",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_nine",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeNineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnCurrentAttributeTen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_ten",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeTenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnAttributeEightTip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_eight_tip",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeEightTipProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeEightName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_eight_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeEightNameProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeNineName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_nine_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeNineNameProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeTenName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_ten_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeTenNameProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeNineTip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_nine_tip",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeNineTipProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeTenTip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_ten_tip",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeTenTipProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
     }
   ],
   "variable_elements": [
@@ -2371,7 +2501,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "neoforge-1.21.1",
     "credits": "Thank you @porogulaemeo",
     "modElementsPackage": "tn.mbs.memory"
   },

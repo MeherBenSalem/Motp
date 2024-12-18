@@ -392,19 +392,6 @@
       "path": "~/GUI"
     },
     {
-      "name": "OrbOfResetingRecipe",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "orb_of_reseting_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/orb_of_reseting_recipe.json"
-        ]
-      },
-      "path": "~/Recipes"
-    },
-    {
       "name": "OrbOfLeveling",
       "type": "item",
       "compiles": true,
@@ -1924,6 +1911,216 @@
         ]
       },
       "path": "~/Procedures/Leveling Logic/Add Points"
+    },
+    {
+      "name": "ReturnNextAttributeEight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_eight",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeEightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnNextAttributeNine",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_nine",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeNineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnNextAttributeTen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_next_attribute_ten",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnNextAttributeTenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/Next"
+    },
+    {
+      "name": "ReturnCurrentAttributeEight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_eight",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeEightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnCurrentAttributeNine",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_nine",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeNineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnCurrentAttributeTen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_attribute_ten",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentAttributeTenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "ReturnAttributeEightTip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_eight_tip",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeEightTipProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeEightName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_eight_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeEightNameProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeNineName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_nine_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeNineNameProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeTenName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_ten_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeTenNameProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeNineTip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_nine_tip",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeNineTipProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "ReturnAttributeTenTip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_attribute_ten_tip",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnAttributeTenTipProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Text Logic/AtrributesNames"
     }
   ],
   "variable_elements": [
