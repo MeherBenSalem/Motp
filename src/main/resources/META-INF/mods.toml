@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="memory_of_the_past"
+version="1.1.0"
+displayName="Memories of the past"
+displayURL="https://meherbensalem.github.io"
+logoFile="logo.png"
+credits="Thank you @porogulaemeo"
+authors="NAIZO"
+description="As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats."
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.memory_of_the_past]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "trophy_texture"
+      },
+      "name": "default"
+    }
+  }
+}
