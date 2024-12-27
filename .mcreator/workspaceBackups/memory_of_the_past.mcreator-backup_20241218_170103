@@ -392,19 +392,6 @@
       "path": "~/GUI"
     },
     {
-      "name": "OrbOfResetingRecipe",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "orb_of_reseting_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/orb_of_reseting_recipe.json"
-        ]
-      },
-      "path": "~/Recipes"
-    },
-    {
       "name": "OrbOfLeveling",
       "type": "item",
       "compiles": true,
