@@ -19,7 +19,7 @@ Want to support this project? [Become a sponsor](https://github.com/sponsors/Meh
 - **Forge**  
 - **NeoForge**  
 
-*Ensure you have one of these mod loaders installed before adding Ascendant Mobs to your game.*  
+*Ensure you have one of these mod loaders installed before adding MOTP to your game.*  
 
 ---
 
