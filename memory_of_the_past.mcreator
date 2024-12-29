@@ -1041,10 +1041,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "sourceentity",
             "type": "entity"
           },
@@ -1136,45 +1132,6 @@
       "metadata": {
         "files": [
           "src/main/java/tn/mbs/memory/procedures/LevelUpProcedureAutoLevelProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
-    },
-    {
-      "name": "CheclLevelupRewardsAuto",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "checl_levelup_rewards_auto",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/CheclLevelupRewardsAutoProcedure.java"
         ],
         "dependencies": [
           {
@@ -2121,6 +2078,41 @@
         "dependencies": []
       },
       "path": "~/Procedures/Text Logic/AtrributesNames"
+    },
+    {
+      "name": "CheckLevelUpRewardsAuto",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_level_up_rewards_auto",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/CheckLevelUpRewardsAutoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic"
     }
   ],
   "variable_elements": [
@@ -2477,7 +2469,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",
