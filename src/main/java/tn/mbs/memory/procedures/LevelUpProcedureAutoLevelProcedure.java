@@ -7,10 +7,10 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 public class LevelUpProcedureAutoLevelProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity sourceentity) {
+		if (sourceentity == null)
 			return;
-		CheclLevelupRewardsAutoProcedure.execute(world, x, y, z, sourceentity);
+		CheckLevelUpRewardsAutoProcedure.execute(world, x, y, z, sourceentity);
 		if ((sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp <= (double) MainConfigFileConfiguration.LEVEL_INTERVAL_FIRST.get()) {
 			{
 				double _setval = Math.round((sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp
@@ -31,7 +31,7 @@ public class LevelUpProcedureAutoLevelProcedure {
 			}
 		} else {
 			{
-				double _setval = Math.round((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp
+				double _setval = Math.round((sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp
 						* (double) MainConfigFileConfiguration.LEVEL_INTERVAL_SCALE_AFTER.get());
 				sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.nextevelXp = _setval;

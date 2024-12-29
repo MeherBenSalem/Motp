@@ -70,7 +70,7 @@ public class MechanicsConfigConfiguration {
 	static {
 		BUILDER.push("Attribute 1");
 		DISPLAY_NAME_ATT_1 = BUILDER.define("display_name", "Vitality : ");
-		CMD_ATT_1 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.max_health base set", "/effect give @p minecraft:health_boost 2 3"), entry -> true);
+		CMD_ATT_1 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.max_health base set", "/effect give @p minecraft:instant_health 2 3"), entry -> true);
 		DISPLAY_TIP_ATT_1 = BUILDER.define("tip_to_display", "§7Represents your overall durability. §7More health means you can survive longer in battle");
 		MAX_LEVEL_ATT_1 = BUILDER.define("max_level", (double) 100);
 		BASE_VALUE_PER_POINT_1 = BUILDER.define("base_value_per_point", (double) 1);

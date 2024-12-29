@@ -38,72 +38,80 @@ public class LootDropRateProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
+		double DropPercentage = 0;
 		if (MainConfigFileConfiguration.ENABLEDROPS.get()) {
 			if (sourceentity instanceof Player || sourceentity instanceof ServerPlayer) {
+				DropPercentage = Mth.nextInt(RandomSource.create(), 0, 100);
 				if ((entity.level().dimension()) == Level.OVERWORLD) {
-					if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.OW_LESSER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.LESSER_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.OW_BETTER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.BETTER_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.OW_GREATER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.GREAT_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
+					if (Mth.nextInt(RandomSource.create(), 0, 100) <= (double) DropRateConfigFileConfiguration.OW_OVERALL_RATE.get()) {
+						if (DropPercentage <= (double) DropRateConfigFileConfiguration.OW_GREATER_RATE.get()) {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.GREAT_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						} else if (DropPercentage <= (double) DropRateConfigFileConfiguration.OW_BETTER_RATE.get()) {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.BETTER_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						} else {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.LESSER_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
 						}
 					}
 				} else if ((entity.level().dimension()) == Level.NETHER) {
-					if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.NETHER_LESSER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.LESSER_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.NETHER_BETTER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.BETTER_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.NETHER_GREATER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.GREAT_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
+					if (Mth.nextInt(RandomSource.create(), 0, 100) <= (double) DropRateConfigFileConfiguration.NETHER_OVERALL_RATE.get()) {
+						if (DropPercentage <= (double) DropRateConfigFileConfiguration.NETHER_GREATER_RATE.get()) {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.GREAT_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						} else if (DropPercentage <= (double) DropRateConfigFileConfiguration.NETHER_BETTER_RATE.get()) {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.BETTER_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						} else {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.LESSER_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
 						}
 					}
-				} else if ((entity.level().dimension()) == Level.END) {
-					if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.END_LESSER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.LESSER_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.END_BETTER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.BETTER_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 0, 99) < (double) DropRateConfigFileConfiguration.END_GREATER_RATE.get()) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.GREAT_DROP_OF_KNOWLEDGE.get()));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
+				} else {
+					if (Mth.nextInt(RandomSource.create(), 0, 100) <= (double) DropRateConfigFileConfiguration.END_OVERALL_RATE.get()) {
+						if (DropPercentage <= (double) DropRateConfigFileConfiguration.END_GREATER_RATE.get()) {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.GREAT_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						} else if (DropPercentage <= (double) DropRateConfigFileConfiguration.END_BETTER_RATE.get()) {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.BETTER_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						} else {
+							if (world instanceof ServerLevel _level) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.LESSER_DROP_OF_KNOWLEDGE.get()));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
 						}
 					}
 				}
 			}
 		} else {
-			GiveXpNoDropProcedure.execute(world, x, y, z, entity, sourceentity);
+			GiveXpNoDropProcedure.execute(world, x, y, z, sourceentity);
 		}
 	}
 }

@@ -14,29 +14,32 @@ public class LevelUpRewardsConfigConfiguration {
 	static {
 		BUILDER.push("Rewards");
 		ENABLE = BUILDER.define("Enable", true);
-		LEVELUP_REWARDS_LIST = BUILDER.comment(
-				"Its VERY Important to keep level up rewards in this format levels must be writen 3 digits so for example level 2 = 003 , level 50 = 050 and so on , same thing goes on for the quantity ## 2 digits for example 2 diamond blocks 02 ... as for the reward you can type any reward you want not only minecrafts rewards so make sure the registry is name is correct #FORMAT(###/##/*)")
-				.defineList("Reward List",
-						List.of("002/16/minecraft:coal", "003/01/minecraft:iron_axe", "004/16/minecraft:iron_ingot", "005/01/minecraft:iron_pickaxe", "006/16/minecraft:redstone", "007/08/minecraft:gold_ingot", "008/01/minecraft:diamond",
-								"009/32/minecraft:lapis_lazuli", "010/08/minecraft:gold_apple", "011/16/minecraft:gold_ingot", "012/02/minecraft:diamond", "013/10/minecraft:emerald", "014/02/minecraft:diamond", "015/01/minecraft:diamond_axe",
-								"016/01/minecraft:enchanted_golden_apple", "017/10/minecraft:redstone_block", "018/05/minecraft:iron_block", "019/03/minecraft:gold_block",
-								"020/01/minecraft:diamond_chestplate{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}", "021/01/minecraft:diamond_helmet{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}",
-								"022/01/minecraft:diamond_boots{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}", "023/01/minecraft:diamond_leggings{Enchantments:[{id:\"minecraft:protection\",lvl:1}]}",
-								"24/01/minecraft:diamond_pickaxe{Enchantments:[{id:\"minecraft:efficiency\",lvl:2},{id:\"minecraft:unbreaking\",lvl:1},{id:\"minecraft:fortune\",lvl:1}]}", "025/01/minecraft:totem_of_undying",
-								"026/01/minecraft:ancient_debris", "027/32/minecraft:diamond", "028/01/minecraft:ancient_debris", "029/01/minecraft:totem_of_undying", "030/03/minecraft:ancient_debris",
-								"099/01/memory_of_the_past:level_100_trophy_reward", "199/01/memory_of_the_past:level_200_trophy_reward"),
-						entry -> true);
-		OVER_LEVEL_REWARDS = BUILDER
-				.comment("write the more commun rewards first , the rewards scale from commun to rare so the more you add reawrds the more rare they become ,  chance/quantity/item dont forget to write in the 2 digits format ##/##/*")
-				.defineList("Random Rewards Table",
-						List.of("02/01/minecraft:netherite_sword{Enchantments:[{id:\"minecraft:sharpness\",lvl:5},{id:\"minecraft:unbreaking\",lvl:3},{id:\"minecraft:fire_aspect\",lvl:2}]}",
-								"02/01/minecraft:netherite_pickaxe{Enchantments:[{id:\"minecraft:efficiency\",lvl:5},{id:\"minecraft:fortune\",lvl:3},{id:\"minecraft:unbreaking\",lvl:3}]}", "20/02/minecraft:enchanted_golden_apple",
-								"05/01/minecraft:elytra{Enchantments:[{id:\"minecraft:unbreaking\",lvl:3},{id:\"minecraft:mending\",lvl:1}]}", "25/05/minecraft:diamond_block", "10/01/minecraft:totem_of_undying", "20/02/minecraft:netherite_ingot",
-								"05/01/minecraft:trident{Enchantments:[{id:\"minecraft:loyalty\",lvl:3},{id:\"minecraft:channeling\",lvl:1},{id:\"minecraft:unbreaking\",lvl:3}]}", "15/03/minecraft:beacon", "20/12/minecraft:golden_apple",
-								"25/32/minecraft:golden_carrot", "05/01/minecraft:bow{Enchantments:[{id:\"minecraft:power\",lvl:5},{id:\"minecraft:infinity\",lvl:1},{id:\"minecraft:unbreaking\",lvl:3}]}",
-								"10/01/minecraft:crossbow{Enchantments:[{id:\"minecraft:multishot\",lvl:1},{id:\"minecraft:quick_charge\",lvl:3},{id:\"minecraft:unbreaking\",lvl:3}]}",
-								"05/01/minecraft:netherite_axe{Enchantments:[{id:\"minecraft:sharpness\",lvl:5},{id:\"minecraft:efficiency\",lvl:5},{id:\"minecraft:unbreaking\",lvl:3}]}"),
-						entry -> true);
+		LEVELUP_REWARDS_LIST = BUILDER.defineList("Reward List",
+				List.of("[level]1[levelEnd][quantity]16[quantityEnd][item]minecraft:coal[itemEnd]", "[level]2[levelEnd][quantity]1[quantityEnd][item]minecraft:iron_axe[itemEnd]",
+						"[level]3[levelEnd][quantity]16[quantityEnd][item]minecraft:iron_ingot[itemEnd]", "[level]4[levelEnd][quantity]1[quantityEnd][item]minecraft:iron_pickaxe[itemEnd]",
+						"[level]5[levelEnd][quantity]16[quantityEnd][item]minecraft:redstone[itemEnd]", "[level]6[levelEnd][quantity]6[quantityEnd][item]minecraft:gold_ingot[itemEnd]",
+						"[level]7[levelEnd][quantity]2[quantityEnd][item]minecraft:diamond[itemEnd]", "[level]8[levelEnd][quantity]3[quantityEnd][item]minecraft:diamond[itemEnd]",
+						"[level]9[levelEnd][quantity]32[quantityEnd][item]minecraft:lapis_lazuli[itemEnd]", "[level]10[levelEnd][quantity]2[quantityEnd][item]minecraft:gold_apple[itemEnd]",
+						"[level]11[levelEnd][quantity]16[quantityEnd][item]minecraft:gold_ingot[itemEnd] ", "[level]12[levelEnd][quantity]2[quantityEnd][item]minecraft:diamond[itemEnd]",
+						"[level]13[levelEnd][quantity]16[quantityEnd][item]minecraft:emerald[itemEnd]", "[level]14[levelEnd][quantity]2[quantityEnd][item]minecraft:diamond[itemEnd]",
+						"[level]15[levelEnd][quantity]1[quantityEnd][item]minecraft:diamond_axe[itemEnd]", "[level]16[levelEnd][quantity]1[quantityEnd][item]minecraft:enchanted_golden_apple[itemEnd]",
+						"[level]17[levelEnd][quantity]3[quantityEnd][item]minecraft:redstone_block[itemEnd]", " [level]18[levelEnd][quantity]5[quantityEnd][item]minecraft:iron_block[itemEnd]",
+						"[level]19[levelEnd][quantity]3[quantityEnd][item]minecraft:gold_block[itemEnd]", "[level]20[levelEnd][quantity]1[quantityEnd][item]minecraft:diamond_chestplate[itemEnd]",
+						"[level]21[levelEnd][quantity]1[quantityEnd][item]minecraft:diamond_helmet[itemEnd]", "[level]22[levelEnd][quantity]1[quantityEnd][item]minecraft:diamond_boots[itemEnd]",
+						"[level]23[levelEnd][quantity]1[quantityEnd][item]minecraft:diamond_leggings[itemEnd]", "[level]24[levelEnd][quantity]1[quantityEnd][item]minecraft:diamond_pickaxe[itemEnd]",
+						"[level]25[levelEnd][quantity]1[quantityEnd][item]minecraft:totem_of_undying[itemEnd]", "[level]26[levelEnd][quantity]2[quantityEnd][item]minecraft:ancient_debris[itemEnd]",
+						"[level]27[levelEnd][quantity]32[quantityEnd][item]minecraft:diamond[itemEnd]", "[level]26[levelEnd][quantity]4[quantityEnd][item]minecraft:ancient_debris[itemEnd]",
+						"[level]29[levelEnd][quantity]2[quantityEnd][item]minecraft:totem_of_undying[itemEnd]", "[level]30[levelEnd][quantity]4[quantityEnd][item]minecraft:ancient_debris[itemEnd]",
+						"[level]100[levelEnd][quantity]1[quantityEnd][item]memory_of_the_past:level_100_trophy_reward[itemEnd]", "[level]200[levelEnd][quantity]1[quantityEnd][item]memory_of_the_past:level_200_trophy_reward[itemEnd]"),
+				entry -> true);
+		OVER_LEVEL_REWARDS = BUILDER.defineList("Random Rewards Table",
+				List.of("[chance]2[chanceEnd][quantity]1[quantityEnd][item]minecraft:netherite_sword[itemEnd] ", "[chance]2[chanceEnd][quantity]1[quantityEnd][item]minecraft:netherite_pickaxe[itemEnd] ",
+						"[chance]20[chanceEnd][quantity]2[quantityEnd][item]minecraft:enchanted_golden_apple[itemEnd] ", "[chance]5[chanceEnd][quantity]1[quantityEnd][item]minecraft:elytra[itemEnd] ",
+						"[chance]25[chanceEnd][quantity]3[quantityEnd][item]minecraft:diamond_block[itemEnd] ", "[chance]10[chanceEnd][quantity]1[quantityEnd][item]minecraft:totem_of_undying[itemEnd] ",
+						"[chance]5[chanceEnd][quantity]1[quantityEnd][item]minecraft:netherite_ingot[itemEnd] ", "[chance]5[chanceEnd][quantity]1[quantityEnd][item]minecraft:trident[itemEnd] ",
+						"[chance]1[chanceEnd][quantity]1[quantityEnd][item]minecraft:beacon[itemEnd] ", "[chance]20[chanceEnd][quantity]5[quantityEnd][item]minecraft:golden_apple[itemEnd] ",
+						"[chance]35[chanceEnd][quantity]16[quantityEnd][item]minecraft:golden_carrot[itemEnd] ", "[chance]2[chanceEnd][quantity]1[quantityEnd][item]minecraft:netherite_axe[itemEnd] "),
+				entry -> true);
 		RANDOM_LOOT_TABLE_LEVEL = BUILDER.comment("Start getting random reward at level").define("random_loot_table_level", (double) 31);
 		BUILDER.pop();
 
