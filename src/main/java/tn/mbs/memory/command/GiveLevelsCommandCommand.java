@@ -1,7 +1,9 @@
 
 package tn.mbs.memory.command;
 
+import tn.mbs.memory.procedures.ResetGivenPlayerProcedure;
 import tn.mbs.memory.procedures.LevelUpUserCommandProcedureProcedure;
+import tn.mbs.memory.procedures.AddPointsCmdProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -23,8 +25,8 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class GiveLevelsCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher()
-				.register(Commands.literal("givelevels").requires(s -> s.hasPermission(4)).then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("amount", DoubleArgumentType.doubleArg(1)).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("motp").requires(s -> s.hasPermission(4))
+				.then(Commands.literal("level").then(Commands.literal("add").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("amount", DoubleArgumentType.doubleArg(1)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -38,6 +40,34 @@ public class GiveLevelsCommandCommand {
 
 					LevelUpUserCommandProcedureProcedure.execute(arguments, entity);
 					return 0;
-				}))));
+				})))).then(Commands.literal("reset").then(Commands.argument("player", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					ResetGivenPlayerProcedure.execute(arguments);
+					return 0;
+				})))).then(Commands.literal("attributes").then(Commands.literal("add").then(Commands.argument("attribute_Id", DoubleArgumentType.doubleArg(1, 10)).then(Commands.argument("count", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					AddPointsCmdProcedure.execute(arguments, entity);
+					return 0;
+				}))))));
 	}
 }

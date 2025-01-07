@@ -1214,19 +1214,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "AddPlayerPoints",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "add_player_points",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/command/AddPlayerPointsCommand.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
       "name": "AddPointsCmd",
       "type": "procedure",
       "compiles": true,
@@ -2701,6 +2688,25 @@
         "dependencies": []
       },
       "path": "~/Procedures/GUI/GetPlayerAttributesDisplay/Return Display Logic"
+    },
+    {
+      "name": "ResetGivenPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_given_player",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ResetGivenPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -2832,8 +2838,8 @@
       "gui.memory_of_the_past.player_stats_gui.label_movement_speed": "Agility :",
       "block.memory_of_the_past.level_100_trophy_reward.description_1": "§bCongratulations on reaching §cLevel 100§b!",
       "block.memory_of_the_past.level_100_trophy_reward.description_0": "§7You have proven your strength and dedication.",
-      "gui.memoryfrags.alter_gui.button_empty": "fuse",
       "item_group.memory_of_the_past.memoryfragments": "MOTP",
+      "gui.memoryfrags.alter_gui.button_empty": "fuse",
       "gui.memoryfrags.alter_gui.label_alter": "Alter",
       "item.memory_of_the_past.codex_of_ascension": "Codex of Ascension",
       "gui.memoryfrags.player_stats_gui.label_hp": "hp",
@@ -2932,8 +2938,8 @@
       "gui.memory_of_the_past.player_stats_gui.label_movement_speed": "Agilité :",
       "block.memory_of_the_past.level_100_trophy_reward.description_1": "§bCongratulations on reaching §cLevel 100§b!",
       "block.memory_of_the_past.level_100_trophy_reward.description_0": "§7You have proven your strength and dedication.",
-      "gui.memoryfrags.alter_gui.button_empty": "fuse",
       "item_group.memory_of_the_past.memoryfragments": "MOTP",
+      "gui.memoryfrags.alter_gui.button_empty": "fuse",
       "gui.memoryfrags.alter_gui.label_alter": "Alter",
       "item.memory_of_the_past.codex_of_ascension": "Orb Of Leveling",
       "gui.memoryfrags.player_stats_gui.label_hp": "hp",

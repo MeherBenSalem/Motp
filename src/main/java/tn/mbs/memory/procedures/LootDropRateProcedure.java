@@ -39,8 +39,8 @@ public class LootDropRateProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double DropPercentage = 0;
-		if (MainConfigFileConfiguration.ENABLE_DROPS.get()) {
-			if (sourceentity instanceof Player || sourceentity instanceof ServerPlayer) {
+		if (sourceentity instanceof Player || sourceentity instanceof ServerPlayer) {
+			if (MainConfigFileConfiguration.ENABLE_DROPS.get()) {
 				DropPercentage = Mth.nextInt(RandomSource.create(), 0, 100);
 				if ((entity.level().dimension()) == Level.OVERWORLD) {
 					if (Mth.nextInt(RandomSource.create(), 0, 100) <= (double) DropRateConfigFileConfiguration.OW_OVERALL_RATE.get()) {
@@ -109,9 +109,9 @@ public class LootDropRateProcedure {
 						}
 					}
 				}
+			} else {
+				GiveXpNoDropProcedure.execute(world, x, y, z, sourceentity);
 			}
-		} else {
-			GiveXpNoDropProcedure.execute(world, x, y, z, sourceentity);
 		}
 	}
 }
