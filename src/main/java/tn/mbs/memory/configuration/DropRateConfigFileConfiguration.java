@@ -7,6 +7,7 @@ import java.util.List;
 public class DropRateConfigFileConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
+
 	public static final ForgeConfigSpec.ConfigValue<Double> OW_BETTER_RATE;
 	public static final ForgeConfigSpec.ConfigValue<Double> OW_GREATER_RATE;
 	public static final ForgeConfigSpec.ConfigValue<Double> OW_OVERALL_RATE;
@@ -37,7 +38,7 @@ public class DropRateConfigFileConfiguration {
 		BUILDER.pop();
 		BUILDER.push("Bosses Drop Rates");
 		MAX_DROP_RATE = BUILDER.comment("Max drop rate of orbs of leveling from bosses").define("max_drop_rate", (double) 3);
-		MIN_DROP_RATE = BUILDER.define("min_drop_rate", (double) 1);
+		MIN_DROP_RATE = BUILDER.comment("Min drop rate of orbs of leveling from bosses").define("min_drop_rate", (double) 1);
 		BOSSES_LIST = BUILDER.comment("list of the mobs which will drop the leveling orbs").defineList("bosses_list", List.of("minecraft:ender_dragon", "minecraft:wither"), entry -> true);
 		BUILDER.pop();
 

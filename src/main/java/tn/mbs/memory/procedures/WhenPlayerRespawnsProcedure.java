@@ -26,7 +26,7 @@ public class WhenPlayerRespawnsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (MainConfigFileConfiguration.ONDEATHRESET.get()) {
+		if (MainConfigFileConfiguration.ON_DEATH_RESET.get()) {
 			{
 				double _setval = 0;
 				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

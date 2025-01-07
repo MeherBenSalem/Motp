@@ -7,6 +7,7 @@ import java.util.List;
 public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
+
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_1;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_1;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_1;
@@ -126,7 +127,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.pop();
 		BUILDER.push("Attribute 8");
 		DISPLAY_NAME_ATT_8 = BUILDER.define("display_name", "");
-		CMD_ATT_8 = BUILDER.defineList("cmd_to_exc", List.of(), entry -> true);
+		CMD_ATT_8 = BUILDER.defineList("cmd_to_exc", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_8 = BUILDER.define("tip_to_display", "");
 		MAX_LEVEL_ATT_8 = BUILDER.define("max_level", (double) 0);
 		BASE_VALUE_PER_POINT_8 = BUILDER.define("base_value_per_point", (double) 0);
@@ -134,7 +135,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.pop();
 		BUILDER.push("Attribute 9");
 		DISPLAY_NAME_ATT_9 = BUILDER.define("display_name ", "");
-		CMD_ATT_9 = BUILDER.defineList("cmd_to_exc", List.of(), entry -> true);
+		CMD_ATT_9 = BUILDER.defineList("cmd_to_exc", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_9 = BUILDER.define("tip_to_display ", "");
 		MAX_LEVEL_ATT_9 = BUILDER.define("max_level", (double) 0);
 		BASE_VALUE_PER_POINT_9 = BUILDER.define("base_value_per_point", (double) 0);
@@ -142,7 +143,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.pop();
 		BUILDER.push("Attribute 10");
 		DISPLAY_NAME_ATT_10 = BUILDER.define("display_name ", "");
-		CMD_ATT_10 = BUILDER.defineList("cmd_to_exc", List.of(), entry -> true);
+		CMD_ATT_10 = BUILDER.defineList("cmd_to_exc", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_10 = BUILDER.define("tip_to_display ", "");
 		MAX_LEVEL_ATT_10 = BUILDER.define("max_level", (double) 0);
 		BASE_VALUE_PER_POINT_10 = BUILDER.define("base_value_per_point", (double) 0);

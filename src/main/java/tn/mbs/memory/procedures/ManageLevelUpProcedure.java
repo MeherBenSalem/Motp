@@ -54,7 +54,7 @@ public class ManageLevelUpProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level >= (double) MainConfigFileConfiguration.MAXPLAYERLEVEL.get()) {
+		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level >= (double) MainConfigFileConfiguration.MAX_PLAYER_LEVEL.get()) {
 			return;
 		}
 		if (world instanceof Level _level) {

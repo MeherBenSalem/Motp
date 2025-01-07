@@ -7,6 +7,7 @@ import java.util.List;
 public class LevelUpRewardsConfigConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
+
 	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVELUP_REWARDS_LIST;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> OVER_LEVEL_REWARDS;

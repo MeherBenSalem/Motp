@@ -5,6 +5,7 @@
 package tn.mbs.memory.init;
 
 import tn.mbs.memory.client.gui.PlayerStatsGUIScreen;
+import tn.mbs.memory.client.gui.PlayerAttributesViewerGUIScreen;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,6 +20,7 @@ public class MemoryOfThePastModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(MemoryOfThePastModMenus.PLAYER_STATS_GUI.get(), PlayerStatsGUIScreen::new);
+			MenuScreens.register(MemoryOfThePastModMenus.PLAYER_ATTRIBUTES_VIEWER_GUI.get(), PlayerAttributesViewerGUIScreen::new);
 		});
 	}
 }

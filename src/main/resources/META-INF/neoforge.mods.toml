@@ -18,7 +18,7 @@ description="As players explore the world, they collect Memories from significan
 [[dependencies.memory_of_the_past]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.1,)"
+    versionRange="[21.1.65,)"
     ordering="AFTER"
     side="BOTH"
 

@@ -78,6 +78,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 	ImageButton imagebutton_button_notclicked7;
 	ImageButton imagebutton_button_notclicked8;
 	ImageButton imagebutton_button_notclicked9;
+	ImageButton imagebutton_button_for_stats;
 
 	public PlayerStatsGUIScreen(PlayerStatsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -340,9 +341,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeOneProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeOneProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked", imagebutton_button_notclicked);
@@ -354,9 +355,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeTwoProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeTwoProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked1", imagebutton_button_notclicked1);
@@ -368,9 +369,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeThreeProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeThreeProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked2", imagebutton_button_notclicked2);
@@ -382,9 +383,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeForthProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeForthProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked3", imagebutton_button_notclicked3);
@@ -396,9 +397,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeFifthProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeFifthProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked4", imagebutton_button_notclicked4);
@@ -410,9 +411,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeSixthProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeSixthProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked5", imagebutton_button_notclicked5);
@@ -424,9 +425,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeSeventhProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeSeventhProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked6", imagebutton_button_notclicked6);
@@ -438,9 +439,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeEightProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeEightProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked7", imagebutton_button_notclicked7);
@@ -452,9 +453,9 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeNineProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeNineProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked8", imagebutton_button_notclicked8);
@@ -466,12 +467,20 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (DisplayLogicAttributeTenProcedure.execute())
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeTenProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked9", imagebutton_button_notclicked9);
 		this.addRenderableWidget(imagebutton_button_notclicked9);
+		imagebutton_button_for_stats = new ImageButton(this.leftPos + -46, this.topPos + -3, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_for_stats.png"), 13, 26, e -> {
+			if (true) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(10, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_button_for_stats", imagebutton_button_for_stats);
+		this.addRenderableWidget(imagebutton_button_for_stats);
 	}
 }

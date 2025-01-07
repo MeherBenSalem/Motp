@@ -5,6 +5,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public class MainConfigFileConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
+
 	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_LEVEL;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_XP;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_POINTS;
@@ -14,9 +15,9 @@ public class MainConfigFileConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> LEVEL_PER_ORB;
 	public static final ForgeConfigSpec.ConfigValue<Double> SCALE_FACTOR;
 	public static final ForgeConfigSpec.ConfigValue<Double> POINTS_PER_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLEDROPS;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> ONDEATHRESET;
-	public static final ForgeConfigSpec.ConfigValue<Double> MAXPLAYERLEVEL;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_DROPS;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ON_DEATH_RESET;
+	public static final ForgeConfigSpec.ConfigValue<Double> MAX_PLAYER_LEVEL;
 	public static final ForgeConfigSpec.ConfigValue<Double> BONUS_EXPERIENCE_FACTOR;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_1;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_2;
@@ -46,12 +47,12 @@ public class MainConfigFileConfiguration {
 		LESSER_XP_VALUE = BUILDER.define("lesser_experience_value", (double) 20);
 		BETTER_XP_VALUE = BUILDER.define("better_experience_value", (double) 200);
 		GREATER_XP_VALUE = BUILDER.define("greater_experience_value", (double) 2000);
-		LEVEL_PER_ORB = BUILDER.define("level_per_orb", (double) 1);
+		LEVEL_PER_ORB = BUILDER.comment("the ammount of levels the orb of leveling gives").define("level_per_orb", (double) 1);
 		SCALE_FACTOR = BUILDER.define("scale_factor", (double) 30);
 		POINTS_PER_LEVEL = BUILDER.define("points_per_level", (double) 1);
-		ENABLEDROPS = BUILDER.define("enableDrops", true);
-		ONDEATHRESET = BUILDER.define("onDeathReset", false);
-		MAXPLAYERLEVEL = BUILDER.define("maxPlayerLevel", (double) 500);
+		ENABLE_DROPS = BUILDER.define("enableDrops", true);
+		ON_DEATH_RESET = BUILDER.define("onDeathReset", false);
+		MAX_PLAYER_LEVEL = BUILDER.define("maxPlayerLevel", (double) 500);
 		BUILDER.pop();
 		BUILDER.push("Artifacts Settings");
 		BONUS_EXPERIENCE_FACTOR = BUILDER.define("bonus_experience_factor", (double) 1.4);

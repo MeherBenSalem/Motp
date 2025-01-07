@@ -36,8 +36,8 @@ public class Level100TrophyRewardBlock extends Block {
 	@Override
 	public void appendHoverText(ItemStack itemstack, BlockGetter level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A77You have proven your strength and dedication."));
-		list.add(Component.literal("\u00A7bCongratulations on reaching \u00A7cLevel 100\u00A7b!"));
+		list.add(Component.translatable("block.memory_of_the_past.level_100_trophy_reward.description_0"));
+		list.add(Component.translatable("block.memory_of_the_past.level_100_trophy_reward.description_1"));
 	}
 
 	@Override
@@ -67,12 +67,13 @@ public class Level100TrophyRewardBlock extends Block {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		super.createBlockStateDefinition(builder);
 		builder.add(FACING);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {

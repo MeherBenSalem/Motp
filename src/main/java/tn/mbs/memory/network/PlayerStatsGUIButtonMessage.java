@@ -2,6 +2,7 @@
 package tn.mbs.memory.network;
 
 import tn.mbs.memory.world.inventory.PlayerStatsGUIMenu;
+import tn.mbs.memory.procedures.OpenAttributesDisplayGUIProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeTwoProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeThreeProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeTenProcedure;
@@ -110,6 +111,10 @@ public class PlayerStatsGUIButtonMessage {
 		if (buttonID == 9) {
 
 			AddPointsAttributeTenProcedure.execute(entity);
+		}
+		if (buttonID == 10) {
+
+			OpenAttributesDisplayGUIProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

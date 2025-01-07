@@ -27,7 +27,7 @@ public class ExperienceEnhancerArtifactItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A76A powerful artifact that \u00A7bGives Bonus experience\u00A76 from the fragments"));
-		list.add(Component.literal("Requires Exploration : 4"));
+		list.add(Component.translatable("item.memory_of_the_past.experience_enhancer_artifact.description_0"));
+		list.add(Component.translatable("item.memory_of_the_past.experience_enhancer_artifact.description_1"));
 	}
 }

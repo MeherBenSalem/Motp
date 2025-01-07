@@ -27,7 +27,5 @@ public class MemoryOfThePastModTabs {
 				tabData.accept(MemoryOfThePastModBlocks.LEVEL_200_TROPHY_REWARD.get().asItem());
 				tabData.accept(MemoryOfThePastModItems.AUTO_CONSUMER_ITEM.get());
 				tabData.accept(MemoryOfThePastModItems.EXPERIENCE_ENHANCER_ARTIFACT.get());
-			})
-
-					.build());
+			}).build());
 }

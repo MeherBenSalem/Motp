@@ -32,7 +32,7 @@ public class OrbOfLevelingItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A76Harness the power within this orb to \u00A7aascend \u00A7eyour level and reach new heights"));
+		list.add(Component.translatable("item.memory_of_the_past.codex_of_ascension.description_0"));
 	}
 
 	@Override

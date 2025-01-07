@@ -32,7 +32,7 @@ public class OrbOfResetingItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A7eA mystical orb that gently\u00A7b resets \u00A7eyour points, allowing you to start anew"));
+		list.add(Component.translatable("item.memory_of_the_past.tome_of_rebirth.description_0"));
 	}
 
 	@Override

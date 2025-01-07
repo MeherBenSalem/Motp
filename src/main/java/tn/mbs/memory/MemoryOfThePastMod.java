@@ -49,6 +49,7 @@ public class MemoryOfThePastMod {
 		MemoryOfThePastModTabs.REGISTRY.register(bus);
 
 		MemoryOfThePastModMenus.REGISTRY.register(bus);
+
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

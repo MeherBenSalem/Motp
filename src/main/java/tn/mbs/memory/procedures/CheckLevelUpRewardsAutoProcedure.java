@@ -66,7 +66,7 @@ public class CheckLevelUpRewardsAutoProcedure {
 								}
 							}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")))) {
 						itemToGive = new ItemStack(
-								ForgeRegistries.ITEMS.getValue(new ResourceLocation(((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))).toLowerCase(java.util.Locale.ENGLISH))));
+								ForgeRegistries.ITEMS.getValue(new ResourceLocation(((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 						Quantity = new Object() {
 							double convert(String s) {
 								try {
@@ -107,7 +107,8 @@ public class CheckLevelUpRewardsAutoProcedure {
 							}
 						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[chance]") + 8), (int) stringiterator.indexOf("[chanceEnd]")))) {
 							itemToGive = new ItemStack(
-									ForgeRegistries.ITEMS.getValue(new ResourceLocation(((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))).toLowerCase(java.util.Locale.ENGLISH))));
+									ForgeRegistries.ITEMS.getValue(new ResourceLocation(((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))).toLowerCase(java.util.Locale.ENGLISH))))
+									.copy();
 							Quantity = new Object() {
 								double convert(String s) {
 									try {

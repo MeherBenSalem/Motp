@@ -21,8 +21,8 @@ public class AutoConsumerItemItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A76A powerful artifact that \u00A7bautomatically consumes fragments\u00A76 from your inventory"));
-		list.add(Component.literal("Requires Exploration : 1 "));
+		list.add(Component.translatable("item.memory_of_the_past.auto_consumer_item.description_0"));
+		list.add(Component.translatable("item.memory_of_the_past.auto_consumer_item.description_1"));
 	}
 
 	@Override

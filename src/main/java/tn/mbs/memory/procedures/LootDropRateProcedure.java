@@ -39,7 +39,7 @@ public class LootDropRateProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double DropPercentage = 0;
-		if (MainConfigFileConfiguration.ENABLEDROPS.get()) {
+		if (MainConfigFileConfiguration.ENABLE_DROPS.get()) {
 			if (sourceentity instanceof Player || sourceentity instanceof ServerPlayer) {
 				DropPercentage = Mth.nextInt(RandomSource.create(), 0, 100);
 				if ((entity.level().dimension()) == Level.OVERWORLD) {
