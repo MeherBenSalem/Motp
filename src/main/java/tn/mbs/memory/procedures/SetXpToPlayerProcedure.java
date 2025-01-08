@@ -8,9 +8,11 @@ import net.minecraft.commands.CommandSource;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.arguments.DoubleArgumentType;
 
-public class ResetGivenPlayerProcedure {
+public class SetXpToPlayerProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
+		double AddedXp = 0;
 		{
 			Entity _ent = (new Object() {
 				public Entity getEntity() {
@@ -24,7 +26,7 @@ public class ResetGivenPlayerProcedure {
 			}.getEntity());
 			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 				_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "motp reset");
+						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), ("motp set xp " + DoubleArgumentType.getDouble(arguments, "amount")));
 			}
 		}
 	}

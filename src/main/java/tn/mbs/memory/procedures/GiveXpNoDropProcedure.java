@@ -74,7 +74,7 @@ public class GiveXpNoDropProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			LevelUpProcedureAutoLevelProcedure.execute(world, x, y, z, sourceentity);
+			LevelUpProcedureAutoProcedure.execute(world, x, y, z, sourceentity);
 		}
 	}
 }

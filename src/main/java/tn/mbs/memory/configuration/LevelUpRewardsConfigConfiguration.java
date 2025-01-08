@@ -14,8 +14,8 @@ public class LevelUpRewardsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> RANDOM_LOOT_TABLE_LEVEL;
 	static {
 		BUILDER.push("Rewards");
-		ENABLE = BUILDER.define("Enable", true);
-		LEVELUP_REWARDS_LIST = BUILDER.defineList("Reward List",
+		ENABLE = BUILDER.define("enable", true);
+		LEVELUP_REWARDS_LIST = BUILDER.defineList("rewards_list",
 				List.of("[level]1[levelEnd][quantity]16[quantityEnd][item]minecraft:coal[itemEnd]", "[level]2[levelEnd][quantity]1[quantityEnd][item]minecraft:iron_axe[itemEnd]",
 						"[level]3[levelEnd][quantity]16[quantityEnd][item]minecraft:iron_ingot[itemEnd]", "[level]4[levelEnd][quantity]1[quantityEnd][item]minecraft:iron_pickaxe[itemEnd]",
 						"[level]5[levelEnd][quantity]16[quantityEnd][item]minecraft:redstone[itemEnd]", "[level]6[levelEnd][quantity]6[quantityEnd][item]minecraft:gold_ingot[itemEnd]",
@@ -33,7 +33,7 @@ public class LevelUpRewardsConfigConfiguration {
 						"[level]29[levelEnd][quantity]2[quantityEnd][item]minecraft:totem_of_undying[itemEnd]", "[level]30[levelEnd][quantity]4[quantityEnd][item]minecraft:ancient_debris[itemEnd]",
 						"[level]100[levelEnd][quantity]1[quantityEnd][item]memory_of_the_past:level_100_trophy_reward[itemEnd]", "[level]200[levelEnd][quantity]1[quantityEnd][item]memory_of_the_past:level_200_trophy_reward[itemEnd]"),
 				entry -> true);
-		OVER_LEVEL_REWARDS = BUILDER.defineList("Random Rewards Table",
+		OVER_LEVEL_REWARDS = BUILDER.defineList("random_rewards_table",
 				List.of("[chance]2[chanceEnd][quantity]1[quantityEnd][item]minecraft:netherite_sword[itemEnd] ", "[chance]2[chanceEnd][quantity]1[quantityEnd][item]minecraft:netherite_pickaxe[itemEnd] ",
 						"[chance]20[chanceEnd][quantity]2[quantityEnd][item]minecraft:enchanted_golden_apple[itemEnd] ", "[chance]5[chanceEnd][quantity]1[quantityEnd][item]minecraft:elytra[itemEnd] ",
 						"[chance]25[chanceEnd][quantity]3[quantityEnd][item]minecraft:diamond_block[itemEnd] ", "[chance]10[chanceEnd][quantity]1[quantityEnd][item]minecraft:totem_of_undying[itemEnd] ",

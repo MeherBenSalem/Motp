@@ -74,7 +74,7 @@ public class PlayerAttributesViewerGUIScreen extends AbstractContainerScreen<Pla
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 1 && mouseX < leftPos + 40 && mouseY > topPos + -3 && mouseY < topPos + 8)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.memory_of_the_past.player_attributes_viewer_gui.tooltip_represents_your_overall_progress"), mouseX, mouseY);
-		if (mouseX > leftPos + 124 && mouseX < leftPos + 213 && mouseY > topPos + -3 && mouseY < topPos + 8)
+		if (mouseX > leftPos + 96 && mouseX < leftPos + 185 && mouseY > topPos + -3 && mouseY < topPos + 8)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.memory_of_the_past.player_attributes_viewer_gui.tooltip_indicates_the_number_of_points_y"), mouseX, mouseY);
 	}
 
@@ -149,10 +149,10 @@ public class PlayerAttributesViewerGUIScreen extends AbstractContainerScreen<Pla
 		guiGraphics.drawString(this.font,
 
 				ReturnCurrentLevelProcedure.execute(entity), 39, -3, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.memory_of_the_past.player_attributes_viewer_gui.label_available_points"), 124, -3, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.memory_of_the_past.player_attributes_viewer_gui.label_available_points"), 99, -3, -1, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnExtraPointsProcedure.execute(entity), 214, -3, -1, false);
+				ReturnExtraPointsProcedure.execute(entity), 189, -3, -1, false);
 		if (ReturnDisplaySection1Procedure.execute())
 			guiGraphics.drawString(this.font,
 
