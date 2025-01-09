@@ -35,8 +35,7 @@ public class OnPlayerSpawnProcedure {
 		String stringCommand = "";
 		double commandParam = 0;
 		double finalValue = 0;
-		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level
-				+ (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints <= 0) {
+		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level <= 0) {
 			{
 				double _setval = (double) MainConfigFileConfiguration.INIT_VAL_1.get();
 				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -107,12 +106,14 @@ public class OnPlayerSpawnProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				double _setval = (double) MainConfigFileConfiguration.STARTING_XP_LEVEL.get();
-				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.nextevelXp = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+			if (!((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints > (double) MainConfigFileConfiguration.INIT_VAL_STARTING_LEVEL.get())) {
+				{
+					double _setval = (double) MainConfigFileConfiguration.STARTING_XP_LEVEL.get();
+					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.nextevelXp = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints <= 0) {
 				{
