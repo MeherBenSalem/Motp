@@ -157,22 +157,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -292,22 +276,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -596,22 +564,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1039,22 +991,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1992,41 +1928,6 @@
       "path": "~/Procedures/Text Logic/AtrributesNames"
     },
     {
-      "name": "CheckLevelUpRewardsAuto",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "check_level_up_rewards_auto",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/CheckLevelUpRewardsAutoProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
-    },
-    {
       "name": "PlayerAttributesViewerGUI",
       "type": "gui",
       "compiles": true,
@@ -2724,22 +2625,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2836,25 +2721,6 @@
       "path": "~/Configurations"
     },
     {
-      "name": "ItemLock",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "item_lock",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ItemLockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Items/ItemLock"
-    },
-    {
       "name": "ItemRequirementsDisplay",
       "type": "procedure",
       "compiles": true,
@@ -2901,14 +2767,33 @@
       "path": "~/Procedures/Items/ItemLock"
     },
     {
-      "name": "PlayerBreaksBlock",
+      "name": "OnBlockPlacement",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "player_breaks_block",
+      "registry_name": "on_block_placement",
       "metadata": {
         "files": [
-          "src/main/java/tn/mbs/memory/procedures/PlayerBreaksBlockProcedure.java"
+          "src/main/java/tn/mbs/memory/procedures/OnBlockPlacementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Items/ItemLock"
+    },
+    {
+      "name": "OnEntityAttacked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_entity_attacked",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/OnEntityAttackedProcedure.java"
         ],
         "dependencies": [
           {
@@ -2918,6 +2803,67 @@
         ]
       },
       "path": "~/Procedures/Items/ItemLock"
+    },
+    {
+      "name": "OnBlockBreak",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_block_break",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/OnBlockBreakProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Items/ItemLock"
+    },
+    {
+      "name": "GiveXpVanilla",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_xp_vanilla",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/GiveXpVanillaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "droppedexperience",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procedures/Drop Logic"
+    },
+    {
+      "name": "CheckLevelUpRewardsAT",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_level_up_rewards_at",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/CheckLevelUpRewardsATProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Leveling Logic"
     }
   ],
   "variable_elements": [
@@ -3328,7 +3274,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",

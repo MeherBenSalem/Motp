@@ -11,6 +11,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_STARTING_LEVEL;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_1;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_1;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_1;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_1;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_1;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_1;
@@ -18,6 +19,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_1;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_2;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_2;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_2;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_2;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_2;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_2;
@@ -25,6 +27,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_2;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_3;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_3;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_3;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_3;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_3;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_3;
@@ -32,6 +35,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_3;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_4;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_4;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_4;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_4;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_4;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_4;
@@ -39,6 +43,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_4;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_5;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_5;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_5;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_5;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_5;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_5;
@@ -46,6 +51,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_5;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_6;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_6;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_6;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_6;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_6;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_6;
@@ -53,6 +59,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_6;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_7;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_7;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_7;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_7;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_7;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_7;
@@ -60,6 +67,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_7;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_8;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_8;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_8;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_8;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_8;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_8;
@@ -67,6 +75,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_8;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_9;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_9;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_9;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_9;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_9;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_9;
@@ -74,6 +83,7 @@ public class MechanicsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> LOCK_ATT_9;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_ATT_10;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> CMD_ATT_10;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVEL_ATT_10;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_TIP_ATT_10;
 	public static final ForgeConfigSpec.ConfigValue<Double> INIT_VAL_10;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_LEVEL_ATT_10;
@@ -85,7 +95,8 @@ public class MechanicsConfigConfiguration {
 		BUILDER.pop();
 		BUILDER.push("Attribute 1");
 		DISPLAY_NAME_ATT_1 = BUILDER.define("display_name", "Vitality : ");
-		CMD_ATT_1 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.max_health base set", "/effect give @p minecraft:instant_health 2 3"), entry -> true);
+		CMD_ATT_1 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.max_health base set"), entry -> true);
+		LEVEL_ATT_1 = BUILDER.defineList("on_level_event", List.of("/effect give @p minecraft:instant_health 2 3"), entry -> true);
 		DISPLAY_TIP_ATT_1 = BUILDER.define("tip_to_display", "§7Represents your overall durability. §7More health means you can survive longer in battle");
 		INIT_VAL_1 = BUILDER.define("init_val_attribute_one", (double) 20);
 		MAX_LEVEL_ATT_1 = BUILDER.define("max_level", (double) 100);
@@ -95,6 +106,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 2");
 		DISPLAY_NAME_ATT_2 = BUILDER.define("display_name", "Attack Power : ");
 		CMD_ATT_2 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.attack_damage base set"), entry -> true);
+		LEVEL_ATT_2 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_2 = BUILDER.define("tip_to_display", "§7Defines the amount of harm you can inflict with each attack. ");
 		INIT_VAL_2 = BUILDER.define("init_val_attribute_two", (double) 2);
 		MAX_LEVEL_ATT_2 = BUILDER.define("max_level", (double) 100);
@@ -104,6 +116,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 3");
 		DISPLAY_NAME_ATT_3 = BUILDER.define("display_name", "Attack Speed : ");
 		CMD_ATT_3 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.attack_speed base set"), entry -> true);
+		LEVEL_ATT_3 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_3 = BUILDER.define("tip_to_display", "§7Determines how quickly you can swing your weapon. ");
 		INIT_VAL_3 = BUILDER.define("init_val_attribute_three", (double) 4);
 		MAX_LEVEL_ATT_3 = BUILDER.define("max_level", (double) 20);
@@ -113,6 +126,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 4");
 		DISPLAY_NAME_ATT_4 = BUILDER.define("display_name", "Protection : ");
 		CMD_ATT_4 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.armor base set [param(0.1)]"), entry -> true);
+		LEVEL_ATT_4 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_4 = BUILDER.define("tip_to_display", "§7Reduces the amount of damage you take from enemy attacks");
 		INIT_VAL_4 = BUILDER.define("init_val_attribute_forth", (double) 0);
 		MAX_LEVEL_ATT_4 = BUILDER.define("max_level", (double) 200);
@@ -122,6 +136,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 5");
 		DISPLAY_NAME_ATT_5 = BUILDER.define("display_name", "Agility : ");
 		CMD_ATT_5 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.movement_speed base set [param(0.005)]"), entry -> true);
+		LEVEL_ATT_5 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_5 = BUILDER.define("tip_to_display", "§7Influences how fast you can move");
 		INIT_VAL_5 = BUILDER.define("init_val_attribute_fifth", (double) 20);
 		MAX_LEVEL_ATT_5 = BUILDER.define("max_level", (double) 50);
@@ -131,6 +146,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 6");
 		DISPLAY_NAME_ATT_6 = BUILDER.define("display_name", "Fortitude : ");
 		CMD_ATT_6 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.knockback_resistance base set [param(0.01)]"), entry -> true);
+		LEVEL_ATT_6 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_6 = BUILDER.define("tip_to_display", "§7Reduces the distance you are pushed back when hit by an enemy or explosion");
 		INIT_VAL_6 = BUILDER.define("init_val_attribute_sixth", (double) 0);
 		MAX_LEVEL_ATT_6 = BUILDER.define("max_level", (double) 100);
@@ -140,6 +156,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 7");
 		DISPLAY_NAME_ATT_7 = BUILDER.define("display_name", "Exploration : ");
 		CMD_ATT_7 = BUILDER.defineList("cmd_to_exc", List.of("/attribute @p generic.luck base set [param(0.5)]"), entry -> true);
+		LEVEL_ATT_7 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_7 = BUILDER.define("tip_to_display", "§7Influences the chances of receiving better loot or triggering beneficial events");
 		INIT_VAL_7 = BUILDER.define("init_val_attribute_seventh", (double) 0);
 		MAX_LEVEL_ATT_7 = BUILDER.define("max_level", (double) 100);
@@ -149,6 +166,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 8");
 		DISPLAY_NAME_ATT_8 = BUILDER.define("display_name", "");
 		CMD_ATT_8 = BUILDER.defineList("cmd_to_exc", List.of(" "), entry -> true);
+		LEVEL_ATT_8 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_8 = BUILDER.define("tip_to_display", "");
 		INIT_VAL_8 = BUILDER.define("init_val_attribute_eight", (double) 0);
 		MAX_LEVEL_ATT_8 = BUILDER.define("max_level", (double) 0);
@@ -158,6 +176,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 9");
 		DISPLAY_NAME_ATT_9 = BUILDER.define("display_name ", "");
 		CMD_ATT_9 = BUILDER.defineList("cmd_to_exc", List.of(" "), entry -> true);
+		LEVEL_ATT_9 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_9 = BUILDER.define("tip_to_display ", "");
 		INIT_VAL_9 = BUILDER.define("init_val_attribute_nine", (double) 0);
 		MAX_LEVEL_ATT_9 = BUILDER.define("max_level", (double) 0);
@@ -167,6 +186,7 @@ public class MechanicsConfigConfiguration {
 		BUILDER.push("Attribute 10");
 		DISPLAY_NAME_ATT_10 = BUILDER.define("display_name ", "");
 		CMD_ATT_10 = BUILDER.defineList("cmd_to_exc", List.of(" "), entry -> true);
+		LEVEL_ATT_10 = BUILDER.defineList("on_level_event", List.of(" "), entry -> true);
 		DISPLAY_TIP_ATT_10 = BUILDER.define("tip_to_display ", "");
 		INIT_VAL_10 = BUILDER.define("init_val_attribute_ten", (double) 0);
 		MAX_LEVEL_ATT_10 = BUILDER.define("max_level", (double) 0);

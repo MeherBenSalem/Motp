@@ -48,7 +48,7 @@ public class SetXpCmdProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			LevelUpProcedureProcedure.execute(world, x, y, z, entity);
+			LevelUpProcedureProcedure.execute(entity);
 		}
 	}
 }

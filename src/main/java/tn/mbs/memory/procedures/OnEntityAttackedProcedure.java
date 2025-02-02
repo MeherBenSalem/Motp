@@ -21,7 +21,7 @@ import net.minecraft.network.chat.Component;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class PlayerBreaksBlockProcedure {
+public class OnEntityAttackedProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
@@ -106,7 +106,7 @@ public class PlayerBreaksBlockProcedure {
 					}
 					if (cancelEvent) {
 						if (sourceentity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal("\u00A74you can't use this item"), true);
+							_player.displayClientMessage(Component.literal("\u00A74you can't attack using this item"), true);
 						if (event != null && event.isCancelable()) {
 							event.setCanceled(true);
 						} else if (event != null && event.hasResult()) {

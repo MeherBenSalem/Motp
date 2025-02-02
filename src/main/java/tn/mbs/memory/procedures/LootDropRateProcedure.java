@@ -110,7 +110,9 @@ public class LootDropRateProcedure {
 					}
 				}
 			} else {
-				GiveXpNoDropProcedure.execute(world, x, y, z, sourceentity);
+				if (!MainConfigFileConfiguration.USE_VANILLA_XP.get()) {
+					GiveXpNoDropProcedure.execute(sourceentity);
+				}
 			}
 		}
 	}

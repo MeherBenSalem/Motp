@@ -21,7 +21,7 @@ public class MemoryOfThePastModConfigs {
 		event.enqueueWork(() -> {
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MainConfigFileConfiguration.SPEC, "motp/main_config.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DropRateConfigFileConfiguration.SPEC, "motp/drop_rate_config.toml");
-			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, LevelUpRewardsConfigConfiguration.SPEC, "motp/levelup_rewards.toml");
+			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, LevelUpRewardsConfigConfiguration.SPEC, "motp/levelup_events.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MechanicsConfigConfiguration.SPEC, "motp/attributes_config.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GUIAttributeConfigConfiguration.SPEC, "motp/attribute_display_config.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ItemsConfigConfiguration.SPEC, "motp/items_config.toml");

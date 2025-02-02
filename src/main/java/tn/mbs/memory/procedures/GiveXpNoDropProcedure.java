@@ -5,7 +5,6 @@ import tn.mbs.memory.init.MemoryOfThePastModItems;
 import tn.mbs.memory.configuration.MainConfigFileConfiguration;
 import tn.mbs.memory.configuration.DropRateConfigFileConfiguration;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -14,12 +13,12 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
 public class GiveXpNoDropProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity sourceentity) {
+	public static void execute(Entity sourceentity) {
 		if (sourceentity == null)
 			return;
 		double AddedXp = 0;
 		double DropChance = 0;
-		DropChance = Mth.nextInt(RandomSource.create(), 0, 100);
+		DropChance = Mth.nextInt(RandomSource.create(), 1, 100);
 		if ((sourceentity.level().dimension()) == Level.OVERWORLD) {
 			if (Mth.nextInt(RandomSource.create(), 0, 100) <= (double) DropRateConfigFileConfiguration.OW_OVERALL_RATE.get()) {
 				if (DropChance <= (double) DropRateConfigFileConfiguration.OW_GREATER_RATE.get()) {
@@ -53,7 +52,7 @@ public class GiveXpNoDropProcedure {
 		}
 		if ((sourceentity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(MemoryOfThePastModItems.EXPERIENCE_ENHANCER_ARTIFACT.get())) : false)
 				&& (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7 >= 4) {
-			AddedXp = (double) MainConfigFileConfiguration.GREATER_XP_VALUE.get() * (double) MainConfigFileConfiguration.BONUS_EXPERIENCE_FACTOR.get();
+			AddedXp = AddedXp * (double) MainConfigFileConfiguration.BONUS_EXPERIENCE_FACTOR.get();
 		}
 		{
 			double _setval = (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel
@@ -74,7 +73,7 @@ public class GiveXpNoDropProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			LevelUpProcedureAutoProcedure.execute(world, x, y, z, sourceentity);
+			LevelUpProcedureAutoProcedure.execute(sourceentity);
 		}
 	}
 }

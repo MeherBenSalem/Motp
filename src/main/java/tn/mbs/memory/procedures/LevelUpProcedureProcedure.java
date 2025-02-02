@@ -6,11 +6,10 @@ import tn.mbs.memory.MemoryOfThePastMod;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 public class LevelUpProcedureProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		String level_interval = "";
@@ -19,7 +18,7 @@ public class LevelUpProcedureProcedure {
 		double max_level_interval = 0;
 		double min_level_interval = 0;
 		double current_level_scale = 0;
-		CheckLevelupRewardsProcedure.execute(world, x, y, z, entity);
+		CheckLevelupRewardsProcedure.execute(entity);
 		current_level_scale = 0;
 		for (String stringiterator : MainConfigFileConfiguration.LEVELS_SCALE_INTERVAL.get()) {
 			if (stringiterator.contains("[range]") && stringiterator.contains("[rangeEnd]") && stringiterator.contains("[scale]") && stringiterator.contains("[scaleEnd]")) {

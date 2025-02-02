@@ -39,76 +39,73 @@ public class ItemRequirementsDisplayProcedure {
 		double attribute = 0;
 		double level = 0;
 		String attributeName = "";
-		if (!(tooltip.get(0).getString()).toLowerCase().contains("requires")) {
-			for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-				if (stringiterator.contains(ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString())) {
-					attribute = new Object() {
-						double convert(String s) {
-							try {
-								return Double.parseDouble(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
+		for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
+			if (stringiterator.contains(ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString())) {
+				attribute = new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
 						}
-					}.convert(stringiterator.substring((int) (stringiterator.indexOf("[attribute]") + 11), (int) stringiterator.indexOf("[attributeEnd]")));
-					level = new Object() {
-						double convert(String s) {
-							try {
-								return Double.parseDouble(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")));
-					attributeName = "";
-					if (attribute == 1) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
-							attributeName = ReturnAttributeOneNameProcedure.execute();
-						}
-					} else if (attribute == 2) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2) {
-							attributeName = ReturnAttributeTwoNameProcedure.execute();
-						}
-					} else if (attribute == 3) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3) {
-							attributeName = ReturnAttributeThreeNameProcedure.execute();
-						}
-					} else if (attribute == 4) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_4) {
-							attributeName = ReturnAttributeForthNameProcedure.execute();
-						}
-					} else if (attribute == 5) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_5) {
-							attributeName = ReturnAttributeFifthNameProcedure.execute();
-						}
-					} else if (attribute == 6) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6) {
-							attributeName = ReturnAttributeSixthNameProcedure.execute();
-						}
-					} else if (attribute == 7) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7) {
-							attributeName = ReturnAttributeSeventhNameProcedure.execute();
-						}
-					} else if (attribute == 8) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_8) {
-							attributeName = ReturnAttributeEightNameProcedure.execute();
-						}
-					} else if (attribute == 9) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_9) {
-							attributeName = ReturnAttributeNineNameProcedure.execute();
-						}
-					} else if (attribute == 10) {
-						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_10) {
-							attributeName = ReturnAttributeTenNameProcedure.execute();
-						}
+						return 0;
 					}
-					if (!(attributeName).isEmpty()) {
-						tooltip.add(0, Component.literal(("\u00A74Requires " + attributeName + "\u00A7c" + level)));
-						break;
+				}.convert(stringiterator.substring((int) (stringiterator.indexOf("[attribute]") + 11), (int) stringiterator.indexOf("[attributeEnd]")));
+				level = new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
 					}
-				} else {
-					continue;
+				}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")));
+				attributeName = "";
+				if (attribute == 1) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
+						attributeName = ReturnAttributeOneNameProcedure.execute();
+					}
+				} else if (attribute == 2) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2) {
+						attributeName = ReturnAttributeTwoNameProcedure.execute();
+					}
+				} else if (attribute == 3) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3) {
+						attributeName = ReturnAttributeThreeNameProcedure.execute();
+					}
+				} else if (attribute == 4) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_4) {
+						attributeName = ReturnAttributeForthNameProcedure.execute();
+					}
+				} else if (attribute == 5) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_5) {
+						attributeName = ReturnAttributeFifthNameProcedure.execute();
+					}
+				} else if (attribute == 6) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6) {
+						attributeName = ReturnAttributeSixthNameProcedure.execute();
+					}
+				} else if (attribute == 7) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7) {
+						attributeName = ReturnAttributeSeventhNameProcedure.execute();
+					}
+				} else if (attribute == 8) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_8) {
+						attributeName = ReturnAttributeEightNameProcedure.execute();
+					}
+				} else if (attribute == 9) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_9) {
+						attributeName = ReturnAttributeNineNameProcedure.execute();
+					}
+				} else if (attribute == 10) {
+					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_10) {
+						attributeName = ReturnAttributeTenNameProcedure.execute();
+					}
 				}
+				if (!(attributeName).isEmpty()) {
+					tooltip.add((int) tooltip.size(), Component.literal(("\u00A74[Requires " + attributeName + "\u00A7c" + level + "\u00A74]")));
+				}
+			} else {
+				continue;
 			}
 		}
 	}

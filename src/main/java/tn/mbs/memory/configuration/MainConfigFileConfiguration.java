@@ -15,6 +15,7 @@ public class MainConfigFileConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> SCALE_FACTOR;
 	public static final ForgeConfigSpec.ConfigValue<Double> POINTS_PER_LEVEL;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_DROPS;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> USE_VANILLA_XP;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> ON_DEATH_RESET;
 	public static final ForgeConfigSpec.ConfigValue<Double> MAX_PLAYER_LEVEL;
 	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVELS_SCALE_INTERVAL;
@@ -30,10 +31,11 @@ public class MainConfigFileConfiguration {
 		LESSER_XP_VALUE = BUILDER.define("lesser_experience_value", (double) 20);
 		BETTER_XP_VALUE = BUILDER.define("better_experience_value", (double) 200);
 		GREATER_XP_VALUE = BUILDER.define("greater_experience_value", (double) 800);
-		LEVEL_PER_ORB = BUILDER.comment("the ammount of levels the orb of leveling gives").define("level_per_orb", (double) 1);
-		SCALE_FACTOR = BUILDER.comment("the higher it is the harder it is to level up").define("xp_diminishing_factor", (double) 20);
+		LEVEL_PER_ORB = BUILDER.comment("The ammount of levels the orb of leveling gives").define("level_per_orb", (double) 1);
+		SCALE_FACTOR = BUILDER.comment("The higher it is the harder it is to level up").define("xp_diminishing_factor", (double) 20);
 		POINTS_PER_LEVEL = BUILDER.define("points_per_level", (double) 1);
 		ENABLE_DROPS = BUILDER.define("enable_drops", true);
+		USE_VANILLA_XP = BUILDER.define("use_vanilla_xp", false);
 		ON_DEATH_RESET = BUILDER.define("on_death_reset", false);
 		MAX_PLAYER_LEVEL = BUILDER.define("max_player_level", (double) 500);
 		BUILDER.pop();

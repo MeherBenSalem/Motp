@@ -6,22 +6,20 @@ import tn.mbs.memory.MemoryOfThePastMod;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
-public class CheckLevelUpRewardsAutoProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity sourceentity) {
+public class CheckLevelUpRewardsATProcedure {
+	public static void execute(Entity sourceentity) {
 		if (sourceentity == null)
 			return;
 		ItemStack itemToGive = ItemStack.EMPTY;
@@ -53,8 +51,7 @@ public class CheckLevelUpRewardsAutoProcedure {
 		if (LevelUpRewardsConfigConfiguration.ENABLE.get()) {
 			index = 0;
 			for (String stringiterator : LevelUpRewardsConfigConfiguration.LEVELUP_REWARDS_LIST.get()) {
-				if (stringiterator.contains("[level]") && stringiterator.contains("[levelEnd]") && stringiterator.contains("[item]") && stringiterator.contains("[itemEnd]") && stringiterator.contains("[quantity]")
-						&& stringiterator.contains("[quantityEnd]")) {
+				if (stringiterator.contains("[level]") && stringiterator.contains("[levelEnd]")) {
 					if ((sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints
 							+ (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level == new Object() {
 								double convert(String s) {
@@ -65,22 +62,11 @@ public class CheckLevelUpRewardsAutoProcedure {
 									return 0;
 								}
 							}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")))) {
-						itemToGive = new ItemStack(
-								ForgeRegistries.ITEMS.getValue(new ResourceLocation(((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-						Quantity = new Object() {
-							double convert(String s) {
-								try {
-									return Double.parseDouble(s.trim());
-								} catch (Exception e) {
-								}
-								return 0;
-							}
-						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[quantity]") + 10), (int) stringiterator.indexOf("[quantityEnd]")));
-						for (int index0 = 0; index0 < (int) Quantity; index0++) {
-							if (world instanceof ServerLevel _level) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemToGive);
-								entityToSpawn.setPickUpDelay(0);
-								_level.addFreshEntity(entityToSpawn);
+						{
+							Entity _ent = sourceentity;
+							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), (stringiterator.substring((int) (stringiterator.indexOf("[levelEnd]") + 10))));
 							}
 						}
 						break;
@@ -95,8 +81,7 @@ public class CheckLevelUpRewardsAutoProcedure {
 							.get()) {
 				index = 0;
 				for (String stringiterator : LevelUpRewardsConfigConfiguration.OVER_LEVEL_REWARDS.get()) {
-					if (stringiterator.contains("[chance]") && stringiterator.contains("[chanceEnd]") && stringiterator.contains("[item]") && stringiterator.contains("[itemEnd]") && stringiterator.contains("[quantity]")
-							&& stringiterator.contains("[quantityEnd]")) {
+					if (stringiterator.contains("[chance]") && stringiterator.contains("[chanceEnd]")) {
 						if (Mth.nextInt(RandomSource.create(), 0, 100) <= new Object() {
 							double convert(String s) {
 								try {
@@ -106,23 +91,11 @@ public class CheckLevelUpRewardsAutoProcedure {
 								return 0;
 							}
 						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[chance]") + 8), (int) stringiterator.indexOf("[chanceEnd]")))) {
-							itemToGive = new ItemStack(
-									ForgeRegistries.ITEMS.getValue(new ResourceLocation(((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))).toLowerCase(java.util.Locale.ENGLISH))))
-									.copy();
-							Quantity = new Object() {
-								double convert(String s) {
-									try {
-										return Double.parseDouble(s.trim());
-									} catch (Exception e) {
-									}
-									return 0;
-								}
-							}.convert(stringiterator.substring((int) (stringiterator.indexOf("[quantity]") + 10), (int) stringiterator.indexOf("[quantityEnd]")));
-							for (int index1 = 0; index1 < (int) Quantity; index1++) {
-								if (world instanceof ServerLevel _level) {
-									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemToGive);
-									entityToSpawn.setPickUpDelay(0);
-									_level.addFreshEntity(entityToSpawn);
+							{
+								Entity _ent = sourceentity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), (stringiterator.substring((int) (stringiterator.indexOf("[levelEnd]") + 10))));
 								}
 							}
 							break;
