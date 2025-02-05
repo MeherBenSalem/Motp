@@ -1,3 +1,8 @@
+## Changelog [1.5.1]
+
+- Added param in attributeGUI.toml to disable the stats attribute screen
+- Changed debug messages in configurations
+
 ## Changelog [1.5.0]
 
 - **Locked Items Tooltip:** Now renders at the bottom instead.  
