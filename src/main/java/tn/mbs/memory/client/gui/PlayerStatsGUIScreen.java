@@ -11,6 +11,7 @@ import tn.mbs.memory.procedures.ReturnNextAttributeNineProcedure;
 import tn.mbs.memory.procedures.ReturnNextAttributeForthProcedure;
 import tn.mbs.memory.procedures.ReturnNextAttributeFifthProcedure;
 import tn.mbs.memory.procedures.ReturnNextAttributeEightProcedure;
+import tn.mbs.memory.procedures.ReturnGlobalSectionsDisplayProcedure;
 import tn.mbs.memory.procedures.ReturnExtraPointsProcedure;
 import tn.mbs.memory.procedures.ReturnCurrentLevelProcedure;
 import tn.mbs.memory.procedures.ReturnCurrentAttributeTwoProcedure;
@@ -475,11 +476,17 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		guistate.put("button:imagebutton_button_notclicked9", imagebutton_button_notclicked9);
 		this.addRenderableWidget(imagebutton_button_notclicked9);
 		imagebutton_button_for_stats = new ImageButton(this.leftPos + -46, this.topPos + -3, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_for_stats.png"), 13, 26, e -> {
-			if (true) {
+			if (ReturnGlobalSectionsDisplayProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(10, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnGlobalSectionsDisplayProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_button_for_stats", imagebutton_button_for_stats);
 		this.addRenderableWidget(imagebutton_button_for_stats);
 	}

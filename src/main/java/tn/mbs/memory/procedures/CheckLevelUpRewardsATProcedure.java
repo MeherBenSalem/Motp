@@ -72,7 +72,7 @@ public class CheckLevelUpRewardsATProcedure {
 						break;
 					}
 				} else {
-					MemoryOfThePastMod.LOGGER.error(("Please check the random rewards config file syntax at index " + index));
+					MemoryOfThePastMod.LOGGER.error(("Missing [level] or [levelEnd] at index " + index));
 				}
 				index = index + 1;
 			}
@@ -101,7 +101,7 @@ public class CheckLevelUpRewardsATProcedure {
 							break;
 						}
 					} else {
-						MemoryOfThePastMod.LOGGER.error(("Please check the random rewards config file syntax at index " + index));
+						MemoryOfThePastMod.LOGGER.error(("Missing [chance] or [chanceEnd] at index " + index));
 					}
 					index = index + 1;
 				}

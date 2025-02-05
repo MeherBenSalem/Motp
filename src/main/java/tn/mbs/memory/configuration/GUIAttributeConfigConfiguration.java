@@ -6,6 +6,7 @@ public class GUIAttributeConfigConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
 
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_GUI_STATS;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SECTION_1;
 	public static final ForgeConfigSpec.ConfigValue<String> DISPLAY_NAME_SECTION_1;
 	public static final ForgeConfigSpec.ConfigValue<String> NAMESPACE_SECTION_1;
@@ -82,6 +83,9 @@ public class GUIAttributeConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<String> NAME_SECTION_15;
 	public static final ForgeConfigSpec.ConfigValue<Double> MODFIER_SECTION_15;
 	static {
+		BUILDER.push("Global Settings");
+		ENABLE_GUI_STATS = BUILDER.define("enable", true);
+		BUILDER.pop();
 		BUILDER.push("Attribute 1");
 		ENABLE_SECTION_1 = BUILDER.define("enable", true);
 		DISPLAY_NAME_SECTION_1 = BUILDER.define("display_name", "§fHealth : §6");

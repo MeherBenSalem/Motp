@@ -2864,6 +2864,21 @@
         ]
       },
       "path": "~/Procedures/Leveling Logic"
+    },
+    {
+      "name": "ReturnGlobalSectionsDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_global_sections_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnGlobalSectionsDisplayProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/GUI/GetPlayerAttributesDisplay/Return Display Logic"
     }
   ],
   "variable_elements": [
@@ -2978,8 +2993,8 @@
       "advancements.reach_level_50.title": "Reach Level 50",
       "item.memory_of_the_past.great_drop_of_knowledge": "Great Drop of Knowledge",
       "gui.memory_of_the_past.player_stats_gui.label_health": "Vitality :",
-      "gui.memoryfrags.alter_gui.button_fuse": "Fuse",
       "key.memory_of_the_past.open_stats_menu_keybind": "Open Stats Menu ",
+      "gui.memoryfrags.alter_gui.button_fuse": "Fuse",
       "item.memoryfrags.great_drop_of_knowledge": "Great Drop of Knowledge",
       "gui.memory_of_the_past.player_attributes_viewer_gui.label_level": "Level :",
       "gui.memoryfrags.player_stats_gui.button_empty1": "\u003e",
@@ -3000,8 +3015,8 @@
       "gui.memory_of_the_past.player_stats_gui.label_movement_speed": "Agility :",
       "block.memory_of_the_past.level_100_trophy_reward.description_1": "§bCongratulations on reaching §cLevel 100§b!",
       "block.memory_of_the_past.level_100_trophy_reward.description_0": "§7You have proven your strength and dedication.",
-      "item_group.memory_of_the_past.memoryfragments": "MOTP",
       "gui.memoryfrags.alter_gui.button_empty": "fuse",
+      "item_group.memory_of_the_past.memoryfragments": "MOTP",
       "gui.memoryfrags.alter_gui.label_alter": "Alter",
       "item.memory_of_the_past.codex_of_ascension": "Codex of Ascension",
       "gui.memoryfrags.player_stats_gui.label_hp": "hp",
@@ -3079,8 +3094,8 @@
       "advancements.reach_level_50.title": "Atteindre le niveau 50",
       "item.memory_of_the_past.great_drop_of_knowledge": "Grande goutte de connaissance",
       "gui.memory_of_the_past.player_stats_gui.label_health": "Vitalité :",
-      "gui.memoryfrags.alter_gui.button_fuse": "Fuse",
       "key.memory_of_the_past.open_stats_menu_keybind": "Ouvrir le menu Stats ",
+      "gui.memoryfrags.alter_gui.button_fuse": "Fuse",
       "item.memoryfrags.great_drop_of_knowledge": "Grande goutte de connaissance",
       "gui.memory_of_the_past.player_attributes_viewer_gui.label_level": "Level :",
       "gui.memoryfrags.player_stats_gui.button_empty1": "\u003e",
@@ -3101,8 +3116,8 @@
       "gui.memory_of_the_past.player_stats_gui.label_movement_speed": "Agilité :",
       "block.memory_of_the_past.level_100_trophy_reward.description_1": "§bCongratulations on reaching §cLevel 100§b!",
       "block.memory_of_the_past.level_100_trophy_reward.description_0": "§7You have proven your strength and dedication.",
-      "item_group.memory_of_the_past.memoryfragments": "MOTP",
       "gui.memoryfrags.alter_gui.button_empty": "fuse",
+      "item_group.memory_of_the_past.memoryfragments": "MOTP",
       "gui.memoryfrags.alter_gui.label_alter": "Alter",
       "item.memory_of_the_past.codex_of_ascension": "Orb Of Leveling",
       "gui.memoryfrags.player_stats_gui.label_hp": "hp",
@@ -3274,7 +3289,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",
