@@ -108,7 +108,7 @@ public class OnPlayerSpawnProcedure {
 			}
 			if (!((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints > (double) MechanicsConfigConfiguration.INIT_VAL_STARTING_LEVEL.get())) {
 				{
-					double _setval = (double) MainConfigFileConfiguration.STARTING_XP_LEVEL.get();
+					double _setval = (double) MainConfigFileConfiguration.FIRST_LEVEL_VP.get();
 					entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.nextevelXp = _setval;
 						capability.syncPlayerVariables(entity);

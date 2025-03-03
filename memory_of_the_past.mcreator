@@ -1,20 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "Commonfragment",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lesser_drop_of_knowledge",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/item/CommonfragmentItem.java",
-          "src/main/resources/assets/memory_of_the_past/models/item/lesser_drop_of_knowledge.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
       "name": "OnPlayerSpawn",
       "type": "procedure",
       "compiles": true,
@@ -163,34 +149,6 @@
       "path": "~/Procedures/Items"
     },
     {
-      "name": "Uncommonfragment",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "better_drop_of_knowledge",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/item/UncommonfragmentItem.java",
-          "src/main/resources/assets/memory_of_the_past/models/item/better_drop_of_knowledge.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "Rarefragment",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "great_drop_of_knowledge",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/item/RarefragmentItem.java",
-          "src/main/resources/assets/memory_of_the_past/models/item/great_drop_of_knowledge.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
       "name": "CurrentXpToLevel",
       "type": "procedure",
       "compiles": true,
@@ -209,45 +167,6 @@
         ]
       },
       "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
-      "name": "ManageLevelUp",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "manage_level_up",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ManageLevelUpProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
     },
     {
       "name": "LevelOverlay",
@@ -274,7 +193,7 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
+            "name": "target",
             "type": "entity"
           }
         ]
@@ -436,45 +355,6 @@
       "path": "~/Procedures/Text Logic"
     },
     {
-      "name": "LootDropRate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "loot_drop_rate",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/LootDropRateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Drop Logic"
-    },
-    {
       "name": "VanillaDropRates",
       "type": "procedure",
       "compiles": true,
@@ -562,7 +442,7 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
+            "name": "target",
             "type": "entity"
           }
         ]
@@ -686,73 +566,6 @@
         ]
       },
       "path": "~/Commands"
-    },
-    {
-      "name": "AutoConsumerItemItemInInventoryTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "auto_consumer_item_item_in_inventory_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/AutoConsumerItemItemInInventoryTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Items"
-    },
-    {
-      "name": "AutoConsumerItem",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "auto_consumer_item",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/item/AutoConsumerItemItem.java",
-          "src/main/resources/assets/memory_of_the_past/models/item/auto_consumer_item.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "ExperienceEnhancerArtifact",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "experience_enhancer_artifact",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/memory_of_the_past/models/item/experience_enhancer_artifact.json",
-          "src/main/java/tn/mbs/memory/item/ExperienceEnhancerArtifactItem.java"
-        ]
-      },
-      "path": "~/Items"
     },
     {
       "name": "MechanicsConfig",
@@ -989,6 +802,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
           }
@@ -1025,32 +842,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/memory_of_the_past/recipes/tome_of_rebirth_recipe.json"
-        ]
-      },
-      "path": "~/Recipes"
-    },
-    {
-      "name": "AutoConsumerArtifactRecipe",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "auto_consumer_artifact_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/auto_consumer_artifact_recipe.json"
-        ]
-      },
-      "path": "~/Recipes"
-    },
-    {
-      "name": "ArtifactEnhancerRecipe",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "artifact_enhancer_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/artifact_enhancer_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -2612,25 +2403,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "LevelUpProcedureAuto",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "level_up_procedure_auto",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/LevelUpProcedureAutoProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
-    },
-    {
       "name": "LevelUpProcedureCmd",
       "type": "procedure",
       "compiles": true,
@@ -2847,25 +2619,6 @@
       "path": "~/Procedures/Drop Logic"
     },
     {
-      "name": "CheckLevelUpRewardsAT",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "check_level_up_rewards_at",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/CheckLevelUpRewardsATProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Leveling Logic"
-    },
-    {
       "name": "ReturnGlobalSectionsDisplay",
       "type": "procedure",
       "compiles": true,
@@ -2879,6 +2632,466 @@
         "dependencies": []
       },
       "path": "~/Procedures/GUI/GetPlayerAttributesDisplay/Return Display Logic"
+    },
+    {
+      "name": "ReturnPercentage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_percentage",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnPercentageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "IsAt0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_0",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt10",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_10",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt15",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_15",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt15Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt20",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_20",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt20Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt25",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_25",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt25Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt30",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_30",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt30Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt35",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_35",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt35Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt40",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_40",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt40Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt45",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_45",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt45Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt50",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_50",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt50Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt55",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_55",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt55Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt60",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_60",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt60Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt65",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_65",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt65Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt70",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_70",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt70Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt75",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_75",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt75Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt80",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_80",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt80Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt85",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_85",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt85Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt90",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_90",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt90Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt95",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_95",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt95Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "IsAt99",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_at_99",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/IsAt99Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/UI Bar"
+    },
+    {
+      "name": "ReturnCurrentVPToLevelPercentage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_vp_to_level_percentage",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentVPToLevelPercentageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
     }
   ],
   "variable_elements": [
@@ -2978,28 +3191,55 @@
   "language_map": {
     "en_us": {
       "gui.memoryfrags.player_stats_gui.label_resistance": "Resistance : ",
-      "item.memory_of_the_past.better_drop_of_knowledge": "Better Drop of Knowledge",
+      "gui.memoryfrags.player_stats_gui.label_available_points": "Available Points:",
+      "itemGroup.tab_memoryfragments": "MOTP",
+      "key.memory_of_the_past.next_value": "Next value is : ",
       "item.memoryfrags.lesser_drop_of_knowledge": "Lesser Drop of Knowledge",
       "gui.memoryfrags.player_stats_gui.label_level": "Level :",
       "gui.memory_of_the_past.player_stats_gui.label_available_points": "Available Points:",
-      "item.memory_of_the_past.auto_consumer_item.description_0": "§6A powerful artifact that §bautomatically consumes fragments§6 from your inventory",
+      "key.memoryfrags.open_stats_menu_keybind": "Open Stats Menu ",
+      "gui.memory_of_the_past.player_attributes_viewer_gui.tooltip_indicates_the_number_of_points_y": "§7Indicates the number of points you can allocate to improve your stats",
       "gui.memory_of_the_past.player_attributes_viewer_gui.tooltip_represents_your_overall_progress": "§7Represents your overall progress and power",
       "item.memory_of_the_past.auto_consumer_item.description_1": "Requires Exploration : 1 ",
       "gui.memory_of_the_past.player_stats_gui.button_empty": "\u003e",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_reduces_the_distance_you_are_pus": "§7Reduces the distance you are pushed back when hit by an enemy or explosion",
       "block.memory_of_the_past.level_100_trophy_reward": "Level 100 Trophy Reward",
+      "gui.memoryfrags.player_stats_gui.label_attack_damage": "Attack Damage :",
+      "gui.memory_of_the_past.player_stats_gui.label_empty1": "?",
       "gui.memory_of_the_past.player_stats_gui.label_level": "Level :",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_reduces_the_amount_of_damage_you": "§7Reduces the amount of damage you take from enemy attacks. ",
       "gui.memory_of_the_past.player_stats_gui.tooltip_influences_how_fast_you_can_move": "§7Influences how fast you can move. ",
+      "item_group.memoryfrags.memoryfragments": "Memory fragments",
+      "item.memory_of_the_past.experience_enhancer_artifact.description_1": "Requires Exploration : 4",
       "item.memoryfrags.orb_of_reseting": "Orb Of Reset",
       "advancements.reach_level_50.title": "Reach Level 50",
-      "item.memory_of_the_past.great_drop_of_knowledge": "Great Drop of Knowledge",
+      "item.memory_of_the_past.tome_of_rebirth.description_0": "§eA mystical orb that gently§b resets §eyour points, allowing you to start anew",
       "gui.memory_of_the_past.player_stats_gui.label_health": "Vitality :",
-      "key.memory_of_the_past.open_stats_menu_keybind": "Open Stats Menu ",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_durabili": "§7Represents your overall durability. §7More health means you can survive longer in battle. ",
       "gui.memoryfrags.alter_gui.button_fuse": "Fuse",
+      "key.memory_of_the_past.open_stats_menu_keybind": "Open Stats Menu ",
+      "itemGroup.memory_of_the_past.memoryfragments": "MOTP",
+      "item.memoryfrags.orb_of_leveling": "Orb Of Leveling",
+      "gui.memory_of_the_past.player_stats_gui.label_resistance": "Fortitude : ",
       "item.memoryfrags.great_drop_of_knowledge": "Great Drop of Knowledge",
+      "gui.memory_of_the_past.player_stats_gui.label_empty8": "?",
+      "gui.memoryfrags.level_overlay.label_available_points": "Available Points :",
+      "gui.memory_of_the_past.player_stats_gui.label_empty7": "?",
+      "gui.memory_of_the_past.player_stats_gui.label_empty6": "?",
       "gui.memory_of_the_past.player_attributes_viewer_gui.label_level": "Level :",
+      "gui.memory_of_the_past.player_stats_gui.label_empty5": "?",
+      "key.categories.motp": "Memory Of The Past",
+      "advancements.reach_level_100.descr": "You Just Reached LEVEL 100 !!",
+      "advancements.reach_level_200.title": "Reach Level 200",
+      "gui.memory_of_the_past.player_stats_gui.label_empty4": "?",
+      "gui.memory_of_the_past.player_stats_gui.label_empty": "?",
+      "gui.memory_of_the_past.player_stats_gui.label_empty3": "?",
+      "gui.memory_of_the_past.player_stats_gui.label_empty2": "?",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_determines_how_quickly_you_can_s": "§7Determines how quickly you can swing your weapon. ",
       "gui.memoryfrags.player_stats_gui.button_empty1": "\u003e",
       "gui.memoryfrags.player_stats_gui.button_empty2": "\u003e",
       "gui.memoryfrags.player_stats_gui.button_empty3": "\u003e",
+      "gui.memory_of_the_past.level_overlay.label_level": "Level:",
       "gui.memoryfrags.player_stats_gui.button_empty4": "\u003e",
       "gui.memoryfrags.level_overlay.label_experience": "Level :",
       "gui.memoryfrags.player_stats_gui.button_empty5": "\u003e",
@@ -3009,98 +3249,93 @@
       "advancements.first_level_up.descr": "You just made the first step into the mod",
       "gui.memory_of_the_past.player_stats_gui.label_upgrade_memories": "Memories Upgrade",
       "item.memory_of_the_past.tome_of_rebirth": "Tome of Rebirth",
+      "gui.memoryfrags.player_stats_gui.label_movement_speed": "Movement Speed :",
       "gui.memory_of_the_past.player_stats_gui.label_attack_damage": "Attack Power :",
+      "advancements.first_level_up.title": "Level Up",
       "gui.memory_of_the_past.player_stats_gui.label_attack_speed": "Attack Speed :",
       "gui.memoryfrags.player_stats_gui.button_empty": "\u003e",
       "gui.memory_of_the_past.player_stats_gui.label_movement_speed": "Agility :",
       "block.memory_of_the_past.level_100_trophy_reward.description_1": "§bCongratulations on reaching §cLevel 100§b!",
       "block.memory_of_the_past.level_100_trophy_reward.description_0": "§7You have proven your strength and dedication.",
-      "gui.memoryfrags.alter_gui.button_empty": "fuse",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_progress": "§7Represents your overall progress and power",
+      "gui.memoryfrags.player_stats_gui.label_attack_speed": "Attack Speed :",
       "item_group.memory_of_the_past.memoryfragments": "MOTP",
+      "gui.memoryfrags.alter_gui.button_empty": "fuse",
+      "gui.memory_of_the_past.level_overlay.label_experience": "Level :",
+      "block.memory_of_the_past.level_200_trophy_reward": "Level 200 Trophy Reward",
       "gui.memoryfrags.alter_gui.label_alter": "Alter",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_influences_the_chances_of_receiv": "§7Influences the chances of receiving better loot or triggering beneficial events",
+      "item.memoryfrags.better_drop_of_knowledge": "Better Drop of Knowledge",
       "item.memory_of_the_past.codex_of_ascension": "Codex of Ascension",
+      "gui.memory_of_the_past.player_stats_gui.label_exploration": "Exploration :",
       "gui.memoryfrags.player_stats_gui.label_hp": "hp",
       "gui.memory_of_the_past.player_stats_gui.label_armor": "Protection :",
       "gui.memory_of_the_past.level_overlay.label_available_points": "You have unspent points !",
-      "advancements.reach_level_50.descr": "You Just Reached LEVEL 50 !!",
-      "advancements.reach_level_100.title": "Reach Level 100",
-      "gui.memory_of_the_past.player_attributes_viewer_gui.label_available_points": "Available Points:",
-      "gui.memoryfrags.player_stats_gui.label_health": "Health :",
-      "gui.memoryfrags.player_stats_gui.label_available_points": "Available Points:",
-      "itemGroup.tab_memoryfragments": "MOTP",
-      "key.memory_of_the_past.next_value": "Next value is : ",
-      "key.memoryfrags.open_stats_menu_keybind": "Open Stats Menu ",
-      "gui.memory_of_the_past.player_attributes_viewer_gui.tooltip_indicates_the_number_of_points_y": "§7Indicates the number of points you can allocate to improve your stats",
-      "item.memory_of_the_past.auto_consumer_item": "Auto-Fragment Consumer",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_reduces_the_distance_you_are_pus": "§7Reduces the distance you are pushed back when hit by an enemy or explosion",
-      "gui.memoryfrags.player_stats_gui.label_attack_damage": "Attack Damage :",
-      "gui.memory_of_the_past.player_stats_gui.label_empty1": "?",
-      "item.memory_of_the_past.experience_enhancer_artifact": "Experience Enhancer Artifact",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_reduces_the_amount_of_damage_you": "§7Reduces the amount of damage you take from enemy attacks. ",
-      "item_group.memoryfrags.memoryfragments": "Memory fragments",
-      "item.memory_of_the_past.experience_enhancer_artifact.description_1": "Requires Exploration : 4",
-      "item.memory_of_the_past.experience_enhancer_artifact.description_0": "§6A powerful artifact that §bGives Bonus experience§6 from the fragments",
-      "item.memory_of_the_past.tome_of_rebirth.description_0": "§eA mystical orb that gently§b resets §eyour points, allowing you to start anew",
-      "item.memory_of_the_past.lesser_drop_of_knowledge": "Lesser Drop of Knowledge",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_durabili": "§7Represents your overall durability. §7More health means you can survive longer in battle. ",
-      "itemGroup.memory_of_the_past.memoryfragments": "MOTP",
-      "item.memoryfrags.orb_of_leveling": "Orb Of Leveling",
-      "gui.memory_of_the_past.player_stats_gui.label_resistance": "Fortitude : ",
-      "gui.memory_of_the_past.player_stats_gui.label_empty8": "?",
-      "gui.memoryfrags.level_overlay.label_available_points": "Available Points :",
-      "gui.memory_of_the_past.player_stats_gui.label_empty7": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty6": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty5": "?",
-      "advancements.reach_level_100.descr": "You Just Reached LEVEL 100 !!",
-      "advancements.reach_level_200.title": "Reach Level 200",
-      "gui.memory_of_the_past.player_stats_gui.label_empty4": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty3": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty2": "?",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_determines_how_quickly_you_can_s": "§7Determines how quickly you can swing your weapon. ",
-      "gui.memoryfrags.player_stats_gui.label_movement_speed": "Movement Speed :",
-      "advancements.first_level_up.title": "Level Up",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_progress": "§7Represents your overall progress and power",
-      "gui.memoryfrags.player_stats_gui.label_attack_speed": "Attack Speed :",
-      "gui.memory_of_the_past.level_overlay.label_experience": "Level :",
-      "block.memory_of_the_past.level_200_trophy_reward": "Level 200 Trophy Reward",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_influences_the_chances_of_receiv": "§7Influences the chances of receiving better loot or triggering beneficial events",
-      "item.memoryfrags.better_drop_of_knowledge": "Better Drop of Knowledge",
-      "gui.memory_of_the_past.player_stats_gui.label_exploration": "Exploration :",
       "gui.memoryfrags.player_stats_gui.label_armor": "Armor :",
       "gui.memory_of_the_past.player_stats_gui.tooltip_defines_the_amount_of_harm_you_c": "§7Defines the amount of harm you can inflict with each attack. ",
       "item.memory_of_the_past.codex_of_ascension.description_0": "§6Harness the power within this orb to §aascend §eyour level and reach new heights",
+      "advancements.reach_level_50.descr": "You Just Reached LEVEL 50 !!",
       "gui.memory_of_the_past.player_stats_gui.button_empty5": "\u003e",
+      "advancements.reach_level_100.title": "Reach Level 100",
       "gui.memory_of_the_past.player_stats_gui.button_empty4": "\u003e",
       "gui.memory_of_the_past.player_stats_gui.button_empty3": "\u003e",
       "gui.memory_of_the_past.player_stats_gui.button_empty2": "\u003e",
+      "gui.memory_of_the_past.player_attributes_viewer_gui.label_available_points": "Available Points:",
       "gui.memory_of_the_past.player_stats_gui.button_empty1": "\u003e",
+      "gui.memoryfrags.player_stats_gui.label_health": "Health :",
       "gui.memory_of_the_past.player_stats_gui.tooltip_indicates_the_number_of_points_y": "§7Indicates the number of points you can allocate to improve your stats"
     },
     "fr_fr": {
       "gui.memoryfrags.player_stats_gui.label_resistance": "Resistance : ",
-      "item.memory_of_the_past.better_drop_of_knowledge": "Une meilleure diffusion des connaissances",
+      "gui.memoryfrags.player_stats_gui.label_available_points": "Available Points:",
+      "itemGroup.tab_memoryfragments": "Fragments de mémoire",
+      "key.memory_of_the_past.next_value": "",
       "item.memoryfrags.lesser_drop_of_knowledge": "Petite goutte de connaissance",
       "gui.memoryfrags.player_stats_gui.label_level": "Level :",
       "gui.memory_of_the_past.player_stats_gui.label_available_points": "Points disponibles :",
-      "item.memory_of_the_past.auto_consumer_item.description_0": "§6A powerful artifact that §bautomatically consumes fragments§6 from your inventory",
+      "key.memoryfrags.open_stats_menu_keybind": "Ouvrir le menu Stats ",
+      "gui.memory_of_the_past.player_attributes_viewer_gui.tooltip_indicates_the_number_of_points_y": "§7Indicates the number of points you can allocate to improve your stats",
       "gui.memory_of_the_past.player_attributes_viewer_gui.tooltip_represents_your_overall_progress": "§7Represents your overall progress and power",
       "item.memory_of_the_past.auto_consumer_item.description_1": "Requires Exploration : 1 ",
       "gui.memory_of_the_past.player_stats_gui.button_empty": "\u003e",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_reduces_the_distance_you_are_pus": "§7Réduit la distance à laquelle vous êtes repoussé lorsque vous êtes touché par un ennemi ou une explosion",
       "block.memory_of_the_past.level_100_trophy_reward": "Récompense du trophée du niveau 100",
+      "gui.memoryfrags.player_stats_gui.label_attack_damage": "Attack Damage :",
+      "gui.memory_of_the_past.player_stats_gui.label_empty1": "?",
       "gui.memory_of_the_past.player_stats_gui.label_level": "Niveau :",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_reduces_the_amount_of_damage_you": "§7Réduit les dégâts infligés par les attaques ennemies",
       "gui.memory_of_the_past.player_stats_gui.tooltip_influences_how_fast_you_can_move": "§7Influence sur la vitesse de déplacement. ",
+      "key.category.motp": "Memory Of The Past",
+      "item_group.memoryfrags.memoryfragments": "Memory fragments",
+      "item.memory_of_the_past.experience_enhancer_artifact.description_1": "Requires Exploration : 4",
       "item.memoryfrags.orb_of_reseting": "Orbe de réinitialisation",
       "advancements.reach_level_50.title": "Atteindre le niveau 50",
-      "item.memory_of_the_past.great_drop_of_knowledge": "Grande goutte de connaissance",
+      "item.memory_of_the_past.tome_of_rebirth.description_0": "§eA mystical orb that gently§b resets §eyour points, allowing you to start anew",
       "gui.memory_of_the_past.player_stats_gui.label_health": "Vitalité :",
-      "key.memory_of_the_past.open_stats_menu_keybind": "Ouvrir le menu Stats ",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_durabili": "§7Représente votre durabilité générale. §Plus de santé signifie que vous pouvez survivre plus longtemps au combat. ",
       "gui.memoryfrags.alter_gui.button_fuse": "Fuse",
+      "key.memory_of_the_past.open_stats_menu_keybind": "Ouvrir le menu Stats ",
+      "itemGroup.memory_of_the_past.memoryfragments": "MOTP",
+      "item.memoryfrags.orb_of_leveling": "Orbe de nivellement",
+      "gui.memory_of_the_past.player_stats_gui.label_resistance": "Fortitude : ",
       "item.memoryfrags.great_drop_of_knowledge": "Grande goutte de connaissance",
+      "gui.memory_of_the_past.player_stats_gui.label_empty8": "?",
+      "gui.memoryfrags.level_overlay.label_available_points": "Points disponibles :",
+      "gui.memory_of_the_past.player_stats_gui.label_empty7": "?",
+      "gui.memory_of_the_past.player_stats_gui.label_empty6": "?",
       "gui.memory_of_the_past.player_attributes_viewer_gui.label_level": "Level :",
+      "gui.memory_of_the_past.player_stats_gui.label_empty5": "?",
+      "advancements.reach_level_100.descr": "Vous venez d\u0027atteindre le NIVEAU 100 !",
+      "advancements.reach_level_200.title": "Atteindre le niveau 200",
+      "gui.memory_of_the_past.player_stats_gui.label_empty4": "?",
+      "gui.memory_of_the_past.player_stats_gui.label_empty": "?",
+      "gui.memory_of_the_past.player_stats_gui.label_empty3": "?",
+      "gui.memory_of_the_past.player_stats_gui.label_empty2": "?",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_determines_how_quickly_you_can_s": "§7Détermine la vitesse à laquelle vous pouvez balancer votre arme. ",
       "gui.memoryfrags.player_stats_gui.button_empty1": "\u003e",
       "gui.memoryfrags.player_stats_gui.button_empty2": "\u003e",
       "gui.memoryfrags.player_stats_gui.button_empty3": "\u003e",
+      "gui.memory_of_the_past.level_overlay.label_level": "Level:",
       "gui.memoryfrags.player_stats_gui.button_empty4": "\u003e",
       "gui.memoryfrags.level_overlay.label_experience": "Level :",
       "gui.memoryfrags.player_stats_gui.button_empty5": "\u003e",
@@ -3110,72 +3345,40 @@
       "advancements.first_level_up.descr": "Vous venez de faire le premier pas dans le mod",
       "gui.memory_of_the_past.player_stats_gui.label_upgrade_memories": "Mise à niveau des mémoires",
       "item.memory_of_the_past.tome_of_rebirth": "Tome of Rebirth",
+      "gui.memoryfrags.player_stats_gui.label_movement_speed": "Movement Speed :",
       "gui.memory_of_the_past.player_stats_gui.label_attack_damage": "Puissance d\u0027attaque :",
+      "advancements.first_level_up.title": "Level Up",
       "gui.memory_of_the_past.player_stats_gui.label_attack_speed": "Vitesse d\u0027attaque :",
       "gui.memoryfrags.player_stats_gui.button_empty": "\u003e",
       "gui.memory_of_the_past.player_stats_gui.label_movement_speed": "Agilité :",
       "block.memory_of_the_past.level_100_trophy_reward.description_1": "§bCongratulations on reaching §cLevel 100§b!",
       "block.memory_of_the_past.level_100_trophy_reward.description_0": "§7You have proven your strength and dedication.",
-      "gui.memoryfrags.alter_gui.button_empty": "fuse",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_progress": "§7Représente vos progrès et votre puissance globale",
+      "gui.memoryfrags.player_stats_gui.label_attack_speed": "Attack Speed :",
       "item_group.memory_of_the_past.memoryfragments": "MOTP",
+      "gui.memoryfrags.alter_gui.button_empty": "fuse",
+      "gui.memory_of_the_past.level_overlay.label_experience": "Niveau :",
+      "block.memory_of_the_past.level_200_trophy_reward": "Récompense du trophée du niveau 200",
       "gui.memoryfrags.alter_gui.label_alter": "Alter",
+      "gui.memory_of_the_past.player_stats_gui.tooltip_influences_the_chances_of_receiv": "§7Influence sur les chances de recevoir un meilleur butin ou de déclencher des événements bénéfiques",
+      "item.memoryfrags.better_drop_of_knowledge": "Une meilleure diffusion des connaissances",
       "item.memory_of_the_past.codex_of_ascension": "Orb Of Leveling",
+      "gui.memory_of_the_past.player_stats_gui.label_exploration": "Exploration :",
       "gui.memoryfrags.player_stats_gui.label_hp": "hp",
       "gui.memory_of_the_past.player_stats_gui.label_armor": "Protection :",
       "gui.memory_of_the_past.level_overlay.label_available_points": "Vous avez des points non dépensés !",
-      "advancements.reach_level_50.descr": "Vous venez d\u0027atteindre le NIVEAU 50 !",
-      "advancements.reach_level_100.title": "Atteindre le niveau 100",
-      "gui.memory_of_the_past.player_attributes_viewer_gui.label_available_points": "Available Points:",
-      "gui.memoryfrags.player_stats_gui.label_health": "Health :",
-      "gui.memoryfrags.player_stats_gui.label_available_points": "Available Points:",
-      "itemGroup.tab_memoryfragments": "Fragments de mémoire",
-      "key.memory_of_the_past.next_value": "",
-      "key.memoryfrags.open_stats_menu_keybind": "Ouvrir le menu Stats ",
-      "gui.memory_of_the_past.player_attributes_viewer_gui.tooltip_indicates_the_number_of_points_y": "§7Indicates the number of points you can allocate to improve your stats",
-      "item.memory_of_the_past.auto_consumer_item": "Auto-Fragment Consumer",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_reduces_the_distance_you_are_pus": "§7Réduit la distance à laquelle vous êtes repoussé lorsque vous êtes touché par un ennemi ou une explosion",
-      "gui.memoryfrags.player_stats_gui.label_attack_damage": "Attack Damage :",
-      "gui.memory_of_the_past.player_stats_gui.label_empty1": "?",
-      "item.memory_of_the_past.experience_enhancer_artifact": "Artifice d\u0027amélioration de l\u0027expérience",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_reduces_the_amount_of_damage_you": "§7Réduit les dégâts infligés par les attaques ennemies",
-      "item_group.memoryfrags.memoryfragments": "Memory fragments",
-      "item.memory_of_the_past.experience_enhancer_artifact.description_1": "Requires Exploration : 4",
-      "item.memory_of_the_past.experience_enhancer_artifact.description_0": "§6A powerful artifact that §bGives Bonus experience§6 from the fragments",
-      "item.memory_of_the_past.tome_of_rebirth.description_0": "§eA mystical orb that gently§b resets §eyour points, allowing you to start anew",
-      "item.memory_of_the_past.lesser_drop_of_knowledge": "Petite goutte de connaissance",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_durabili": "§7Représente votre durabilité générale. §Plus de santé signifie que vous pouvez survivre plus longtemps au combat. ",
-      "itemGroup.memory_of_the_past.memoryfragments": "MOTP",
-      "item.memoryfrags.orb_of_leveling": "Orbe de nivellement",
-      "gui.memory_of_the_past.player_stats_gui.label_resistance": "Fortitude : ",
-      "gui.memory_of_the_past.player_stats_gui.label_empty8": "?",
-      "gui.memoryfrags.level_overlay.label_available_points": "Points disponibles :",
-      "gui.memory_of_the_past.player_stats_gui.label_empty7": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty6": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty5": "?",
-      "advancements.reach_level_100.descr": "Vous venez d\u0027atteindre le NIVEAU 100 !",
-      "advancements.reach_level_200.title": "Atteindre le niveau 200",
-      "gui.memory_of_the_past.player_stats_gui.label_empty4": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty3": "?",
-      "gui.memory_of_the_past.player_stats_gui.label_empty2": "?",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_determines_how_quickly_you_can_s": "§7Détermine la vitesse à laquelle vous pouvez balancer votre arme. ",
-      "gui.memoryfrags.player_stats_gui.label_movement_speed": "Movement Speed :",
-      "advancements.first_level_up.title": "Level Up",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_progress": "§7Représente vos progrès et votre puissance globale",
-      "gui.memoryfrags.player_stats_gui.label_attack_speed": "Attack Speed :",
-      "gui.memory_of_the_past.level_overlay.label_experience": "Niveau :",
-      "block.memory_of_the_past.level_200_trophy_reward": "Récompense du trophée du niveau 200",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_influences_the_chances_of_receiv": "§7Influence sur les chances de recevoir un meilleur butin ou de déclencher des événements bénéfiques",
-      "item.memoryfrags.better_drop_of_knowledge": "Une meilleure diffusion des connaissances",
-      "gui.memory_of_the_past.player_stats_gui.label_exploration": "Exploration :",
       "gui.memoryfrags.player_stats_gui.label_armor": "Armor :",
       "gui.memory_of_the_past.player_stats_gui.tooltip_defines_the_amount_of_harm_you_c": "§7Définit la quantité de dégâts que vous pouvez infliger à chaque attaque. ",
       "item.memory_of_the_past.codex_of_ascension.description_0": "§6Harness the power within this orb to §aascend §eyour level and reach new heights",
+      "advancements.reach_level_50.descr": "Vous venez d\u0027atteindre le NIVEAU 50 !",
       "gui.memory_of_the_past.player_stats_gui.button_empty5": "\u003e",
+      "advancements.reach_level_100.title": "Atteindre le niveau 100",
       "gui.memory_of_the_past.player_stats_gui.button_empty4": "\u003e",
       "gui.memory_of_the_past.player_stats_gui.button_empty3": "\u003e",
       "gui.memory_of_the_past.player_stats_gui.button_empty2": "\u003e",
+      "gui.memory_of_the_past.player_attributes_viewer_gui.label_available_points": "Available Points:",
       "gui.memory_of_the_past.player_stats_gui.button_empty1": "\u003e",
+      "gui.memoryfrags.player_stats_gui.label_health": "Health :",
       "gui.memory_of_the_past.player_stats_gui.tooltip_indicates_the_number_of_points_y": "§7Indique le nombre de points que vous pouvez allouer pour améliorer vos statistiques"
     }
   },
@@ -3246,6 +3449,10 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "UI Bar",
+                "children": []
               }
             ]
           },
@@ -3289,7 +3496,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.5.1",
+    "version": "1.6.0a",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",

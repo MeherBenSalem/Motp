@@ -14,8 +14,8 @@ public class LevelUpRewardsConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> RANDOM_LOOT_TABLE_LEVEL;
 	static {
 		BUILDER.push("Rewards");
-		ENABLE = BUILDER.define("enable", true);
-		LEVELUP_REWARDS_LIST = BUILDER.defineList("events_list",
+		ENABLE = BUILDER.comment("enable").define("enable", true);
+		LEVELUP_REWARDS_LIST = BUILDER.comment("levelup_rewards_list").defineList("events_list",
 				List.of("[level]1[levelEnd]give @p minecraft:coal 16", "[level]2[levelEnd]give @p minecraft:iron_axe 1", "[level]3[levelEnd]give @p minecraft:iron_ingot 16", "[level]4[levelEnd]give @p minecraft:iron_pickaxe 1",
 						"[level]5[levelEnd]give @p minecraft:redstone 16", "[level]6[levelEnd]give @p minecraft:gold_ingot 6", "[level]7[levelEnd]give @p minecraft:diamond 2", "[level]8[levelEnd]give @p minecraft:diamond 3",
 						"[level]9[levelEnd]give @p minecraft:lapis_lazuli 32", "[level]10[levelEnd]give @p minecraft:golden_apple 2", "[level]11[levelEnd]give @p minecraft:gold_ingot 16", "[level]12[levelEnd]give @p minecraft:diamond 2",
@@ -25,7 +25,7 @@ public class LevelUpRewardsConfigConfiguration {
 						"[level]24[levelEnd]give @p minecraft:diamond_pickaxe 1", "[level]25[levelEnd]give @p minecraft:totem_of_undying 1", "[level]26[levelEnd]give @p minecraft:ancient_debris 2", "[level]27[levelEnd]give @p minecraft:diamond 32",
 						"[level]30[levelEnd]give @p minecraft:ancient_debris 4", "[level]100[levelEnd]give @p memory_of_the_past:level_100_trophy_reward 1", "[level]200[levelEnd]give @p memory_of_the_past:level_200_trophy_reward 1"),
 				entry -> true);
-		OVER_LEVEL_REWARDS = BUILDER.defineList("random_events_list_table",
+		OVER_LEVEL_REWARDS = BUILDER.comment("over_level_rewards").defineList("random_events_list_table",
 				List.of("[chance]2[chanceEnd]give @p minecraft:netherite_sword 1", "[chance]2[chanceEnd]give @p minecraft:netherite_pickaxe 1", "[chance]20[chanceEnd]give @p minecraft:enchanted_golden_apple 2",
 						"[chance]5[chanceEnd]give @p minecraft:elytra 1", "[chance]25[chanceEnd]give @p minecraft:diamond_block 3", "[chance]10[chanceEnd]give @p minecraft:totem_of_undying 1",
 						"[chance]5[chanceEnd]give @p minecraft:netherite_ingot 1", "[chance]5[chanceEnd]give @p minecraft:trident 1", "[chance]1[chanceEnd]give @p minecraft:beacon 1", "[chance]20[chanceEnd]give @p minecraft:golden_apple 5",

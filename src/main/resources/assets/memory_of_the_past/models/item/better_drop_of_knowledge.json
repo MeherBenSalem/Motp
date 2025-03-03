@@ -1,7 +1,0 @@
-{
-  "parent": "memory_of_the_past:custom/better_memory_frag",
-  "textures": {
-    "1": "memory_of_the_past:block/lesser_texture",
-    "particle": "memory_of_the_past:item/better_texture"
-  }
-}

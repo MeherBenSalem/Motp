@@ -1,3 +1,24 @@
+## Changelog [1.6.0a] (BETA)
+
+- **Removed Content:**  
+  - Experience Enhancer Artifact & all related recipes  
+  - Auto Consumer Item & all related recipes  
+  - All Orb Drops (XP is now gained directly from killing mobs)  
+  - Config option `enable_drops`  
+  - Settings in `DropRateConfig` related to orb drop chances  
+  - Settings in `mainconfig` related to orb XP value  
+
+- **Fixes & Optimizations:**  
+  - Fixed MOTP keybinds category name (now called "Memory of the Past")  
+  - Optimized a lot of code, improving performance by ~40%  
+
+- **New Features & Changes:**  
+  - Added `dimension_xp_modifier` setting to adjust XP gain based on mob health and dimension multiplier  
+  - XP System has been **renamed to Valor Points (VP)** for better distinction from vanilla XP  
+  - New **action bar message** to display XP gained from killing mobs  
+  - Added `show_vp_in_action_bar` setting to toggle XP visibility in the action bar  
+  - **New UI Bar** to show XP progress and percentage  
+
 ## Changelog [1.5.1]
 
 - Added param in attributeGUI.toml to disable the stats attribute screen
