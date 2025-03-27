@@ -52,7 +52,7 @@ public class LevelUpProcedureCmdProcedure {
 						return 0;
 					}
 				}.convert(level_interval.substring((int) (level_interval.indexOf("-") + 1)));
-				if (((new Object() {
+				if ((new Object() {
 					public Entity getEntity() {
 						try {
 							return EntityArgument.getEntity(arguments, "player");
@@ -61,7 +61,7 @@ public class LevelUpProcedureCmdProcedure {
 							return null;
 						}
 					}
-				}.getEntity()).getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level + ((new Object() {
+				}.getEntity()).getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level + (new Object() {
 					public Entity getEntity() {
 						try {
 							return EntityArgument.getEntity(arguments, "player");
@@ -70,7 +70,7 @@ public class LevelUpProcedureCmdProcedure {
 							return null;
 						}
 					}
-				}.getEntity()).getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints >= min_level_interval && ((new Object() {
+				}.getEntity()).getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints >= min_level_interval && (new Object() {
 					public Entity getEntity() {
 						try {
 							return EntityArgument.getEntity(arguments, "player");
@@ -79,7 +79,7 @@ public class LevelUpProcedureCmdProcedure {
 							return null;
 						}
 					}
-				}.getEntity()).getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level + ((new Object() {
+				}.getEntity()).getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level + (new Object() {
 					public Entity getEntity() {
 						try {
 							return EntityArgument.getEntity(arguments, "player");
@@ -88,7 +88,7 @@ public class LevelUpProcedureCmdProcedure {
 							return null;
 						}
 					}
-				}.getEntity()).getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints <= max_level_interval) {
+				}.getEntity()).getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints <= max_level_interval) {
 					current_level_scale = level_scale;
 					break;
 				}
@@ -100,7 +100,7 @@ public class LevelUpProcedureCmdProcedure {
 			current_level_scale = (double) MainConfigFileConfiguration.DEFAULT_LEVELING_SCALE.get();
 		}
 		{
-			double _setval = Math.round(((new Object() {
+			MemoryOfThePastModVariables.PlayerVariables _vars = (new Object() {
 				public Entity getEntity() {
 					try {
 						return EntityArgument.getEntity(arguments, "player");
@@ -109,8 +109,8 @@ public class LevelUpProcedureCmdProcedure {
 						return null;
 					}
 				}
-			}.getEntity()).getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp * current_level_scale);
-			(new Object() {
+			}.getEntity()).getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.nextevelXp = Math.round((new Object() {
 				public Entity getEntity() {
 					try {
 						return EntityArgument.getEntity(arguments, "player");
@@ -119,22 +119,20 @@ public class LevelUpProcedureCmdProcedure {
 						return null;
 					}
 				}
-			}.getEntity()).getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.nextevelXp = _setval;
-				capability.syncPlayerVariables((new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
+			}.getEntity()).getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).nextevelXp * current_level_scale);
+			_vars.syncPlayerVariables((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
 					}
-				}.getEntity()));
-			});
+				}
+			}.getEntity()));
 		}
 		{
-			double _setval = ((new Object() {
+			MemoryOfThePastModVariables.PlayerVariables _vars = (new Object() {
 				public Entity getEntity() {
 					try {
 						return EntityArgument.getEntity(arguments, "player");
@@ -143,8 +141,8 @@ public class LevelUpProcedureCmdProcedure {
 						return null;
 					}
 				}
-			}.getEntity()).getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints + (double) MainConfigFileConfiguration.POINTS_PER_LEVEL.get();
-			(new Object() {
+			}.getEntity()).getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.SparePoints = (new Object() {
 				public Entity getEntity() {
 					try {
 						return EntityArgument.getEntity(arguments, "player");
@@ -153,19 +151,17 @@ public class LevelUpProcedureCmdProcedure {
 						return null;
 					}
 				}
-			}.getEntity()).getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.SparePoints = _setval;
-				capability.syncPlayerVariables((new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
+			}.getEntity()).getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints + (double) MainConfigFileConfiguration.POINTS_PER_LEVEL.get();
+			_vars.syncPlayerVariables((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
 					}
-				}.getEntity()));
-			});
+				}
+			}.getEntity()));
 		}
 	}
 }

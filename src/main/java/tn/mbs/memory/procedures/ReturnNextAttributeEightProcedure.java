@@ -11,8 +11,7 @@ public class ReturnNextAttributeEightProcedure {
 		if (entity == null)
 			return "";
 		return Component.translatable("key.memory_of_the_past.next_value").getString() + ""
-				+ new java.text.DecimalFormat("##.##").format(
-						(entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_8 + (double) MechanicsConfigConfiguration.BASE_VALUE_PER_POINT_8.get())
-				+ " (max:" + (double) MechanicsConfigConfiguration.MAX_LEVEL_ATT_8.get() + " )";
+				+ new java.text.DecimalFormat("##.##").format(entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_8 + (double) MechanicsConfigConfiguration.BASE_VALUE_PER_POINT_8.get()) + " (max:"
+				+ (double) MechanicsConfigConfiguration.MAX_LEVEL_ATT_8.get() + " )";
 	}
 }

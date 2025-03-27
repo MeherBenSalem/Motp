@@ -1,14 +1,14 @@
 package tn.mbs.memory.configuration;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.List;
 
 public class ItemsConfigConfiguration {
-	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
-	public static final ForgeConfigSpec SPEC;
+	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
+	public static final ModConfigSpec SPEC;
 
-	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> ITEMS_LIST;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> ITEMS_LIST;
 	static {
 		BUILDER.push("Items Settings");
 		ITEMS_LIST = BUILDER.defineList("Items_list",

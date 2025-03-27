@@ -49,10 +49,8 @@ public class LevelUpProcedureProcedure {
 						return 0;
 					}
 				}.convert(level_interval.substring((int) (level_interval.indexOf("-") + 1)));
-				if ((target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level
-						+ (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints >= min_level_interval
-						&& (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level
-								+ (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints <= max_level_interval) {
+				if (target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level + target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints >= min_level_interval
+						&& target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level + target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints <= max_level_interval) {
 					current_level_scale = level_scale;
 					break;
 				}
@@ -64,18 +62,14 @@ public class LevelUpProcedureProcedure {
 			current_level_scale = (double) MainConfigFileConfiguration.DEFAULT_LEVELING_SCALE.get();
 		}
 		{
-			double _setval = Math.round((target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp * current_level_scale);
-			target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.nextevelXp = _setval;
-				capability.syncPlayerVariables(target);
-			});
+			MemoryOfThePastModVariables.PlayerVariables _vars = target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.nextevelXp = Math.round(target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).nextevelXp * current_level_scale);
+			_vars.syncPlayerVariables(target);
 		}
 		{
-			double _setval = (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints + (double) MainConfigFileConfiguration.POINTS_PER_LEVEL.get();
-			target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.SparePoints = _setval;
-				capability.syncPlayerVariables(target);
-			});
+			MemoryOfThePastModVariables.PlayerVariables _vars = target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.SparePoints = target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints + (double) MainConfigFileConfiguration.POINTS_PER_LEVEL.get();
+			_vars.syncPlayerVariables(target);
 		}
 		CheckLevelupRewardsProcedure.execute(target);
 	}

@@ -4,10 +4,10 @@ import tn.mbs.memory.network.MemoryOfThePastModVariables;
 import tn.mbs.memory.configuration.MainConfigFileConfiguration;
 import tn.mbs.memory.configuration.DropRateConfigFileConfiguration;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -19,11 +19,11 @@ import net.minecraft.network.chat.Component;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class GiveXpNoDropProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getEntity(), event.getSource().getEntity());
 		}
 	}
@@ -49,28 +49,20 @@ public class GiveXpNoDropProcedure {
 						* (double) DropRateConfigFileConfiguration.END_XP_MODIFIER.get();
 			}
 			{
-				double _setval = (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel
-						+ AddedXp * (1 + Math.round(((sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints
-								+ (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level)
-								/ (double) MainConfigFileConfiguration.SCALE_FACTOR.get()));
-				sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.currentXpTLevel = _setval;
-					capability.syncPlayerVariables(sourceentity);
-				});
+				MemoryOfThePastModVariables.PlayerVariables _vars = sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+				_vars.currentXpTLevel = sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).currentXpTLevel + AddedXp * (1 + Math
+						.round((sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints + sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level) / (double) MainConfigFileConfiguration.SCALE_FACTOR.get()));
+				_vars.syncPlayerVariables(sourceentity);
 			}
 			if (MainConfigFileConfiguration.SHOW_VP_INACTION_BAR.get()) {
 				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(("\u00A7a+" + new java.text.DecimalFormat("##").format(AddedXp) + " VP")), true);
 			}
-			while ((sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel >= (sourceentity
-					.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp) {
+			while (sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).currentXpTLevel >= sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).nextevelXp) {
 				{
-					double _setval = (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel
-							- (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp;
-					sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.currentXpTLevel = _setval;
-						capability.syncPlayerVariables(sourceentity);
-					});
+					MemoryOfThePastModVariables.PlayerVariables _vars = sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+					_vars.currentXpTLevel = sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).currentXpTLevel - sourceentity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).nextevelXp;
+					_vars.syncPlayerVariables(sourceentity);
 				}
 				LevelUpProcedureProcedure.execute(sourceentity);
 			}

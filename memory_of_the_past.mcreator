@@ -457,9 +457,9 @@
       "registry_name": "level_100_trophy_reward",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/loot_tables/blocks/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/item/level_100_trophy_reward.json",
           "src/main/java/tn/mbs/memory/block/Level100TrophyRewardBlock.java",
+          "src/main/resources/data/memory_of_the_past/loot_table/blocks/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/blockstates/level_100_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/block/level_100_trophy_reward.json"
         ]
@@ -478,7 +478,7 @@
           "src/main/java/tn/mbs/memory/block/Level200TrophyRewardBlock.java",
           "src/main/resources/assets/memory_of_the_past/blockstates/level_200_trophy_reward.json",
           "src/main/resources/assets/memory_of_the_past/models/item/level_200_trophy_reward.json",
-          "src/main/resources/data/memory_of_the_past/loot_tables/blocks/level_200_trophy_reward.json"
+          "src/main/resources/data/memory_of_the_past/loot_table/blocks/level_200_trophy_reward.json"
         ]
       },
       "path": "~/Blocks"
@@ -491,7 +491,7 @@
       "registry_name": "first_level_up",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancements/first_level_up.json"
+          "src/main/resources/data/memory_of_the_past/advancement/first_level_up.json"
         ]
       },
       "path": "~/Advancements"
@@ -504,7 +504,7 @@
       "registry_name": "reach_level_50",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancements/reach_level_50.json"
+          "src/main/resources/data/memory_of_the_past/advancement/reach_level_50.json"
         ]
       },
       "path": "~/Advancements"
@@ -517,7 +517,7 @@
       "registry_name": "reach_level_100",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancements/reach_level_100.json"
+          "src/main/resources/data/memory_of_the_past/advancement/reach_level_100.json"
         ]
       },
       "path": "~/Advancements"
@@ -530,7 +530,7 @@
       "registry_name": "reach_level_200",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/advancements/reach_level_200.json"
+          "src/main/resources/data/memory_of_the_past/advancement/reach_level_200.json"
         ]
       },
       "path": "~/Advancements"
@@ -841,7 +841,7 @@
       "registry_name": "tome_of_rebirth_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/memory_of_the_past/recipes/tome_of_rebirth_recipe.json"
+          "src/main/resources/data/memory_of_the_past/recipe/tome_of_rebirth_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -3507,7 +3507,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "neoforge-1.21.1",
     "credits": "Thank you @porogulaemeo",
     "modElementsPackage": "tn.mbs.memory"
   },

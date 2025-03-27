@@ -5,55 +5,52 @@ import tn.mbs.memory.world.inventory.PlayerAttributesViewerGUIMenu;
 import tn.mbs.memory.procedures.OpenStatsMenuProcedure;
 import tn.mbs.memory.MemoryOfThePastMod;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.function.Supplier;
 import java.util.HashMap;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class PlayerAttributesViewerGUIButtonMessage {
-	private final int buttonID, x, y, z;
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+public record PlayerAttributesViewerGUIButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public PlayerAttributesViewerGUIButtonMessage(FriendlyByteBuf buffer) {
-		this.buttonID = buffer.readInt();
-		this.x = buffer.readInt();
-		this.y = buffer.readInt();
-		this.z = buffer.readInt();
-	}
-
-	public PlayerAttributesViewerGUIButtonMessage(int buttonID, int x, int y, int z) {
-		this.buttonID = buttonID;
-		this.x = x;
-		this.y = y;
-		this.z = z;
-	}
-
-	public static void buffer(PlayerAttributesViewerGUIButtonMessage message, FriendlyByteBuf buffer) {
+	public static final Type<PlayerAttributesViewerGUIButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MemoryOfThePastMod.MODID, "player_attributes_viewer_gui_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, PlayerAttributesViewerGUIButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerAttributesViewerGUIButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
+	}, (RegistryFriendlyByteBuf buffer) -> new PlayerAttributesViewerGUIButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	@Override
+	public Type<PlayerAttributesViewerGUIButtonMessage> type() {
+		return TYPE;
 	}
 
-	public static void handler(PlayerAttributesViewerGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			Player entity = context.getSender();
-			int buttonID = message.buttonID;
-			int x = message.x;
-			int y = message.y;
-			int z = message.z;
-			handleButtonAction(entity, buttonID, x, y, z);
-		});
-		context.setPacketHandled(true);
+	public static void handleData(final PlayerAttributesViewerGUIButtonMessage message, final IPayloadContext context) {
+		if (context.flow() == PacketFlow.SERVERBOUND) {
+			context.enqueueWork(() -> {
+				Player entity = context.player();
+				int buttonID = message.buttonID;
+				int x = message.x;
+				int y = message.y;
+				int z = message.z;
+				handleButtonAction(entity, buttonID, x, y, z);
+			}).exceptionally(e -> {
+				context.connection().disconnect(Component.literal(e.getMessage()));
+				return null;
+			});
+		}
 	}
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
@@ -70,6 +67,6 @@ public class PlayerAttributesViewerGUIButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		MemoryOfThePastMod.addNetworkMessage(PlayerAttributesViewerGUIButtonMessage.class, PlayerAttributesViewerGUIButtonMessage::buffer, PlayerAttributesViewerGUIButtonMessage::new, PlayerAttributesViewerGUIButtonMessage::handler);
+		MemoryOfThePastMod.addNetworkMessage(PlayerAttributesViewerGUIButtonMessage.TYPE, PlayerAttributesViewerGUIButtonMessage.STREAM_CODEC, PlayerAttributesViewerGUIButtonMessage::handleData);
 	}
 }

@@ -34,7 +34,8 @@ import tn.mbs.memory.procedures.ReturnDisplaySection11Procedure;
 import tn.mbs.memory.procedures.ReturnDisplaySection10Procedure;
 import tn.mbs.memory.procedures.ReturnCurrentLevelProcedure;
 import tn.mbs.memory.network.PlayerAttributesViewerGUIButtonMessage;
-import tn.mbs.memory.MemoryOfThePastMod;
+
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -42,6 +43,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -69,7 +71,7 @@ public class PlayerAttributesViewerGUIScreen extends AbstractContainerScreen<Pla
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 1 && mouseX < leftPos + 40 && mouseY > topPos + -3 && mouseY < topPos + 8)
@@ -84,52 +86,52 @@ public class PlayerAttributesViewerGUIScreen extends AbstractContainerScreen<Pla
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg.png"), this.leftPos + -61, this.topPos + -23, 0, 0, 350, 210, 350, 210);
+		guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg.png"), this.leftPos + -61, this.topPos + -23, 0, 0, 350, 210, 350, 210);
 
 		if (ReturnDisplaySection1Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 14, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 14, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection2Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 14, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 14, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection3Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 14, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 14, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection4Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 47, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 47, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection5Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 47, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 47, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection6Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 47, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 47, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection7Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 79, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 79, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection8Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 79, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 79, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection9Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 79, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 79, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection10Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 112, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 112, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection11Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 112, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 112, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection12Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 112, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 112, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection13Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 144, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + -36, this.topPos + 144, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection14Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 144, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 71, this.topPos + 144, 0, 0, 97, 30, 97, 30);
 		}
 		if (ReturnDisplaySection15Procedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 144, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 179, this.topPos + 144, 0, 0, 97, 30, 97, 30);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -218,12 +220,18 @@ public class PlayerAttributesViewerGUIScreen extends AbstractContainerScreen<Pla
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_button_for_stats = new ImageButton(this.leftPos + -46, this.topPos + -3, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_for_stats.png"), 13, 26, e -> {
-			if (true) {
-				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerAttributesViewerGUIButtonMessage(0, x, y, z));
-				PlayerAttributesViewerGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+		imagebutton_button_for_stats = new ImageButton(this.leftPos + -46, this.topPos + -3, 13, 13,
+				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_for_stats.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_for_stats_pressed.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new PlayerAttributesViewerGUIButtonMessage(0, x, y, z));
+						PlayerAttributesViewerGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_button_for_stats", imagebutton_button_for_stats);
 		this.addRenderableWidget(imagebutton_button_for_stats);
 	}

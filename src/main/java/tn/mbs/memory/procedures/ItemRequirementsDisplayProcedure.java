@@ -5,23 +5,23 @@ import tn.mbs.memory.configuration.ItemsConfigConfiguration;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import javax.annotation.Nullable;
 
 import java.util.List;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber(value = {Dist.CLIENT})
 public class ItemRequirementsDisplayProcedure {
 	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
@@ -40,7 +40,7 @@ public class ItemRequirementsDisplayProcedure {
 		double level = 0;
 		String attributeName = "";
 		for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-			if (stringiterator.contains(ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString())) {
+			if (stringiterator.contains(BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString())) {
 				attribute = new Object() {
 					double convert(String s) {
 						try {
@@ -61,43 +61,43 @@ public class ItemRequirementsDisplayProcedure {
 				}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")));
 				attributeName = "";
 				if (attribute == 1) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_1) {
 						attributeName = ReturnAttributeOneNameProcedure.execute();
 					}
 				} else if (attribute == 2) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_2) {
 						attributeName = ReturnAttributeTwoNameProcedure.execute();
 					}
 				} else if (attribute == 3) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_3) {
 						attributeName = ReturnAttributeThreeNameProcedure.execute();
 					}
 				} else if (attribute == 4) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_4) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_4) {
 						attributeName = ReturnAttributeForthNameProcedure.execute();
 					}
 				} else if (attribute == 5) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_5) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_5) {
 						attributeName = ReturnAttributeFifthNameProcedure.execute();
 					}
 				} else if (attribute == 6) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_6) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_6) {
 						attributeName = ReturnAttributeSixthNameProcedure.execute();
 					}
 				} else if (attribute == 7) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_7) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_7) {
 						attributeName = ReturnAttributeSeventhNameProcedure.execute();
 					}
 				} else if (attribute == 8) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_8) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_8) {
 						attributeName = ReturnAttributeEightNameProcedure.execute();
 					}
 				} else if (attribute == 9) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_9) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_9) {
 						attributeName = ReturnAttributeNineNameProcedure.execute();
 					}
 				} else if (attribute == 10) {
-					if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_10) {
+					if (level > entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_10) {
 						attributeName = ReturnAttributeTenNameProcedure.execute();
 					}
 				}

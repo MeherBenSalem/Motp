@@ -1,19 +1,19 @@
 package tn.mbs.memory.configuration;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.List;
 
 public class DropRateConfigFileConfiguration {
-	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
-	public static final ForgeConfigSpec SPEC;
+	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
+	public static final ModConfigSpec SPEC;
 
-	public static final ForgeConfigSpec.ConfigValue<Double> OVERWORLD_XP_MODIFIER;
-	public static final ForgeConfigSpec.ConfigValue<Double> NETHER_XP_MODIFIER;
-	public static final ForgeConfigSpec.ConfigValue<Double> END_XP_MODIFIER;
-	public static final ForgeConfigSpec.ConfigValue<Double> MAX_DROP_RATE;
-	public static final ForgeConfigSpec.ConfigValue<Double> MIN_DROP_RATE;
-	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> BOSSES_LIST;
+	public static final ModConfigSpec.ConfigValue<Double> OVERWORLD_XP_MODIFIER;
+	public static final ModConfigSpec.ConfigValue<Double> NETHER_XP_MODIFIER;
+	public static final ModConfigSpec.ConfigValue<Double> END_XP_MODIFIER;
+	public static final ModConfigSpec.ConfigValue<Double> MAX_DROP_RATE;
+	public static final ModConfigSpec.ConfigValue<Double> MIN_DROP_RATE;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> BOSSES_LIST;
 	static {
 		BUILDER.push("Dimensions");
 		OVERWORLD_XP_MODIFIER = BUILDER.comment("This is used to calculate the xp you get when you kill a mob in that dimension").define("overworld_vp_modifier", (double) 1);

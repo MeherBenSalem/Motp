@@ -9,6 +9,6 @@ public class ReturnCurrentAttributeTwoProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return MainConfigFileConfiguration.GLOBAL_STATS_UI_COLOR.get() + "" + ("" + (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_2);
+		return MainConfigFileConfiguration.GLOBAL_STATS_UI_COLOR.get() + "" + ("" + entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_2);
 	}
 }

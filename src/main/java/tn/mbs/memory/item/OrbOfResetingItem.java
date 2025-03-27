@@ -3,8 +3,8 @@ package tn.mbs.memory.item;
 
 import tn.mbs.memory.procedures.OnOrbResetProcedure;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
@@ -30,8 +30,9 @@ public class OrbOfResetingItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, level, list, flag);
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.translatable("item.memory_of_the_past.tome_of_rebirth.description_0"));
 	}
 

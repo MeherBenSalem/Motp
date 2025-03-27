@@ -1,27 +1,27 @@
 package tn.mbs.memory.configuration;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.List;
 
 public class MainConfigFileConfiguration {
-	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
-	public static final ForgeConfigSpec SPEC;
+	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
+	public static final ModConfigSpec SPEC;
 
-	public static final ForgeConfigSpec.ConfigValue<Double> LEVEL_PER_ORB;
-	public static final ForgeConfigSpec.ConfigValue<Double> SCALE_FACTOR;
-	public static final ForgeConfigSpec.ConfigValue<Double> POINTS_PER_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> USE_VANILLA_XP;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> ON_DEATH_RESET;
-	public static final ForgeConfigSpec.ConfigValue<Double> MAX_PLAYER_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVELS_SCALE_INTERVAL;
-	public static final ForgeConfigSpec.ConfigValue<Double> DEFAULT_LEVELING_SCALE;
-	public static final ForgeConfigSpec.ConfigValue<Double> FIRST_LEVEL_VP;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> SHOW_VP_INACTION_BAR;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_LEVEL;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_VP;
-	public static final ForgeConfigSpec.ConfigValue<Boolean> DISPLAY_POINTS;
-	public static final ForgeConfigSpec.ConfigValue<String> GLOBAL_STATS_UI_COLOR;
+	public static final ModConfigSpec.ConfigValue<Double> LEVEL_PER_ORB;
+	public static final ModConfigSpec.ConfigValue<Double> SCALE_FACTOR;
+	public static final ModConfigSpec.ConfigValue<Double> POINTS_PER_LEVEL;
+	public static final ModConfigSpec.ConfigValue<Boolean> USE_VANILLA_XP;
+	public static final ModConfigSpec.ConfigValue<Boolean> ON_DEATH_RESET;
+	public static final ModConfigSpec.ConfigValue<Double> MAX_PLAYER_LEVEL;
+	public static final ModConfigSpec.ConfigValue<List<? extends String>> LEVELS_SCALE_INTERVAL;
+	public static final ModConfigSpec.ConfigValue<Double> DEFAULT_LEVELING_SCALE;
+	public static final ModConfigSpec.ConfigValue<Double> FIRST_LEVEL_VP;
+	public static final ModConfigSpec.ConfigValue<Boolean> SHOW_VP_INACTION_BAR;
+	public static final ModConfigSpec.ConfigValue<Boolean> DISPLAY_LEVEL;
+	public static final ModConfigSpec.ConfigValue<Boolean> DISPLAY_VP;
+	public static final ModConfigSpec.ConfigValue<Boolean> DISPLAY_POINTS;
+	public static final ModConfigSpec.ConfigValue<String> GLOBAL_STATS_UI_COLOR;
 	static {
 		BUILDER.push("Global Settings");
 		LEVEL_PER_ORB = BUILDER.comment("The amount of levels the orb of leveling gives").define("level_per_orb", (double) 1);

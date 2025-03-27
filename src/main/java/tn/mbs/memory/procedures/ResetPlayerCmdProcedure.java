@@ -9,32 +9,24 @@ public class ResetPlayerCmdProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 0;
-			entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Level = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.Level = 0;
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			double _setval = 0;
-			entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.currentXpTLevel = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.currentXpTLevel = 0;
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			double _setval = 100;
-			entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.nextevelXp = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.nextevelXp = 100;
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			double _setval = 0;
-			entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.SparePoints = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.SparePoints = 0;
+			_vars.syncPlayerVariables(entity);
 		}
 		OnPlayerSpawnProcedure.execute(entity);
 	}

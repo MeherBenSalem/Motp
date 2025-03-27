@@ -13,11 +13,9 @@ public class AddPointsCmdProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints + DoubleArgumentType.getDouble(arguments, "count");
-			entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.SparePoints = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
+			_vars.SparePoints = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints + DoubleArgumentType.getDouble(arguments, "count");
+			_vars.syncPlayerVariables(entity);
 		}
 		if (DoubleArgumentType.getDouble(arguments, "attribute_Id") == 1) {
 			if (DisplayLogicAttributeOneProcedure.execute()) {

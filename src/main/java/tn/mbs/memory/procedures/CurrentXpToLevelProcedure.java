@@ -8,7 +8,7 @@ public class CurrentXpToLevelProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return new java.text.DecimalFormat("##").format((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel) + "/"
-				+ new java.text.DecimalFormat("##").format((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp);
+		return new java.text.DecimalFormat("##").format(entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).currentXpTLevel) + "/"
+				+ new java.text.DecimalFormat("##").format(entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).nextevelXp);
 	}
 }
