@@ -9,7 +9,7 @@ public class YouHavePointsProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if (entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints > 0 && MainConfigFileConfiguration.DISPLAY_POINTS.get()) {
+		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints > 0 && MainConfigFileConfiguration.DISPLAY_POINTS.get()) {
 			return true;
 		}
 		return false;

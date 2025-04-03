@@ -15,52 +15,55 @@ import tn.mbs.memory.procedures.AddPointsAttributeFifthProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeEightProcedure;
 import tn.mbs.memory.MemoryOfThePastMod;
 
-import net.neoforged.neoforge.network.handling.IPayloadContext;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.network.protocol.PacketFlow;
-import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import java.util.function.Supplier;
 import java.util.HashMap;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public record PlayerStatsGUIButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+public class PlayerStatsGUIButtonMessage {
+	private final int buttonID, x, y, z;
 
-	public static final Type<PlayerStatsGUIButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MemoryOfThePastMod.MODID, "player_stats_gui_buttons"));
-	public static final StreamCodec<RegistryFriendlyByteBuf, PlayerStatsGUIButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerStatsGUIButtonMessage message) -> {
+	public PlayerStatsGUIButtonMessage(FriendlyByteBuf buffer) {
+		this.buttonID = buffer.readInt();
+		this.x = buffer.readInt();
+		this.y = buffer.readInt();
+		this.z = buffer.readInt();
+	}
+
+	public PlayerStatsGUIButtonMessage(int buttonID, int x, int y, int z) {
+		this.buttonID = buttonID;
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+
+	public static void buffer(PlayerStatsGUIButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
-	}, (RegistryFriendlyByteBuf buffer) -> new PlayerStatsGUIButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
-	@Override
-	public Type<PlayerStatsGUIButtonMessage> type() {
-		return TYPE;
 	}
 
-	public static void handleData(final PlayerStatsGUIButtonMessage message, final IPayloadContext context) {
-		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				Player entity = context.player();
-				int buttonID = message.buttonID;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleButtonAction(entity, buttonID, x, y, z);
-			}).exceptionally(e -> {
-				context.connection().disconnect(Component.literal(e.getMessage()));
-				return null;
-			});
-		}
+	public static void handler(PlayerStatsGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+		NetworkEvent.Context context = contextSupplier.get();
+		context.enqueueWork(() -> {
+			Player entity = context.getSender();
+			int buttonID = message.buttonID;
+			int x = message.x;
+			int y = message.y;
+			int z = message.z;
+			handleButtonAction(entity, buttonID, x, y, z);
+		});
+		context.setPacketHandled(true);
 	}
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
@@ -117,6 +120,6 @@ public record PlayerStatsGUIButtonMessage(int buttonID, int x, int y, int z) imp
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		MemoryOfThePastMod.addNetworkMessage(PlayerStatsGUIButtonMessage.TYPE, PlayerStatsGUIButtonMessage.STREAM_CODEC, PlayerStatsGUIButtonMessage::handleData);
+		MemoryOfThePastMod.addNetworkMessage(PlayerStatsGUIButtonMessage.class, PlayerStatsGUIButtonMessage::buffer, PlayerStatsGUIButtonMessage::new, PlayerStatsGUIButtonMessage::handler);
 	}
 }

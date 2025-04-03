@@ -12,7 +12,8 @@ public class AddPointsAttributeThreeProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints >= 1 && entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_3 < (double) MechanicsConfigConfiguration.MAX_LEVEL_ATT_3.get()) {
+		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints >= 1
+				&& (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3 < (double) MechanicsConfigConfiguration.MAX_LEVEL_ATT_3.get()) {
 			for (String stringiterator : MechanicsConfigConfiguration.LEVEL_ATT_3.get()) {
 				{
 					Entity _ent = entity;
@@ -23,19 +24,26 @@ public class AddPointsAttributeThreeProcedure {
 				}
 			}
 			{
-				MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
-				_vars.SparePoints = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints - 1;
-				_vars.syncPlayerVariables(entity);
+				double _setval = (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints - 1;
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SparePoints = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 			{
-				MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
-				_vars.attribute_3 = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_3 + (double) MechanicsConfigConfiguration.BASE_VALUE_PER_POINT_3.get();
-				_vars.syncPlayerVariables(entity);
+				double _setval = (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_3
+						+ (double) MechanicsConfigConfiguration.BASE_VALUE_PER_POINT_3.get();
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.attribute_3 = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 			{
-				MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
-				_vars.Level = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level + 1;
-				_vars.syncPlayerVariables(entity);
+				double _setval = (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level + 1;
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Level = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 			OnPlayerSpawnProcedure.execute(entity);
 		}

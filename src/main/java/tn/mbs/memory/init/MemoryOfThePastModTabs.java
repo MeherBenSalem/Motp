@@ -6,8 +6,8 @@ package tn.mbs.memory.init;
 
 import tn.mbs.memory.MemoryOfThePastMod;
 
-import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,7 +16,7 @@ import net.minecraft.core.registries.Registries;
 
 public class MemoryOfThePastModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MemoryOfThePastMod.MODID);
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MEMORYFRAGMENTS = REGISTRY.register("memoryfragments",
+	public static final RegistryObject<CreativeModeTab> MEMORYFRAGMENTS = REGISTRY.register("memoryfragments",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.memory_of_the_past.memoryfragments")).icon(() -> new ItemStack(MemoryOfThePastModItems.CODEX_OF_ASCENSION.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(MemoryOfThePastModItems.CODEX_OF_ASCENSION.get());
 				tabData.accept(MemoryOfThePastModItems.TOME_OF_REBIRTH.get());

@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "tn.mbs.memory.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+      "MemoryOfThePastModRepairItemRecipeMixin"  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

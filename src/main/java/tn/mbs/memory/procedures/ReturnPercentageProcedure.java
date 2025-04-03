@@ -8,6 +8,7 @@ public class ReturnPercentageProcedure {
 	public static double execute(Entity entity) {
 		if (entity == null)
 			return 0;
-		return Math.round((entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).currentXpTLevel * 100) / entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).nextevelXp);
+		return Math.round(((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel * 100)
+				/ (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp);
 	}
 }

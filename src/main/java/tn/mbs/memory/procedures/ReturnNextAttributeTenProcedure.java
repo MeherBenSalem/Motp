@@ -10,8 +10,8 @@ public class ReturnNextAttributeTenProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return Component.translatable("key.memory_of_the_past.next_value").getString() + ""
-				+ new java.text.DecimalFormat("##.##").format(entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).attribute_10 + (double) MechanicsConfigConfiguration.BASE_VALUE_PER_POINT_10.get()) + " (max:"
-				+ (double) MechanicsConfigConfiguration.MAX_LEVEL_ATT_10.get() + " )";
+		return Component.translatable("key.memory_of_the_past.next_value").getString() + "" + new java.text.DecimalFormat("##.##").format(
+				(entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_10 + (double) MechanicsConfigConfiguration.BASE_VALUE_PER_POINT_10.get())
+				+ " (max:" + (double) MechanicsConfigConfiguration.MAX_LEVEL_ATT_10.get() + " )";
 	}
 }

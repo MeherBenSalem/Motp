@@ -1,15 +1,21 @@
 package tn.mbs.memory.configuration;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
+import net.minecraftforge.common.ForgeConfigSpec;
 
 import java.util.List;
 
 public class ItemsConfigConfiguration {
-	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
-	public static final ModConfigSpec SPEC;
+	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+	public static final ForgeConfigSpec SPEC;
 
-	public static final ModConfigSpec.ConfigValue<List<? extends String>> ITEMS_LIST;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_ITEMS_LOCK;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> SHOW_TOOLTIP_ITEMS;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> ITEMS_LIST;
 	static {
+		BUILDER.push("General");
+		ENABLE_ITEMS_LOCK = BUILDER.define("enabled", true);
+		SHOW_TOOLTIP_ITEMS = BUILDER.define("show_tooltip", true);
+		BUILDER.pop();
 		BUILDER.push("Items Settings");
 		ITEMS_LIST = BUILDER.defineList("Items_list",
 				List.of("[item]minecraft:diamond_sword[itemEnd][attribute]2[attributeEnd][level]10[levelEnd]  ", "[item]minecraft:diamond_pickaxe[itemEnd][attribute]2[attributeEnd][level]10[levelEnd]  ",

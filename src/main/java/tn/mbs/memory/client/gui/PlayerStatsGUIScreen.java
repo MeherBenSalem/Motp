@@ -47,11 +47,7 @@ import tn.mbs.memory.procedures.DisplayLogicAttributeForthProcedure;
 import tn.mbs.memory.procedures.DisplayLogicAttributeFifthProcedure;
 import tn.mbs.memory.procedures.DisplayLogicAttributeEightProcedure;
 import tn.mbs.memory.network.PlayerStatsGUIButtonMessage;
-
-import org.joml.Vector3f;
-import org.joml.Quaternionf;
-
-import net.neoforged.neoforge.network.PacketDistributor;
+import tn.mbs.memory.MemoryOfThePastMod;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -61,7 +57,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -99,10 +94,11 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
+		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		if (GetThePlayerModelProcedure.execute(world, x, y, z, entity) instanceof LivingEntity livingEntity) {
-			this.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + -16, this.topPos + 137, 60, 0f + (float) Math.atan((this.leftPos + -16 - mouseX) / 40.0), (float) Math.atan((this.topPos + 88 - mouseY) / 40.0), livingEntity);
+			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + -16, this.topPos + 137, 60, 0f + (float) Math.atan((this.leftPos + -16 - mouseX) / 40.0), (float) Math.atan((this.topPos + 88 - mouseY) / 40.0),
+					livingEntity);
 		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + -38 && mouseX < leftPos + 1 && mouseY > topPos + 147 && mouseY < topPos + 158)
@@ -177,97 +173,97 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg.png"), this.leftPos + -61, this.topPos + -23, 0, 0, 350, 210, 350, 210);
+		guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg.png"), this.leftPos + -61, this.topPos + -23, 0, 0, 350, 210, 350, 210);
 
 		if (DisplayLogicAttributeOneProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 17, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 17, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeOneProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 20, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 20, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeOneProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_1.png"), this.leftPos + 42, this.topPos + 24, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_1.png"), this.leftPos + 42, this.topPos + 24, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeTwoProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 17, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 17, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeTwoProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 20, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 20, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeTwoProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_2.png"), this.leftPos + 164, this.topPos + 24, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_2.png"), this.leftPos + 164, this.topPos + 24, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeThreeProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 48, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 48, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeFifthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 79, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 79, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeSeventhProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 111, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 111, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeNineProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 143, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 49, this.topPos + 143, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeForthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 48, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 48, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeSixthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 79, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 79, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeEightProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 111, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 111, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeTenProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 143, 0, 0, 97, 30, 97, 30);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 143, 0, 0, 97, 30, 97, 30);
 		}
 		if (DisplayLogicAttributeThreeProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 52, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 52, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeForthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 51, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 51, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeFifthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 83, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 83, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeSixthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 83, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 83, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeSeventhProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 114, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 114, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeEightProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 114, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 114, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeNineProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 146, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 146, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeTenProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 147, 0, 0, 24, 24, 24, 24);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 160, this.topPos + 147, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeThreeProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_3.png"), this.leftPos + 42, this.topPos + 56, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_3.png"), this.leftPos + 42, this.topPos + 56, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeForthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_4.png"), this.leftPos + 164, this.topPos + 55, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_4.png"), this.leftPos + 164, this.topPos + 55, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeFifthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_5.png"), this.leftPos + 42, this.topPos + 87, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_5.png"), this.leftPos + 42, this.topPos + 87, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeSixthProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_6.png"), this.leftPos + 164, this.topPos + 87, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_6.png"), this.leftPos + 164, this.topPos + 87, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeSeventhProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_7.png"), this.leftPos + 43, this.topPos + 118, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_7.png"), this.leftPos + 43, this.topPos + 118, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeEightProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_8.png"), this.leftPos + 164, this.topPos + 118, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_8.png"), this.leftPos + 164, this.topPos + 118, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeNineProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_9.png"), this.leftPos + 42, this.topPos + 150, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_9.png"), this.leftPos + 42, this.topPos + 150, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeTenProcedure.execute()) {
-			guiGraphics.blit(ResourceLocation.parse("memory_of_the_past:textures/screens/att_10.png"), this.leftPos + 164, this.topPos + 150, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_10.png"), this.leftPos + 164, this.topPos + 150, 0, 0, 16, 16, 16, 16);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -339,192 +335,159 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_button_notclicked = new ImageButton(this.leftPos + 128, this.topPos + 25, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeOneProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(0, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked = new ImageButton(this.leftPos + 128, this.topPos + 25, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeOneProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(0, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeOneProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeOneProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked", imagebutton_button_notclicked);
 		this.addRenderableWidget(imagebutton_button_notclicked);
-		imagebutton_button_notclicked1 = new ImageButton(this.leftPos + 249, this.topPos + 25, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeTwoProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(1, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked1 = new ImageButton(this.leftPos + 249, this.topPos + 25, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked1.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeTwoProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(1, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeTwoProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeTwoProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked1", imagebutton_button_notclicked1);
 		this.addRenderableWidget(imagebutton_button_notclicked1);
-		imagebutton_button_notclicked2 = new ImageButton(this.leftPos + 128, this.topPos + 57, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeThreeProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(2, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked2 = new ImageButton(this.leftPos + 128, this.topPos + 57, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked2.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeThreeProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(2, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeThreeProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeThreeProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked2", imagebutton_button_notclicked2);
 		this.addRenderableWidget(imagebutton_button_notclicked2);
-		imagebutton_button_notclicked3 = new ImageButton(this.leftPos + 249, this.topPos + 57, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeForthProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(3, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked3 = new ImageButton(this.leftPos + 249, this.topPos + 57, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked3.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeForthProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(3, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeForthProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeForthProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked3", imagebutton_button_notclicked3);
 		this.addRenderableWidget(imagebutton_button_notclicked3);
-		imagebutton_button_notclicked4 = new ImageButton(this.leftPos + 128, this.topPos + 88, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeFifthProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(4, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked4 = new ImageButton(this.leftPos + 128, this.topPos + 88, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked4.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeFifthProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(4, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeFifthProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeFifthProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked4", imagebutton_button_notclicked4);
 		this.addRenderableWidget(imagebutton_button_notclicked4);
-		imagebutton_button_notclicked5 = new ImageButton(this.leftPos + 249, this.topPos + 88, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeSixthProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(5, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked5 = new ImageButton(this.leftPos + 249, this.topPos + 88, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked5.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeSixthProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(5, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeSixthProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeSixthProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked5", imagebutton_button_notclicked5);
 		this.addRenderableWidget(imagebutton_button_notclicked5);
-		imagebutton_button_notclicked6 = new ImageButton(this.leftPos + 128, this.topPos + 120, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeSeventhProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(6, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked6 = new ImageButton(this.leftPos + 128, this.topPos + 120, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked6.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeSeventhProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(6, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeSeventhProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeSeventhProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked6", imagebutton_button_notclicked6);
 		this.addRenderableWidget(imagebutton_button_notclicked6);
-		imagebutton_button_notclicked7 = new ImageButton(this.leftPos + 249, this.topPos + 120, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeEightProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(7, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked7 = new ImageButton(this.leftPos + 249, this.topPos + 120, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked7.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeEightProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(7, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeEightProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeEightProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked7", imagebutton_button_notclicked7);
 		this.addRenderableWidget(imagebutton_button_notclicked7);
-		imagebutton_button_notclicked8 = new ImageButton(this.leftPos + 128, this.topPos + 151, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeNineProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(8, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked8 = new ImageButton(this.leftPos + 128, this.topPos + 151, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked8.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeNineProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(8, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeNineProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeNineProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked8", imagebutton_button_notclicked8);
 		this.addRenderableWidget(imagebutton_button_notclicked8);
-		imagebutton_button_notclicked9 = new ImageButton(this.leftPos + 249, this.topPos + 151, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_notclicked.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_clicked.png")), e -> {
-					if (DisplayLogicAttributeTenProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(9, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
-					}
-				}) {
+		imagebutton_button_notclicked9 = new ImageButton(this.leftPos + 249, this.topPos + 151, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked9.png"), 13, 26, e -> {
+			if (DisplayLogicAttributeTenProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(9, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (DisplayLogicAttributeTenProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = DisplayLogicAttributeTenProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_notclicked9", imagebutton_button_notclicked9);
 		this.addRenderableWidget(imagebutton_button_notclicked9);
-		imagebutton_button_for_stats = new ImageButton(this.leftPos + -46, this.topPos + -3, 13, 13,
-				new WidgetSprites(ResourceLocation.parse("memory_of_the_past:textures/screens/button_for_stats.png"), ResourceLocation.parse("memory_of_the_past:textures/screens/button_for_stats_pressed.png")), e -> {
-					if (ReturnGlobalSectionsDisplayProcedure.execute()) {
-						PacketDistributor.sendToServer(new PlayerStatsGUIButtonMessage(10, x, y, z));
-						PlayerStatsGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
-					}
-				}) {
+		imagebutton_button_for_stats = new ImageButton(this.leftPos + -46, this.topPos + -3, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_for_stats.png"), 13, 26, e -> {
+			if (ReturnGlobalSectionsDisplayProcedure.execute()) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(10, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (ReturnGlobalSectionsDisplayProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnGlobalSectionsDisplayProcedure.execute();
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_button_for_stats", imagebutton_button_for_stats);
 		this.addRenderableWidget(imagebutton_button_for_stats);
-	}
-
-	private void renderEntityInInventoryFollowsAngle(GuiGraphics guiGraphics, int x, int y, int scale, float angleXComponent, float angleYComponent, LivingEntity entity) {
-		Quaternionf pose = new Quaternionf().rotateZ((float) Math.PI);
-		Quaternionf cameraOrientation = new Quaternionf().rotateX(angleYComponent * 20 * ((float) Math.PI / 180F));
-		pose.mul(cameraOrientation);
-		float f2 = entity.yBodyRot;
-		float f3 = entity.getYRot();
-		float f4 = entity.getXRot();
-		float f5 = entity.yHeadRotO;
-		float f6 = entity.yHeadRot;
-		entity.yBodyRot = 180.0F + angleXComponent * 20.0F;
-		entity.setYRot(180.0F + angleXComponent * 40.0F);
-		entity.setXRot(-angleYComponent * 20.0F);
-		entity.yHeadRot = entity.getYRot();
-		entity.yHeadRotO = entity.getYRot();
-		InventoryScreen.renderEntityInInventory(guiGraphics, x, y, scale, new Vector3f(0, 0, 0), pose, cameraOrientation, entity);
-		entity.yBodyRot = f2;
-		entity.setYRot(f3);
-		entity.setXRot(f4);
-		entity.yHeadRotO = f5;
-		entity.yHeadRot = f6;
 	}
 }

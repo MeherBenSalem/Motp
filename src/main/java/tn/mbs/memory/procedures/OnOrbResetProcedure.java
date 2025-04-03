@@ -18,14 +18,19 @@ public class OnOrbResetProcedure {
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		{
-			MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
-			_vars.SparePoints = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints + entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level;
-			_vars.syncPlayerVariables(entity);
+			double _setval = (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints
+					+ (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level;
+			entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.SparePoints = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 		{
-			MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
-			_vars.Level = 0;
-			_vars.syncPlayerVariables(entity);
+			double _setval = 0;
+			entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Level = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 		OnPlayerSpawnProcedure.execute(entity);
 	}

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "memory_of_the_past:codex_of_ascension"
+      "item": "memory_of_the_past:codex_of_ascension"
     },
     "title": {
       "translate": "advancements.reach_level_200.title"

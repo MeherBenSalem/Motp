@@ -1,17 +1,17 @@
 package tn.mbs.memory.configuration;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
+import net.minecraftforge.common.ForgeConfigSpec;
 
 import java.util.List;
 
 public class LevelUpRewardsConfigConfiguration {
-	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
-	public static final ModConfigSpec SPEC;
+	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+	public static final ForgeConfigSpec SPEC;
 
-	public static final ModConfigSpec.ConfigValue<Boolean> ENABLE;
-	public static final ModConfigSpec.ConfigValue<List<? extends String>> LEVELUP_REWARDS_LIST;
-	public static final ModConfigSpec.ConfigValue<List<? extends String>> OVER_LEVEL_REWARDS;
-	public static final ModConfigSpec.ConfigValue<Double> RANDOM_LOOT_TABLE_LEVEL;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> LEVELUP_REWARDS_LIST;
+	public static final ForgeConfigSpec.ConfigValue<List<? extends String>> OVER_LEVEL_REWARDS;
+	public static final ForgeConfigSpec.ConfigValue<Double> RANDOM_LOOT_TABLE_LEVEL;
 	static {
 		BUILDER.push("Rewards");
 		ENABLE = BUILDER.comment("enable").define("enable", true);

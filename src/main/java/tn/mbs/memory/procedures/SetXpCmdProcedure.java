@@ -3,12 +3,13 @@ package tn.mbs.memory.procedures;
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
 import tn.mbs.memory.configuration.MainConfigFileConfiguration;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 
@@ -21,25 +22,31 @@ public class SetXpCmdProcedure {
 			return;
 		double AddedXp = 0;
 		{
-			MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
-			_vars.currentXpTLevel = DoubleArgumentType.getDouble(arguments, "amount");
-			_vars.syncPlayerVariables(entity);
+			double _setval = DoubleArgumentType.getDouble(arguments, "amount");
+			entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.currentXpTLevel = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
-		if (entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level >= (double) MainConfigFileConfiguration.MAX_PLAYER_LEVEL.get()) {
+		if ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level >= (double) MainConfigFileConfiguration.MAX_PLAYER_LEVEL.get()) {
 			return;
 		}
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1);
+				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1);
 			} else {
-				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1, false);
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.experience_orb.pickup")), SoundSource.NEUTRAL, 1, 1, false);
 			}
 		}
-		while (entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).currentXpTLevel >= entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).nextevelXp) {
+		while ((entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel >= (entity
+				.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp) {
 			{
-				MemoryOfThePastModVariables.PlayerVariables _vars = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES);
-				_vars.currentXpTLevel = entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).currentXpTLevel - entity.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).nextevelXp;
-				_vars.syncPlayerVariables(entity);
+				double _setval = (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel
+						- (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).nextevelXp;
+				entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.currentXpTLevel = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 			LevelUpProcedureProcedure.execute(entity);
 		}

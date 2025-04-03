@@ -16,7 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.Advancement;
 
 public class CheckLevelupRewardsProcedure {
 	public static void execute(Entity target) {
@@ -25,27 +25,26 @@ public class CheckLevelupRewardsProcedure {
 		ItemStack itemToGive = ItemStack.EMPTY;
 		double Quantity = 0;
 		double index = 0;
-		if (!(target instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().get(ResourceLocation.parse("memory_of_the_past:first_level_up"))).isDone())) {
+		if (!(target instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel
+				&& _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("memory_of_the_past:first_level_up"))).isDone())) {
 			if (target instanceof ServerPlayer _player) {
-				AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("memory_of_the_past:first_level_up"));
-				if (_adv != null) {
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						for (String criteria : _ap.getRemainingCriteria())
-							_player.getAdvancements().award(_adv, criteria);
-					}
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("memory_of_the_past:first_level_up"));
+				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+				if (!_ap.isDone()) {
+					for (String criteria : _ap.getRemainingCriteria())
+						_player.getAdvancements().award(_adv, criteria);
 				}
 			}
-		} else if (target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints + target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level >= 50 && !(target instanceof ServerPlayer _plr2 && _plr2.level() instanceof ServerLevel
-				&& _plr2.getAdvancements().getOrStartProgress(_plr2.server.getAdvancements().get(ResourceLocation.parse("memory_of_the_past:reach_level_50"))).isDone())) {
+		} else if ((target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints
+				+ (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level >= 50
+				&& !(target instanceof ServerPlayer _plr2 && _plr2.level() instanceof ServerLevel
+						&& _plr2.getAdvancements().getOrStartProgress(_plr2.server.getAdvancements().getAdvancement(new ResourceLocation("memory_of_the_past:reach_level_50"))).isDone())) {
 			if (target instanceof ServerPlayer _player) {
-				AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("memory_of_the_past:reach_level_50"));
-				if (_adv != null) {
-					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-					if (!_ap.isDone()) {
-						for (String criteria : _ap.getRemainingCriteria())
-							_player.getAdvancements().award(_adv, criteria);
-					}
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("memory_of_the_past:reach_level_50"));
+				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+				if (!_ap.isDone()) {
+					for (String criteria : _ap.getRemainingCriteria())
+						_player.getAdvancements().award(_adv, criteria);
 				}
 			}
 		}
@@ -53,15 +52,16 @@ public class CheckLevelupRewardsProcedure {
 			index = 0;
 			for (String stringiterator : LevelUpRewardsConfigConfiguration.LEVELUP_REWARDS_LIST.get()) {
 				if (stringiterator.contains("[level]") && stringiterator.contains("[levelEnd]")) {
-					if (target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints + target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level == new Object() {
-						double convert(String s) {
-							try {
-								return Double.parseDouble(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")))) {
+					if ((target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints
+							+ (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level == new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")))) {
 						{
 							Entity _ent = target;
 							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -76,7 +76,8 @@ public class CheckLevelupRewardsProcedure {
 				}
 				index = index + 1;
 			}
-			if (target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).SparePoints + target.getData(MemoryOfThePastModVariables.PLAYER_VARIABLES).Level >= (double) LevelUpRewardsConfigConfiguration.RANDOM_LOOT_TABLE_LEVEL.get()) {
+			if ((target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints
+					+ (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level >= (double) LevelUpRewardsConfigConfiguration.RANDOM_LOOT_TABLE_LEVEL.get()) {
 				index = 0;
 				for (String stringiterator : LevelUpRewardsConfigConfiguration.OVER_LEVEL_REWARDS.get()) {
 					if (stringiterator.contains("[chance]") && stringiterator.contains("[chanceEnd]")) {
