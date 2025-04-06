@@ -6,8 +6,10 @@ public class IsAt90Procedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if (ReturnPercentageProcedure.execute(entity) >= 89 && ReturnPercentageProcedure.execute(entity) <= 94) {
-			return true;
+		if (DisplayXpOverlayProcedure.execute()) {
+			if (ReturnPercentageProcedure.execute(entity) >= 89 && ReturnPercentageProcedure.execute(entity) <= 94) {
+				return true;
+			}
 		}
 		return false;
 	}

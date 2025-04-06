@@ -168,8 +168,6 @@ public class EntityChangesEquipementProcedure {
 								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
 						}
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(slot), false);
 						break;
 					}
 				} else {

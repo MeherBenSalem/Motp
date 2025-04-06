@@ -144,10 +144,12 @@ public class LevelOverlayOverlay {
 						ReturnCurrentLevelProcedure.execute(entity), 37, h - 26, -1, false);
 			if (YouHavePointsProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.memory_of_the_past.level_overlay.label_available_points"), 4, h - 37, -1, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.memory_of_the_past.level_overlay.label_level"), 4, h - 26, -1, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+			if (DisplayOverlayProcedure.execute())
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.memory_of_the_past.level_overlay.label_level"), 4, h - 26, -1, false);
+			if (DisplayXpOverlayProcedure.execute())
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					ReturnCurrentVPToLevelPercentageProcedure.execute(entity), 85, h - 12, -1, false);
+						ReturnCurrentVPToLevelPercentageProcedure.execute(entity), 85, h - 12, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();
