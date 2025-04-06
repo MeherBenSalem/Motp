@@ -4,14 +4,9 @@
 
 ---
 
-## 📚 Documentation  
-Explore all features, configurations, and tips on getting the most out of the **MOTP** in our [official documentation](https://meherbensalem.github.io/pages/mods.html).  
-
----
-
 ## 💖 Sponsors List  
 Thanks @porogulaemeo for being awsome <3
-Want to support this project? [Become a sponsor](https://github.com/sponsors/MeherBenSalem)!  
+Want to support this project? [Become a sponsor](https://ko-fi.com/nightbeamstudio)!  
 
 ---
 
@@ -30,7 +25,7 @@ Check out my other mods for more amazing Minecraft experiences! 😊
 
 ## 🌐 Social Media & Links  
 Follow me for updates, announcements, and sneak peeks of upcoming projects:
-- **Discord**: [M3HER COMMUNITY SERVER](https://discord.gg/SAmd9fhNhr)
+- **Discord**: [NightBeam COMMUNITY SERVER](https://discord.gg/TJc3CxR4jK)
 - **CurseForge**: [Download Mod](https://www.curseforge.com/minecraft/mc-mods/memories-of-the-past)
 - **Modrinth**: [Download Mod](https://modrinth.com/mod/memories-of-the-past/versions)
 - **YouTube**: [Join My Community](https://www.youtube.com/@naizo_mods)
