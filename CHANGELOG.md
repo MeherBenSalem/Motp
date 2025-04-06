@@ -1,5 +1,5 @@
 ## Changelog [1.6.1]
-- Fixed a bug where the display overlay wasn't hiding the VP bar.  
+- Fixed a bug where the display overlay option wasn't hiding the VP bar.  
 - Fixed a bug that caused "DEBUG" messages to appear when holding a locked item.  
 - Removed unused VP parameters from `drop_rate_config.toml`.  
 
