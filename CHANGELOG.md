@@ -1,3 +1,9 @@
+## Changelog [1.6.0]
+- Added option to toggle item locking
+- Added option to enable and disable items requirements tool tips
+- The item locking system now works with armors
+- Added custom dimensions support to set the VP drop values
+  
 ## Changelog [1.6.0a] (BETA)
 
 - **Removed Content:**  
