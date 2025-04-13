@@ -42,7 +42,7 @@ public class ItemRequirementsDisplayProcedure {
 		if (ItemsConfigConfiguration.ENABLE_ITEMS_LOCK.get()) {
 			if (ItemsConfigConfiguration.SHOW_TOOLTIP_ITEMS.get()) {
 				for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-					if (stringiterator.contains(ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString())) {
+					if ((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]"))).equals(ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString())) {
 						attribute = new Object() {
 							double convert(String s) {
 								try {

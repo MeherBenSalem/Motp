@@ -42,7 +42,8 @@ public class OnEntityAttackedProcedure {
 		if (ItemsConfigConfiguration.ENABLE_ITEMS_LOCK.get()) {
 			if (sourceentity instanceof Player) {
 				for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-					if (stringiterator.contains(ForgeRegistries.ITEMS.getKey((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())) {
+					if ((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))
+							.equals(ForgeRegistries.ITEMS.getKey((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())) {
 						attribute = new Object() {
 							double convert(String s) {
 								try {

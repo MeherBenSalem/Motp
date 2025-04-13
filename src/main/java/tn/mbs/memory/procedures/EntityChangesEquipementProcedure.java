@@ -41,7 +41,7 @@ public class EntityChangesEquipementProcedure {
 		boolean cancelEvent = false;
 		if (ItemsConfigConfiguration.ENABLE_ITEMS_LOCK.get()) {
 			for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-				if (stringiterator.contains(ForgeRegistries.ITEMS.getKey(to.getItem()).toString())) {
+				if ((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]"))).equals(ForgeRegistries.ITEMS.getKey(to.getItem()).toString())) {
 					attribute = new Object() {
 						double convert(String s) {
 							try {

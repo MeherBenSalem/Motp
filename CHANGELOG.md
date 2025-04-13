@@ -1,3 +1,8 @@
+## Changelog [1.6.2]
+- Fixed an issue where item locking incorrectly applied to components sharing the same starting name as the tool
+- Fixed an issue that caused some configs to generate with extra space inside of them.
+
+
 ## Changelog [1.6.1]
 - Fixed a bug where the display overlay option wasn't hiding the VP bar.  
 - Fixed a bug that caused "DEBUG" messages to appear when holding a locked item.  

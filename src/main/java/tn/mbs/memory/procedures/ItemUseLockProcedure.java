@@ -41,7 +41,8 @@ public class ItemUseLockProcedure {
 		boolean cancelEvent = false;
 		if (ItemsConfigConfiguration.ENABLE_ITEMS_LOCK.get()) {
 			for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-				if (stringiterator.contains(ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _entUseItem2 ? _entUseItem2.getUseItem() : ItemStack.EMPTY).getItem()).toString())) {
+				if ((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))
+						.equals(ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _entUseItem6 ? _entUseItem6.getUseItem() : ItemStack.EMPTY).getItem()).toString())) {
 					attribute = new Object() {
 						double convert(String s) {
 							try {
