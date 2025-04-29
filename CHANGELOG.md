@@ -1,7 +1,17 @@
+## Changelog [1.6.3]
+
+- **Added** new XP level display in the **Stats** menu.
+- **Added** option to level up an attribute up to **10 times at once**.
+- **Updated** default UI theme for improved clarity and consistency.
+- **Improved** navigation: switching between the **Stats** menu and **Attributes** menu no longer resets mouse position.
+- **Enhanced** unspent points message: now clearly shows how many points are available to allocate.
+- **Fixed** display bug for attribute **NB 2**: now shows integers (e.g., `##`) instead of decimals (e.g., `##.##`).
+- **Fixed** various icon display problems in the GUI.
+- **Fixed** several GUI alignment issues for a more polished look.
+
 ## Changelog [1.6.2]
 - Fixed an issue where item locking incorrectly applied to components sharing the same starting name as the tool
 - Fixed an issue that caused some configs to generate with extra space inside of them.
-
 
 ## Changelog [1.6.1]
 - Fixed a bug where the display overlay option wasn't hiding the VP bar.  
