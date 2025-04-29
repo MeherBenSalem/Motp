@@ -2,6 +2,7 @@
 package tn.mbs.memory.client.screens;
 
 import tn.mbs.memory.procedures.YouHavePointsProcedure;
+import tn.mbs.memory.procedures.ReturnExtraPointsUIProcedure;
 import tn.mbs.memory.procedures.ReturnCurrentVPToLevelPercentageProcedure;
 import tn.mbs.memory.procedures.ReturnCurrentLevelProcedure;
 import tn.mbs.memory.procedures.IsAt99Procedure;
@@ -143,7 +144,9 @@ public class LevelOverlayOverlay {
 
 						ReturnCurrentLevelProcedure.execute(entity), 37, h - 26, -1, false);
 			if (YouHavePointsProcedure.execute(entity))
-				event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.memory_of_the_past.level_overlay.label_available_points"), 4, h - 37, -1, false);
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						ReturnExtraPointsUIProcedure.execute(entity), 4, h - 37, -1, false);
 			if (DisplayOverlayProcedure.execute())
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.memory_of_the_past.level_overlay.label_level"), 4, h - 26, -1, false);
 			if (DisplayXpOverlayProcedure.execute())

@@ -1,6 +1,7 @@
 
 package tn.mbs.memory.world.inventory;
 
+import tn.mbs.memory.procedures.PlayerStatsGUIThisGUIIsOpenedProcedure;
 import tn.mbs.memory.init.MemoryOfThePastModMenus;
 
 import net.minecraftforge.items.ItemStackHandler;
@@ -48,6 +49,7 @@ public class PlayerStatsGUIMenu extends AbstractContainerMenu implements Supplie
 			this.z = pos.getZ();
 			access = ContainerLevelAccess.create(world, pos);
 		}
+		PlayerStatsGUIThisGUIIsOpenedProcedure.execute(entity);
 	}
 
 	@Override

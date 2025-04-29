@@ -81,6 +81,7 @@ public class MemoryOfThePastModVariables {
 			clone.attribute_8 = original.attribute_8;
 			clone.attribute_9 = original.attribute_9;
 			clone.attribute_10 = original.attribute_10;
+			clone.modifier = original.modifier;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -131,6 +132,7 @@ public class MemoryOfThePastModVariables {
 		public double attribute_8 = 0;
 		public double attribute_9 = 0;
 		public double attribute_10 = 0;
+		public double modifier = 1.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -153,6 +155,7 @@ public class MemoryOfThePastModVariables {
 			nbt.putDouble("attribute_8", attribute_8);
 			nbt.putDouble("attribute_9", attribute_9);
 			nbt.putDouble("attribute_10", attribute_10);
+			nbt.putDouble("modifier", modifier);
 			return nbt;
 		}
 
@@ -172,6 +175,7 @@ public class MemoryOfThePastModVariables {
 			attribute_8 = nbt.getDouble("attribute_8");
 			attribute_9 = nbt.getDouble("attribute_9");
 			attribute_10 = nbt.getDouble("attribute_10");
+			modifier = nbt.getDouble("modifier");
 		}
 	}
 
@@ -210,6 +214,7 @@ public class MemoryOfThePastModVariables {
 					variables.attribute_8 = message.data.attribute_8;
 					variables.attribute_9 = message.data.attribute_9;
 					variables.attribute_10 = message.data.attribute_10;
+					variables.modifier = message.data.modifier;
 				}
 			});
 			context.setPacketHandled(true);

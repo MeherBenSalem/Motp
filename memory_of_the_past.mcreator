@@ -3119,6 +3119,103 @@
         ]
       },
       "path": "~/Procedures/Items/ItemLock"
+    },
+    {
+      "name": "AddModiferCount",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_modifer_count",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/AddModiferCountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI"
+    },
+    {
+      "name": "RemoveModiferCount",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_modifer_count",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/RemoveModiferCountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI"
+    },
+    {
+      "name": "ReturnCurrentModifier",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_current_modifier",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentModifierProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI"
+    },
+    {
+      "name": "PlayerStatsGUIThisGUIIsOpened",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_stats_gui_this_gui_is_opened",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/PlayerStatsGUIThisGUIIsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "ReturnExtraPointsUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_extra_points_ui",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/ReturnExtraPointsUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Text Logic/LevelInfo"
     }
   ],
   "variable_elements": [
@@ -3205,6 +3302,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "modifier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
     }
   ],
   "sound_elements": [],
@@ -3310,7 +3413,8 @@
       "gui.memory_of_the_past.player_attributes_viewer_gui.label_available_points": "Available Points:",
       "gui.memory_of_the_past.player_stats_gui.button_empty1": "\u003e",
       "gui.memoryfrags.player_stats_gui.label_health": "Health :",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_indicates_the_number_of_points_y": "§7Indicates the number of points you can allocate to improve your stats"
+      "gui.memory_of_the_past.player_stats_gui.tooltip_indicates_the_number_of_points_y": "§7Indicates the number of points you can allocate to improve your stats",
+      "gui.memory_of_the_past.player_stats_gui.label_5": "5"
     },
     "fr_fr": {
       "gui.memoryfrags.player_stats_gui.label_resistance": "Resistance : ",
@@ -3406,7 +3510,8 @@
       "gui.memory_of_the_past.player_attributes_viewer_gui.label_available_points": "Available Points:",
       "gui.memory_of_the_past.player_stats_gui.button_empty1": "\u003e",
       "gui.memoryfrags.player_stats_gui.label_health": "Health :",
-      "gui.memory_of_the_past.player_stats_gui.tooltip_indicates_the_number_of_points_y": "§7Indique le nombre de points que vous pouvez allouer pour améliorer vos statistiques"
+      "gui.memory_of_the_past.player_stats_gui.tooltip_indicates_the_number_of_points_y": "§7Indique le nombre de points que vous pouvez allouer pour améliorer vos statistiques",
+      "gui.memory_of_the_past.player_stats_gui.label_5": "5"
     }
   },
   "foldersRoot": {
@@ -3523,7 +3628,7 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.6.2",
+    "version": "1.6.3",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",

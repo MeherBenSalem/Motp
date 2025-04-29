@@ -2,6 +2,7 @@
 package tn.mbs.memory.network;
 
 import tn.mbs.memory.world.inventory.PlayerStatsGUIMenu;
+import tn.mbs.memory.procedures.RemoveModiferCountProcedure;
 import tn.mbs.memory.procedures.OpenAttributesDisplayGUIProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeTwoProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeThreeProcedure;
@@ -13,6 +14,7 @@ import tn.mbs.memory.procedures.AddPointsAttributeNineProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeForthProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeFifthProcedure;
 import tn.mbs.memory.procedures.AddPointsAttributeEightProcedure;
+import tn.mbs.memory.procedures.AddModiferCountProcedure;
 import tn.mbs.memory.MemoryOfThePastMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -115,6 +117,14 @@ public class PlayerStatsGUIButtonMessage {
 		if (buttonID == 10) {
 
 			OpenAttributesDisplayGUIProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 11) {
+
+			RemoveModiferCountProcedure.execute(entity);
+		}
+		if (buttonID == 12) {
+
+			AddModiferCountProcedure.execute(entity);
 		}
 	}
 

@@ -13,6 +13,7 @@ import tn.mbs.memory.procedures.ReturnNextAttributeFifthProcedure;
 import tn.mbs.memory.procedures.ReturnNextAttributeEightProcedure;
 import tn.mbs.memory.procedures.ReturnGlobalSectionsDisplayProcedure;
 import tn.mbs.memory.procedures.ReturnExtraPointsProcedure;
+import tn.mbs.memory.procedures.ReturnCurrentModifierProcedure;
 import tn.mbs.memory.procedures.ReturnCurrentLevelProcedure;
 import tn.mbs.memory.procedures.ReturnCurrentAttributeTwoProcedure;
 import tn.mbs.memory.procedures.ReturnCurrentAttributeThreeProcedure;
@@ -35,6 +36,27 @@ import tn.mbs.memory.procedures.ReturnAttributeForthTipProcedure;
 import tn.mbs.memory.procedures.ReturnAttributeFifthTipProcedure;
 import tn.mbs.memory.procedures.ReturnAttributeEightTipProcedure;
 import tn.mbs.memory.procedures.PlayerNameProcedure;
+import tn.mbs.memory.procedures.IsAt99Procedure;
+import tn.mbs.memory.procedures.IsAt95Procedure;
+import tn.mbs.memory.procedures.IsAt90Procedure;
+import tn.mbs.memory.procedures.IsAt85Procedure;
+import tn.mbs.memory.procedures.IsAt80Procedure;
+import tn.mbs.memory.procedures.IsAt75Procedure;
+import tn.mbs.memory.procedures.IsAt70Procedure;
+import tn.mbs.memory.procedures.IsAt65Procedure;
+import tn.mbs.memory.procedures.IsAt60Procedure;
+import tn.mbs.memory.procedures.IsAt5Procedure;
+import tn.mbs.memory.procedures.IsAt55Procedure;
+import tn.mbs.memory.procedures.IsAt50Procedure;
+import tn.mbs.memory.procedures.IsAt45Procedure;
+import tn.mbs.memory.procedures.IsAt40Procedure;
+import tn.mbs.memory.procedures.IsAt35Procedure;
+import tn.mbs.memory.procedures.IsAt30Procedure;
+import tn.mbs.memory.procedures.IsAt25Procedure;
+import tn.mbs.memory.procedures.IsAt20Procedure;
+import tn.mbs.memory.procedures.IsAt15Procedure;
+import tn.mbs.memory.procedures.IsAt10Procedure;
+import tn.mbs.memory.procedures.IsAt0Procedure;
 import tn.mbs.memory.procedures.GetThePlayerModelProcedure;
 import tn.mbs.memory.procedures.DisplayLogicAttributeTwoProcedure;
 import tn.mbs.memory.procedures.DisplayLogicAttributeThreeProcedure;
@@ -46,6 +68,7 @@ import tn.mbs.memory.procedures.DisplayLogicAttributeNineProcedure;
 import tn.mbs.memory.procedures.DisplayLogicAttributeForthProcedure;
 import tn.mbs.memory.procedures.DisplayLogicAttributeFifthProcedure;
 import tn.mbs.memory.procedures.DisplayLogicAttributeEightProcedure;
+import tn.mbs.memory.procedures.CurrentXpToLevelProcedure;
 import tn.mbs.memory.network.PlayerStatsGUIButtonMessage;
 import tn.mbs.memory.MemoryOfThePastMod;
 
@@ -80,6 +103,8 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 	ImageButton imagebutton_button_notclicked8;
 	ImageButton imagebutton_button_notclicked9;
 	ImageButton imagebutton_button_for_stats;
+	ImageButton imagebutton_button_left;
+	ImageButton imagebutton_button_right;
 
 	public PlayerStatsGUIScreen(PlayerStatsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -97,11 +122,11 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		if (GetThePlayerModelProcedure.execute(world, x, y, z, entity) instanceof LivingEntity livingEntity) {
-			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + -16, this.topPos + 137, 60, 0f + (float) Math.atan((this.leftPos + -16 - mouseX) / 40.0), (float) Math.atan((this.topPos + 88 - mouseY) / 40.0),
+			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + -11, this.topPos + 137, 60, 0f + (float) Math.atan((this.leftPos + -11 - mouseX) / 40.0), (float) Math.atan((this.topPos + 88 - mouseY) / 40.0),
 					livingEntity);
 		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + -38 && mouseX < leftPos + 1 && mouseY > topPos + 147 && mouseY < topPos + 158)
+		if (mouseX > leftPos + -44 && mouseX < leftPos + -5 && mouseY > topPos + 147 && mouseY < topPos + 158)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.memory_of_the_past.player_stats_gui.tooltip_represents_your_overall_progress"), mouseX, mouseY);
 		if (mouseX > leftPos + 78 && mouseX < leftPos + 167 && mouseY > topPos + -8 && mouseY < topPos + 3)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.memory_of_the_past.player_stats_gui.tooltip_indicates_the_number_of_points_y"), mouseX, mouseY);
@@ -109,7 +134,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			if (mouseX > leftPos + 38 && mouseX < leftPos + 62 && mouseY > topPos + 20 && mouseY < topPos + 44)
 				guiGraphics.renderTooltip(font, Component.literal(ReturnAttributeOneTipProcedure.execute()), mouseX, mouseY);
 		if (DisplayLogicAttributeOneProcedure.execute())
-			if (mouseX > leftPos + 128 && mouseX < leftPos + 140 && mouseY > topPos + 25 && mouseY < topPos + 37)
+			if (mouseX > leftPos + 127 && mouseX < leftPos + 141 && mouseY > topPos + 26 && mouseY < topPos + 39)
 				guiGraphics.renderTooltip(font, Component.literal(ReturnNextAttributeOneProcedure.execute(entity)), mouseX, mouseY);
 		if (DisplayLogicAttributeTwoProcedure.execute())
 			if (mouseX > leftPos + 160 && mouseX < leftPos + 184 && mouseY > topPos + 20 && mouseY < topPos + 44)
@@ -182,7 +207,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/iconbg.png"), this.leftPos + 38, this.topPos + 20, 0, 0, 24, 24, 24, 24);
 		}
 		if (DisplayLogicAttributeOneProcedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_1.png"), this.leftPos + 42, this.topPos + 24, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_1.png"), this.leftPos + 42, this.topPos + 24, 0, 0, 17, 17, 17, 17);
 		}
 		if (DisplayLogicAttributeTwoProcedure.execute()) {
 			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/bg_attributes.png"), this.leftPos + 170, this.topPos + 17, 0, 0, 97, 30, 97, 30);
@@ -245,7 +270,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_3.png"), this.leftPos + 42, this.topPos + 56, 0, 0, 16, 16, 16, 16);
 		}
 		if (DisplayLogicAttributeForthProcedure.execute()) {
-			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_4.png"), this.leftPos + 164, this.topPos + 55, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_4.png"), this.leftPos + 164, this.topPos + 55, 0, 0, 17, 17, 17, 17);
 		}
 		if (DisplayLogicAttributeFifthProcedure.execute()) {
 			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_5.png"), this.leftPos + 42, this.topPos + 87, 0, 0, 16, 16, 16, 16);
@@ -265,6 +290,69 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		if (DisplayLogicAttributeTenProcedure.execute()) {
 			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/att_10.png"), this.leftPos + 164, this.topPos + 150, 0, 0, 16, 16, 16, 16);
 		}
+		if (IsAt0Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_0.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt5Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_5.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt10Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_10.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt15Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_15.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt20Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_20.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt25Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_25.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt30Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_30.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt35Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_35.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt40Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_40.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt45Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_45.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt50Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_50.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt55Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_55.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt60Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_60.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt65Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_65.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt70Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_70.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt75Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_75.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt80Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_80.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt85Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_85.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt90Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_90.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt95Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_95.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
+		if (IsAt99Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_99.png"), this.leftPos + -52, this.topPos + 162, 0, 0, 80, 12, 80, 12);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -279,10 +367,10 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.memory_of_the_past.player_stats_gui.label_level"), -36, 147, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.memory_of_the_past.player_stats_gui.label_level"), -41, 147, -1, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnCurrentLevelProcedure.execute(entity), 4, 147, -1, false);
+				ReturnCurrentLevelProcedure.execute(entity), -1, 147, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.memory_of_the_past.player_stats_gui.label_available_points"), 79, -8, -1, false);
 		guiGraphics.drawString(this.font,
 
@@ -297,7 +385,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		if (DisplayLogicAttributeTwoProcedure.execute())
 			guiGraphics.drawString(this.font,
 
-					ReturnCurrentAttributeTwoProcedure.execute(entity), 186, 27, -1, false);
+					ReturnCurrentAttributeTwoProcedure.execute(entity), 186, 28, -1, false);
 		if (DisplayLogicAttributeThreeProcedure.execute())
 			guiGraphics.drawString(this.font,
 
@@ -330,12 +418,18 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 			guiGraphics.drawString(this.font,
 
 					ReturnCurrentAttributeTenProcedure.execute(entity), 185, 156, -1, false);
+		guiGraphics.drawString(this.font,
+
+				ReturnCurrentModifierProcedure.execute(entity), 248, 4, -1, false);
+		guiGraphics.drawString(this.font,
+
+				CurrentXpToLevelProcedure.execute(entity), -50, 165, -16777216, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_button_notclicked = new ImageButton(this.leftPos + 128, this.topPos + 25, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked.png"), 13, 26, e -> {
+		imagebutton_button_notclicked = new ImageButton(this.leftPos + 127, this.topPos + 26, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeOneProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(0, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -349,7 +443,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked", imagebutton_button_notclicked);
 		this.addRenderableWidget(imagebutton_button_notclicked);
-		imagebutton_button_notclicked1 = new ImageButton(this.leftPos + 249, this.topPos + 25, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked1.png"), 13, 26, e -> {
+		imagebutton_button_notclicked1 = new ImageButton(this.leftPos + 247, this.topPos + 25, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked1.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeTwoProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(1, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -363,7 +457,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked1", imagebutton_button_notclicked1);
 		this.addRenderableWidget(imagebutton_button_notclicked1);
-		imagebutton_button_notclicked2 = new ImageButton(this.leftPos + 128, this.topPos + 57, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked2.png"), 13, 26, e -> {
+		imagebutton_button_notclicked2 = new ImageButton(this.leftPos + 127, this.topPos + 57, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked2.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeThreeProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(2, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -377,7 +471,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked2", imagebutton_button_notclicked2);
 		this.addRenderableWidget(imagebutton_button_notclicked2);
-		imagebutton_button_notclicked3 = new ImageButton(this.leftPos + 249, this.topPos + 57, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked3.png"), 13, 26, e -> {
+		imagebutton_button_notclicked3 = new ImageButton(this.leftPos + 247, this.topPos + 57, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked3.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeForthProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(3, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -391,7 +485,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked3", imagebutton_button_notclicked3);
 		this.addRenderableWidget(imagebutton_button_notclicked3);
-		imagebutton_button_notclicked4 = new ImageButton(this.leftPos + 128, this.topPos + 88, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked4.png"), 13, 26, e -> {
+		imagebutton_button_notclicked4 = new ImageButton(this.leftPos + 127, this.topPos + 88, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked4.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeFifthProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(4, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -405,7 +499,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked4", imagebutton_button_notclicked4);
 		this.addRenderableWidget(imagebutton_button_notclicked4);
-		imagebutton_button_notclicked5 = new ImageButton(this.leftPos + 249, this.topPos + 88, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked5.png"), 13, 26, e -> {
+		imagebutton_button_notclicked5 = new ImageButton(this.leftPos + 247, this.topPos + 88, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked5.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeSixthProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(5, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -419,7 +513,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked5", imagebutton_button_notclicked5);
 		this.addRenderableWidget(imagebutton_button_notclicked5);
-		imagebutton_button_notclicked6 = new ImageButton(this.leftPos + 128, this.topPos + 120, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked6.png"), 13, 26, e -> {
+		imagebutton_button_notclicked6 = new ImageButton(this.leftPos + 127, this.topPos + 120, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked6.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeSeventhProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(6, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -433,7 +527,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked6", imagebutton_button_notclicked6);
 		this.addRenderableWidget(imagebutton_button_notclicked6);
-		imagebutton_button_notclicked7 = new ImageButton(this.leftPos + 249, this.topPos + 120, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked7.png"), 13, 26, e -> {
+		imagebutton_button_notclicked7 = new ImageButton(this.leftPos + 247, this.topPos + 120, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked7.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeEightProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(7, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -447,7 +541,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked7", imagebutton_button_notclicked7);
 		this.addRenderableWidget(imagebutton_button_notclicked7);
-		imagebutton_button_notclicked8 = new ImageButton(this.leftPos + 128, this.topPos + 151, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked8.png"), 13, 26, e -> {
+		imagebutton_button_notclicked8 = new ImageButton(this.leftPos + 127, this.topPos + 151, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked8.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeNineProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(8, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
@@ -461,7 +555,7 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_notclicked8", imagebutton_button_notclicked8);
 		this.addRenderableWidget(imagebutton_button_notclicked8);
-		imagebutton_button_notclicked9 = new ImageButton(this.leftPos + 249, this.topPos + 151, 13, 13, 0, 0, 13, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked9.png"), 13, 26, e -> {
+		imagebutton_button_notclicked9 = new ImageButton(this.leftPos + 247, this.topPos + 151, 16, 14, 0, 0, 14, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_notclicked9.png"), 16, 28, e -> {
 			if (DisplayLogicAttributeTenProcedure.execute()) {
 				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(9, x, y, z));
 				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
@@ -489,5 +583,21 @@ public class PlayerStatsGUIScreen extends AbstractContainerScreen<PlayerStatsGUI
 		};
 		guistate.put("button:imagebutton_button_for_stats", imagebutton_button_for_stats);
 		this.addRenderableWidget(imagebutton_button_for_stats);
+		imagebutton_button_left = new ImageButton(this.leftPos + 240, this.topPos + 4, 6, 8, 0, 0, 8, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_left.png"), 6, 16, e -> {
+			if (true) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(11, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 11, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_button_left", imagebutton_button_left);
+		this.addRenderableWidget(imagebutton_button_left);
+		imagebutton_button_right = new ImageButton(this.leftPos + 261, this.topPos + 4, 6, 8, 0, 0, 8, new ResourceLocation("memory_of_the_past:textures/screens/atlas/imagebutton_button_right.png"), 6, 16, e -> {
+			if (true) {
+				MemoryOfThePastMod.PACKET_HANDLER.sendToServer(new PlayerStatsGUIButtonMessage(12, x, y, z));
+				PlayerStatsGUIButtonMessage.handleButtonAction(entity, 12, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_button_right", imagebutton_button_right);
+		this.addRenderableWidget(imagebutton_button_right);
 	}
 }
