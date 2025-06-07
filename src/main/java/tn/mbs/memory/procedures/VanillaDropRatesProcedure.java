@@ -1,8 +1,7 @@
 package tn.mbs.memory.procedures;
 
-import tn.naizo.jauml.JaumlConfigLib;
-
 import tn.mbs.memory.init.MemoryOfThePastModItems;
+import tn.mbs.memory.configuration.DropRateConfigFileConfiguration;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
@@ -39,12 +38,14 @@ public class VanillaDropRatesProcedure {
 		if (entity == null)
 			return;
 		if (!(entity instanceof Player || entity instanceof ServerPlayer)) {
-			if (JaumlConfigLib.stringExistsInArray("motp", "droprate", "bosses_list", (ForgeRegistries.ENTITY_TYPES.getKey(entity.getType()).toString()))) {
-				for (int index0 = 0; index0 < Mth.nextInt(RandomSource.create(), (int) JaumlConfigLib.getNumberValue("motp", "droprate", "min_drop_rate"), (int) JaumlConfigLib.getNumberValue("motp", "droprate", "max_drop_rate")); index0++) {
-					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.CODEX_OF_ASCENSION.get()));
-						entityToSpawn.setPickUpDelay(10);
-						_level.addFreshEntity(entityToSpawn);
+			for (String stringiterator : DropRateConfigFileConfiguration.BOSSES_LIST.get()) {
+				if ((ForgeRegistries.ENTITY_TYPES.getKey(entity.getType()).toString()).equals(stringiterator)) {
+					for (int index0 = 0; index0 < Mth.nextInt(RandomSource.create(), (int) (double) DropRateConfigFileConfiguration.MIN_DROP_RATE.get(), (int) (double) DropRateConfigFileConfiguration.MAX_DROP_RATE.get()); index0++) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MemoryOfThePastModItems.CODEX_OF_ASCENSION.get()));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
 					}
 				}
 			}

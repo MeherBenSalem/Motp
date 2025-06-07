@@ -405,6 +405,19 @@
       "path": "~/Procedures/Text Logic"
     },
     {
+      "name": "DropRateConfigFile",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drop_rate_config_file",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/configuration/DropRateConfigFileConfiguration.java"
+        ]
+      },
+      "path": "~/Configurations"
+    },
+    {
       "name": "LevelUpRewardsConfig",
       "type": "config",
       "compiles": true,
@@ -3203,20 +3216,6 @@
         ]
       },
       "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
-      "name": "CreateDropRatesConfigFiles",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "create_drop_rates_config_files",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/CreateDropRatesConfigFilesProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Configurations"
     }
   ],
   "variable_elements": [
@@ -3629,21 +3628,17 @@
   "workspaceSettings": {
     "modid": "memory_of_the_past",
     "modName": "Memories of the past",
-    "version": "1.7.0",
+    "version": "1.6.3",
     "description": "As players explore the world, they collect Memories from significant defeating a bosses or mobs. you can use this fragments to level up and gain extra stats.",
     "author": "NAIZO",
     "websiteURL": "https://meherbensalem.github.io",
     "license": "All Rights Reserved",
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [
-      "jauml"
-    ],
+    "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [
-      "github"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "forge-1.20.1",
     "credits": "Thank you @porogulaemeo",
     "modElementsPackage": "tn.mbs.memory"
