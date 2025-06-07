@@ -1,8 +1,9 @@
 package tn.mbs.memory.procedures;
 
+import tn.naizo.jauml.JaumlConfigLib;
+
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
 import tn.mbs.memory.configuration.MainConfigFileConfiguration;
-import tn.mbs.memory.configuration.DropRateConfigFileConfiguration;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -39,9 +40,15 @@ public class GiveXpNoDropProcedure {
 			return;
 		double AddedXp = 0;
 		double DropChance = 0;
+		double index = 0;
+		double count = 0;
+		String dimension = "";
 		if ((sourceentity instanceof Player || sourceentity instanceof ServerPlayer) && !MainConfigFileConfiguration.USE_VANILLA_XP.get()) {
-			for (String stringiterator : DropRateConfigFileConfiguration.DIMENSIONS_DROP_RATES.get()) {
-				if (("" + sourceentity.level().dimension()).contains(stringiterator.substring(0, (int) stringiterator.indexOf("=")))) {
+			count = JaumlConfigLib.getArrayLength("motp", "droprate", "dimensions_drop_rates");
+			index = 0;
+			for (int index0 = 0; index0 < (int) count; index0++) {
+				dimension = JaumlConfigLib.getArrayElement("motp", "droprate", "dimensions_drop_rates", ((int) index));
+				if (("" + sourceentity.level().dimension()).contains(dimension.substring(0, (int) dimension.indexOf("/")))) {
 					AddedXp = ((LivingEntity) entity).getAttribute(ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("minecraft", "generic.max_health"))).getBaseValue() * new Object() {
 						double convert(String s) {
 							try {
@@ -50,8 +57,15 @@ public class GiveXpNoDropProcedure {
 							}
 							return 0;
 						}
-					}.convert(stringiterator.substring((int) (stringiterator.indexOf("=") + 1)));
+					}.convert(dimension.substring((int) (dimension.indexOf("/") + 1)));
+					break;
+				} else {
+					index = index + 1;
+					continue;
 				}
+			}
+			if (AddedXp <= 0) {
+				AddedXp = ((LivingEntity) entity).getAttribute(ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("minecraft", "generic.max_health"))).getBaseValue() * JaumlConfigLib.getNumberValue("motp", "droprate", "default_vp_rates");
 			}
 			{
 				double _setval = (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).currentXpTLevel
