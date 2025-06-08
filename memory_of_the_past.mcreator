@@ -3203,6 +3203,20 @@
         ]
       },
       "path": "~/Procedures/Text Logic/LevelInfo"
+    },
+    {
+      "name": "CreateDropRateConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_drop_rate_config",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/CreateDropRateConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Configurations"
     }
   ],
   "variable_elements": [
