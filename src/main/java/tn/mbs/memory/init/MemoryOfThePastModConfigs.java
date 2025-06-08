@@ -5,7 +5,6 @@ import tn.mbs.memory.configuration.MainConfigFileConfiguration;
 import tn.mbs.memory.configuration.LevelUpRewardsConfigConfiguration;
 import tn.mbs.memory.configuration.ItemsConfigConfiguration;
 import tn.mbs.memory.configuration.GUIAttributeConfigConfiguration;
-import tn.mbs.memory.configuration.DropRateConfigFileConfiguration;
 import tn.mbs.memory.MemoryOfThePastMod;
 
 import net.minecraftforge.fml.event.lifecycle.FMLConstructModEvent;
@@ -20,7 +19,6 @@ public class MemoryOfThePastModConfigs {
 	public static void register(FMLConstructModEvent event) {
 		event.enqueueWork(() -> {
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MainConfigFileConfiguration.SPEC, "motp/main_config.toml");
-			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, DropRateConfigFileConfiguration.SPEC, "motp/drop_rate_config.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, LevelUpRewardsConfigConfiguration.SPEC, "motp/levelup_events.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MechanicsConfigConfiguration.SPEC, "motp/attributes_config.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GUIAttributeConfigConfiguration.SPEC, "motp/attribute_display_config.toml");
