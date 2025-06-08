@@ -3636,7 +3636,9 @@
     "license": "All Rights Reserved",
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [],
+    "requiredMods": [
+      "jauml"
+    ],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
