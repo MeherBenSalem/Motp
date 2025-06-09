@@ -1,3 +1,17 @@
+## Changelog [1.7.0]
+
+## 🚀 New Features
+- **JAUML Library Integration**: Added support for the JAUML library, unlocking new possibilities for mod compatibility and performance.
+- **JSON Config Overhaul**: Say goodbye to `.toml`! The `drop_rate`, `items_lock`, and `levelup_rewards` config files are now in `.json` format for easier management and consistency.
+- **Default Drop Rate Config**: Introduced a `default_drop_rate` config that applies across all dimensions, ensuring seamless gameplay even if specific dimension settings are missing.
+- **Items Lock Mining Restrictions**: The Items Lock system now prevents mining specific blocks until you meet the required stats, adding strategic depth to resource gathering.
+- **Hot Reload for JSON Configs**: Change any `.json` config file, and watch it auto-reload in-game for real-time testing and tweaking—no restarts needed!
+
+## 🛠️ Bug Fixes
+- **Level Up Rewards Fix**: Resolved an issue that prevented random level-up rewards from functioning correctly.
+- **Armor Duplication Bug**: Fixed a bug where equipping restricted armor via the main hand would duplicate the armor or fail to swap properly.
+- **UI Polish**: Implemented minor UI fixes and tweaks for a smoother, more professional look.
+
 ## Changelog [1.6.3]
 
 - **Added** new XP level display in the **Stats** menu.

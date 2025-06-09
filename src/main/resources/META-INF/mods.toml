@@ -22,17 +22,18 @@ description="As players explore the world, they collect Memories from significan
     ordering="AFTER"
     side="BOTH"
 
+
 [[dependencies.memory_of_the_past]]
     modId="jauml"
-    mandatory=true
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.memory_of_the_past]]
     modId="jauml"
-    mandatory=false
-    versionRange="[0,)"
+    mandatory=true
+    versionRange="[1.0.3,)"
     ordering="NONE"
     side="BOTH"
 
