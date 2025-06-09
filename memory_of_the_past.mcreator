@@ -2526,63 +2526,6 @@
       "path": "~/Procedures/Items/ItemLock"
     },
     {
-      "name": "OnBlockPlacement",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "on_block_placement",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/OnBlockPlacementProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Items/ItemLock"
-    },
-    {
-      "name": "OnEntityAttacked",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "on_entity_attacked",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/OnEntityAttackedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Items/ItemLock"
-    },
-    {
-      "name": "OnBlockBreak",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "on_block_break",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/OnBlockBreakProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Items/ItemLock"
-    },
-    {
       "name": "GiveXpVanilla",
       "type": "procedure",
       "compiles": true,
@@ -3217,6 +3160,85 @@
         "dependencies": []
       },
       "path": "~/Configurations"
+    },
+    {
+      "name": "CreateItemsLockConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_items_lock_config",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/CreateItemsLockConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Configurations"
+    },
+    {
+      "name": "DisableBlockPlacement",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_block_placement",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisableBlockPlacementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Items/ItemLock"
+    },
+    {
+      "name": "DisableBlockBreak",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_block_break",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisableBlockBreakProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Items/ItemLock"
+    },
+    {
+      "name": "DisableEntityAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_entity_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/DisableEntityAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Items/ItemLock"
     }
   ],
   "variable_elements": [

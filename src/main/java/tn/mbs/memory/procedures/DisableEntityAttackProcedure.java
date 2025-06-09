@@ -1,7 +1,8 @@
 package tn.mbs.memory.procedures;
 
+import tn.naizo.jauml.JaumlConfigLib;
+
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
-import tn.mbs.memory.configuration.ItemsConfigConfiguration;
 import tn.mbs.memory.MemoryOfThePastMod;
 
 import org.checkerframework.checker.units.qual.s;
@@ -21,7 +22,7 @@ import net.minecraft.network.chat.Component;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class OnEntityAttackedProcedure {
+public class DisableEntityAttackProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
@@ -36,13 +37,19 @@ public class OnEntityAttackedProcedure {
 	private static void execute(@Nullable Event event, Entity sourceentity) {
 		if (sourceentity == null)
 			return;
+		boolean cancelEvent = false;
 		double attribute = 0;
 		double level = 0;
-		boolean cancelEvent = false;
-		if (ItemsConfigConfiguration.ENABLE_ITEMS_LOCK.get()) {
+		double count = 0;
+		double index = 0;
+		String iterrator = "";
+		if (JaumlConfigLib.getBooleanValue("motp", "items_lock", "enabled")) {
 			if (sourceentity instanceof Player) {
-				for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-					if ((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]")))
+				count = JaumlConfigLib.getArrayLength("motp", "items_lock", "items_list");
+				index = 0;
+				for (int index0 = 0; index0 < (int) count; index0++) {
+					iterrator = JaumlConfigLib.getArrayElement("motp", "items_lock", "items_list", ((int) index));
+					if ((iterrator.substring((int) (iterrator.indexOf("[item]") + 6), (int) iterrator.indexOf("[itemEnd]")))
 							.equals(ForgeRegistries.ITEMS.getKey((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())) {
 						attribute = new Object() {
 							double convert(String s) {
@@ -52,7 +59,7 @@ public class OnEntityAttackedProcedure {
 								}
 								return 0;
 							}
-						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[attribute]") + 11), (int) stringiterator.indexOf("[attributeEnd]")));
+						}.convert(iterrator.substring((int) (iterrator.indexOf("[attribute]") + 11), (int) iterrator.indexOf("[attributeEnd]")));
 						level = new Object() {
 							double convert(String s) {
 								try {
@@ -61,7 +68,7 @@ public class OnEntityAttackedProcedure {
 								}
 								return 0;
 							}
-						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")));
+						}.convert(iterrator.substring((int) (iterrator.indexOf("[level]") + 7), (int) iterrator.indexOf("[levelEnd]")));
 						cancelEvent = false;
 						if (attribute == 1) {
 							if (level > (sourceentity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
@@ -115,7 +122,7 @@ public class OnEntityAttackedProcedure {
 							break;
 						}
 					} else {
-						continue;
+						index = index + 1;
 					}
 				}
 			}

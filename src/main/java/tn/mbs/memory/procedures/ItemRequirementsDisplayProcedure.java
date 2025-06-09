@@ -1,7 +1,8 @@
 package tn.mbs.memory.procedures;
 
+import tn.naizo.jauml.JaumlConfigLib;
+
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
-import tn.mbs.memory.configuration.ItemsConfigConfiguration;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -38,11 +39,17 @@ public class ItemRequirementsDisplayProcedure {
 			return;
 		double attribute = 0;
 		double level = 0;
+		double count = 0;
+		double index = 0;
 		String attributeName = "";
-		if (ItemsConfigConfiguration.ENABLE_ITEMS_LOCK.get()) {
-			if (ItemsConfigConfiguration.SHOW_TOOLTIP_ITEMS.get()) {
-				for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-					if ((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]"))).equals(ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString())) {
+		String iterator = "";
+		if (JaumlConfigLib.getBooleanValue("motp", "items_lock", "enabled")) {
+			if (JaumlConfigLib.getBooleanValue("motp", "items_lock", "show_tooltip")) {
+				count = JaumlConfigLib.getArrayLength("motp", "items_lock", "items_list");
+				index = 0;
+				for (int index0 = 0; index0 < (int) count; index0++) {
+					iterator = JaumlConfigLib.getArrayElement("motp", "items_lock", "items_list", ((int) index));
+					if ((iterator.substring((int) (iterator.indexOf("[item]") + 6), (int) iterator.indexOf("[itemEnd]"))).equals(ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString())) {
 						attribute = new Object() {
 							double convert(String s) {
 								try {
@@ -51,7 +58,7 @@ public class ItemRequirementsDisplayProcedure {
 								}
 								return 0;
 							}
-						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[attribute]") + 11), (int) stringiterator.indexOf("[attributeEnd]")));
+						}.convert(iterator.substring((int) (iterator.indexOf("[attribute]") + 11), (int) iterator.indexOf("[attributeEnd]")));
 						level = new Object() {
 							double convert(String s) {
 								try {
@@ -60,7 +67,7 @@ public class ItemRequirementsDisplayProcedure {
 								}
 								return 0;
 							}
-						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")));
+						}.convert(iterator.substring((int) (iterator.indexOf("[level]") + 7), (int) iterator.indexOf("[levelEnd]")));
 						attributeName = "";
 						if (attribute == 1) {
 							if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
@@ -104,10 +111,11 @@ public class ItemRequirementsDisplayProcedure {
 							}
 						}
 						if (!(attributeName).isEmpty()) {
-							tooltip.add((int) tooltip.size(), Component.literal(("\u00A74[Requires " + attributeName + "\u00A7c" + level + "\u00A74]")));
+							tooltip.add((int) tooltip.size(), Component.literal(("\u00A74[Requires " + attributeName + "\u00A7c" + level + "\u00A74\uD83D\uDD12]")));
+							break;
 						}
 					} else {
-						continue;
+						index = index + 1;
 					}
 				}
 			}

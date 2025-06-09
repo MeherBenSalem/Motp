@@ -1,7 +1,8 @@
 package tn.mbs.memory.procedures;
 
+import tn.naizo.jauml.JaumlConfigLib;
+
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
-import tn.mbs.memory.configuration.ItemsConfigConfiguration;
 import tn.mbs.memory.MemoryOfThePastMod;
 
 import org.checkerframework.checker.units.qual.s;
@@ -36,12 +37,18 @@ public class EntityChangesEquipementProcedure {
 	private static void execute(@Nullable Event event, Entity entity, ItemStack to, String slot) {
 		if (entity == null || slot == null)
 			return;
+		boolean cancelEvent = false;
 		double attribute = 0;
 		double level = 0;
-		boolean cancelEvent = false;
-		if (ItemsConfigConfiguration.ENABLE_ITEMS_LOCK.get()) {
-			for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-				if ((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 6), (int) stringiterator.indexOf("[itemEnd]"))).equals(ForgeRegistries.ITEMS.getKey(to.getItem()).toString())) {
+		double count = 0;
+		double index = 0;
+		String itterator = "";
+		if (JaumlConfigLib.getBooleanValue("motp", "items_lock", "enabled")) {
+			count = JaumlConfigLib.getArrayLength("motp", "items_lock", "items_list");
+			index = 0;
+			for (int index0 = 0; index0 < (int) count; index0++) {
+				itterator = JaumlConfigLib.getArrayElement("motp", "items_lock", "items_list", ((int) index));
+				if ((itterator.substring((int) (itterator.indexOf("[item]") + 6), (int) itterator.indexOf("[itemEnd]"))).equals(ForgeRegistries.ITEMS.getKey(to.getItem()).toString())) {
 					attribute = new Object() {
 						double convert(String s) {
 							try {
@@ -50,7 +57,7 @@ public class EntityChangesEquipementProcedure {
 							}
 							return 0;
 						}
-					}.convert(stringiterator.substring((int) (stringiterator.indexOf("[attribute]") + 11), (int) stringiterator.indexOf("[attributeEnd]")));
+					}.convert(itterator.substring((int) (itterator.indexOf("[attribute]") + 11), (int) itterator.indexOf("[attributeEnd]")));
 					level = new Object() {
 						double convert(String s) {
 							try {
@@ -59,7 +66,7 @@ public class EntityChangesEquipementProcedure {
 							}
 							return 0;
 						}
-					}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")));
+					}.convert(itterator.substring((int) (itterator.indexOf("[level]") + 7), (int) itterator.indexOf("[levelEnd]")));
 					cancelEvent = false;
 					if (attribute == 1) {
 						if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
@@ -171,7 +178,7 @@ public class EntityChangesEquipementProcedure {
 						break;
 					}
 				} else {
-					continue;
+					index = index + 1;
 				}
 			}
 		}

@@ -3,7 +3,6 @@ package tn.mbs.memory.init;
 import tn.mbs.memory.configuration.MechanicsConfigConfiguration;
 import tn.mbs.memory.configuration.MainConfigFileConfiguration;
 import tn.mbs.memory.configuration.LevelUpRewardsConfigConfiguration;
-import tn.mbs.memory.configuration.ItemsConfigConfiguration;
 import tn.mbs.memory.configuration.GUIAttributeConfigConfiguration;
 import tn.mbs.memory.MemoryOfThePastMod;
 
@@ -22,7 +21,6 @@ public class MemoryOfThePastModConfigs {
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, LevelUpRewardsConfigConfiguration.SPEC, "motp/levelup_events.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MechanicsConfigConfiguration.SPEC, "motp/attributes_config.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GUIAttributeConfigConfiguration.SPEC, "motp/attribute_display_config.toml");
-			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ItemsConfigConfiguration.SPEC, "motp/items_config.toml");
 		});
 	}
 }

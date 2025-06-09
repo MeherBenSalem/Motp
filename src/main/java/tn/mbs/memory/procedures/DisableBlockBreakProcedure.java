@@ -1,7 +1,8 @@
 package tn.mbs.memory.procedures;
 
+import tn.naizo.jauml.JaumlConfigLib;
+
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
-import tn.mbs.memory.configuration.ItemsConfigConfiguration;
 import tn.mbs.memory.MemoryOfThePastMod;
 
 import org.checkerframework.checker.units.qual.s;
@@ -12,6 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.level.BlockEvent;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,27 +23,34 @@ import net.minecraft.network.chat.Component;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class OnBlockBreakProcedure {
+public class DisableBlockBreakProcedure {
 	@SubscribeEvent
 	public static void onBlockBreak(BlockEvent.BreakEvent event) {
-		execute(event, event.getPlayer());
+		execute(event, event.getState(), event.getPlayer());
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(BlockState blockstate, Entity entity) {
+		execute(null, blockstate, entity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
+	private static void execute(@Nullable Event event, BlockState blockstate, Entity entity) {
 		if (entity == null)
 			return;
+		boolean cancelEvent = false;
 		double attribute = 0;
 		double level = 0;
-		boolean cancelEvent = false;
-		if (ItemsConfigConfiguration.ENABLE_ITEMS_LOCK.get()) {
+		double count = 0;
+		double index = 0;
+		String iterrator = "";
+		if (JaumlConfigLib.getBooleanValue("motp", "items_lock", "enabled")) {
 			if (entity instanceof Player) {
-				for (String stringiterator : ItemsConfigConfiguration.ITEMS_LIST.get()) {
-					if ((stringiterator.substring((int) (stringiterator.indexOf("[item]") + 11), (int) stringiterator.indexOf("[itemEnd]")))
-							.equals(ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())) {
+				count = JaumlConfigLib.getArrayLength("motp", "items_lock", "items_list");
+				index = 0;
+				for (int index0 = 0; index0 < (int) count; index0++) {
+					iterrator = JaumlConfigLib.getArrayElement("motp", "items_lock", "items_list", ((int) index));
+					if ((iterrator.substring((int) (iterrator.indexOf("[item]") + 6), (int) iterrator.indexOf("[itemEnd]"))).equals(ForgeRegistries.BLOCKS.getKey(blockstate.getBlock()).toString())
+							|| (iterrator.substring((int) (iterrator.indexOf("[item]") + 6), (int) iterrator.indexOf("[itemEnd]")))
+									.equals(ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())) {
 						attribute = new Object() {
 							double convert(String s) {
 								try {
@@ -50,7 +59,7 @@ public class OnBlockBreakProcedure {
 								}
 								return 0;
 							}
-						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[attribute]") + 11), (int) stringiterator.indexOf("[attributeEnd]")));
+						}.convert(iterrator.substring((int) (iterrator.indexOf("[attribute]") + 11), (int) iterrator.indexOf("[attributeEnd]")));
 						level = new Object() {
 							double convert(String s) {
 								try {
@@ -59,7 +68,7 @@ public class OnBlockBreakProcedure {
 								}
 								return 0;
 							}
-						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")));
+						}.convert(iterrator.substring((int) (iterrator.indexOf("[level]") + 7), (int) iterrator.indexOf("[levelEnd]")));
 						cancelEvent = false;
 						if (attribute == 1) {
 							if (level > (entity.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).attribute_1) {
@@ -106,14 +115,14 @@ public class OnBlockBreakProcedure {
 						}
 						if (cancelEvent) {
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("\u00A74you can't break using this item"), true);
+								_player.displayClientMessage(Component.literal("\u00A74You can't break this block yet"), true);
 							if (event != null && event.isCancelable()) {
 								event.setCanceled(true);
 							}
 							break;
 						}
 					} else {
-						continue;
+						index = index + 1;
 					}
 				}
 			}
