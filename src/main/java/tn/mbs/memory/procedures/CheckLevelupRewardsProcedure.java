@@ -1,7 +1,8 @@
 package tn.mbs.memory.procedures;
 
+import tn.naizo.jauml.JaumlConfigLib;
+
 import tn.mbs.memory.network.MemoryOfThePastModVariables;
-import tn.mbs.memory.configuration.LevelUpRewardsConfigConfiguration;
 import tn.mbs.memory.MemoryOfThePastMod;
 
 import org.checkerframework.checker.units.qual.s;
@@ -23,8 +24,9 @@ public class CheckLevelupRewardsProcedure {
 		if (target == null)
 			return;
 		ItemStack itemToGive = ItemStack.EMPTY;
-		double Quantity = 0;
 		double index = 0;
+		double count = 0;
+		String itterator = "";
 		if (!(target instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel
 				&& _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("memory_of_the_past:first_level_up"))).isDone())) {
 			if (target instanceof ServerPlayer _player) {
@@ -48,10 +50,12 @@ public class CheckLevelupRewardsProcedure {
 				}
 			}
 		}
-		if (LevelUpRewardsConfigConfiguration.ENABLE.get()) {
+		if (JaumlConfigLib.getBooleanValue("motp", "levelup_rewards", "enabled")) {
+			count = JaumlConfigLib.getArrayLength("motp", "levelup_rewards", "rewards");
 			index = 0;
-			for (String stringiterator : LevelUpRewardsConfigConfiguration.LEVELUP_REWARDS_LIST.get()) {
-				if (stringiterator.contains("[level]") && stringiterator.contains("[levelEnd]")) {
+			for (int index0 = 0; index0 < (int) count; index0++) {
+				itterator = JaumlConfigLib.getArrayElement("motp", "levelup_rewards", "rewards", ((int) index));
+				if (itterator.contains("[level]") && itterator.contains("[levelEnd]")) {
 					if ((target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints
 							+ (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level == new Object() {
 								double convert(String s) {
@@ -61,12 +65,12 @@ public class CheckLevelupRewardsProcedure {
 									}
 									return 0;
 								}
-							}.convert(stringiterator.substring((int) (stringiterator.indexOf("[level]") + 7), (int) stringiterator.indexOf("[levelEnd]")))) {
+							}.convert(itterator.substring((int) (itterator.indexOf("[level]") + 7), (int) itterator.indexOf("[levelEnd]")))) {
 						{
 							Entity _ent = target;
 							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), (stringiterator.substring((int) (stringiterator.indexOf("[levelEnd]") + 10))));
+										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), (itterator.substring((int) (itterator.indexOf("[levelEnd]") + 10))));
 							}
 						}
 						break;
@@ -77,10 +81,13 @@ public class CheckLevelupRewardsProcedure {
 				index = index + 1;
 			}
 			if ((target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).SparePoints
-					+ (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level >= (double) LevelUpRewardsConfigConfiguration.RANDOM_LOOT_TABLE_LEVEL.get()) {
+					+ (target.getCapability(MemoryOfThePastModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MemoryOfThePastModVariables.PlayerVariables())).Level >= JaumlConfigLib.getNumberValue("motp", "levelup_rewards",
+							"random_rewards_level")) {
+				count = JaumlConfigLib.getArrayLength("motp", "levelup_rewards", "random_rewards");
 				index = 0;
-				for (String stringiterator : LevelUpRewardsConfigConfiguration.OVER_LEVEL_REWARDS.get()) {
-					if (stringiterator.contains("[chance]") && stringiterator.contains("[chanceEnd]")) {
+				for (int index1 = 0; index1 < (int) count; index1++) {
+					itterator = JaumlConfigLib.getArrayElement("motp", "levelup_rewards", "random_rewards", ((int) index));
+					if (itterator.contains("[chance]") && itterator.contains("[chanceEnd]")) {
 						if (Mth.nextInt(RandomSource.create(), 0, 100) <= new Object() {
 							double convert(String s) {
 								try {
@@ -89,12 +96,12 @@ public class CheckLevelupRewardsProcedure {
 								}
 								return 0;
 							}
-						}.convert(stringiterator.substring((int) (stringiterator.indexOf("[chance]") + 8), (int) stringiterator.indexOf("[chanceEnd]")))) {
+						}.convert(itterator.substring((int) (itterator.indexOf("[chance]") + 8), (int) itterator.indexOf("[chanceEnd]")))) {
 							{
 								Entity _ent = target;
 								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
-											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), (stringiterator.substring((int) (stringiterator.indexOf("[levelEnd]") + 10))));
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), (itterator.substring((int) (itterator.indexOf("[chanceEnd]") + 11))));
 								}
 							}
 							break;

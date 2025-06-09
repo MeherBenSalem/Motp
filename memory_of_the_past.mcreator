@@ -405,19 +405,6 @@
       "path": "~/Procedures/Text Logic"
     },
     {
-      "name": "LevelUpRewardsConfig",
-      "type": "config",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "level_up_rewards_config",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/configuration/LevelUpRewardsConfigConfiguration.java"
-        ]
-      },
-      "path": "~/Configurations"
-    },
-    {
       "name": "CheckLevelupRewards",
       "type": "procedure",
       "compiles": true,
@@ -3226,6 +3213,20 @@
         ]
       },
       "path": "~/Procedures/Items/ItemLock"
+    },
+    {
+      "name": "CreateLevelUpRewardsConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_level_up_rewards_config",
+      "metadata": {
+        "files": [
+          "src/main/java/tn/mbs/memory/procedures/CreateLevelUpRewardsConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Configurations"
     }
   ],
   "variable_elements": [

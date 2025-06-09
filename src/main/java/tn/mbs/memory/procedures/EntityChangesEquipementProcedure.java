@@ -124,11 +124,6 @@ public class EntityChangesEquipementProcedure {
 									_living.setItemSlot(EquipmentSlot.HEAD, ItemStack.EMPTY);
 								}
 							}
-							if (entity instanceof Player _player) {
-								ItemStack _setstack = to.copy();
-								_setstack.setCount(1);
-								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-							}
 						} else if ((slot).equals("chest")) {
 							{
 								Entity _entity = entity;
@@ -138,11 +133,6 @@ public class EntityChangesEquipementProcedure {
 								} else if (_entity instanceof LivingEntity _living) {
 									_living.setItemSlot(EquipmentSlot.CHEST, ItemStack.EMPTY);
 								}
-							}
-							if (entity instanceof Player _player) {
-								ItemStack _setstack = to.copy();
-								_setstack.setCount(1);
-								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
 						} else if ((slot).equals("legs")) {
 							{
@@ -154,11 +144,6 @@ public class EntityChangesEquipementProcedure {
 									_living.setItemSlot(EquipmentSlot.LEGS, ItemStack.EMPTY);
 								}
 							}
-							if (entity instanceof Player _player) {
-								ItemStack _setstack = to.copy();
-								_setstack.setCount(1);
-								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-							}
 						} else if ((slot).equals("feet")) {
 							{
 								Entity _entity = entity;
@@ -169,6 +154,8 @@ public class EntityChangesEquipementProcedure {
 									_living.setItemSlot(EquipmentSlot.FEET, ItemStack.EMPTY);
 								}
 							}
+						}
+						if (!(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(to) : false)) {
 							if (entity instanceof Player _player) {
 								ItemStack _setstack = to.copy();
 								_setstack.setCount(1);
