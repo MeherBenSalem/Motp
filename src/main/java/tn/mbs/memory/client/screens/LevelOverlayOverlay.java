@@ -2,9 +2,7 @@
 package tn.mbs.memory.client.screens;
 
 import tn.mbs.memory.procedures.YouHavePointsProcedure;
-import tn.mbs.memory.procedures.ReturnExtraPointsUIProcedure;
-import tn.mbs.memory.procedures.ReturnCurrentVPToLevelPercentageProcedure;
-import tn.mbs.memory.procedures.ReturnCurrentLevelProcedure;
+import tn.mbs.memory.procedures.ReturnExtraPointsProcedure;
 import tn.mbs.memory.procedures.IsAt99Procedure;
 import tn.mbs.memory.procedures.IsAt95Procedure;
 import tn.mbs.memory.procedures.IsAt90Procedure;
@@ -27,7 +25,6 @@ import tn.mbs.memory.procedures.IsAt15Procedure;
 import tn.mbs.memory.procedures.IsAt10Procedure;
 import tn.mbs.memory.procedures.IsAt0Procedure;
 import tn.mbs.memory.procedures.DisplayXpOverlayProcedure;
-import tn.mbs.memory.procedures.DisplayOverlayProcedure;
 import tn.mbs.memory.procedures.CurrentXpToLevelProcedure;
 
 import org.checkerframework.checker.units.qual.h;
@@ -41,7 +38,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
@@ -135,24 +131,17 @@ public class LevelOverlayOverlay {
 			if (IsAt99Procedure.execute(entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("memory_of_the_past:textures/screens/ui_bar_99.png"), 3, h - 15, 0, 0, 80, 12, 80, 12);
 			}
+			if (YouHavePointsProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("memory_of_the_past:textures/screens/levelup.png"), 4, h - 25, 0, 0, 7, 8, 7, 8);
+			}
 			if (DisplayXpOverlayProcedure.execute())
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						CurrentXpToLevelProcedure.execute(entity), 5, h - 12, -16777216, false);
-			if (DisplayOverlayProcedure.execute())
-				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-						ReturnCurrentLevelProcedure.execute(entity), 37, h - 26, -1, false);
 			if (YouHavePointsProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						ReturnExtraPointsUIProcedure.execute(entity), 4, h - 37, -1, false);
-			if (DisplayOverlayProcedure.execute())
-				event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.memory_of_the_past.level_overlay.label_level"), 4, h - 26, -1, false);
-			if (DisplayXpOverlayProcedure.execute())
-				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-						ReturnCurrentVPToLevelPercentageProcedure.execute(entity), 85, h - 12, -1, false);
+						ReturnExtraPointsProcedure.execute(entity), 12, h - 25, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

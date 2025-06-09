@@ -2978,26 +2978,6 @@
       "path": "~/Procedures/GUI/UI Bar"
     },
     {
-      "name": "ReturnCurrentVPToLevelPercentage",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_current_vp_to_level_percentage",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/tn/mbs/memory/procedures/ReturnCurrentVPToLevelPercentageProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Text Logic/LevelInfo"
-    },
-    {
       "name": "EntityChangesEquipement",
       "type": "procedure",
       "compiles": true,
