@@ -2467,19 +2467,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "ItemsConfig",
-      "type": "config",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "items_config",
-      "metadata": {
-        "files": [
-          "src/main/java/tn/mbs/memory/configuration/ItemsConfigConfiguration.java"
-        ]
-      },
-      "path": "~/Configurations"
-    },
-    {
       "name": "ItemRequirementsDisplay",
       "type": "procedure",
       "compiles": true,
